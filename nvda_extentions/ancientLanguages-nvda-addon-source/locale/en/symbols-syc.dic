@@ -1,0 +1,142 @@
+#Syriac symbols.dic
+#Copyright (c) 2024Matthew Yeater and Paul Geoghegan.
+#This file is covered by the GNU General Public License.
+
+symbols:
+܏	abbreviation mark	none
+ܐ	alaph	none
+ܐ݁	alaph and qushshaya	none
+ܐ݂	alaph and rukkakha	none
+݊	barrekh	none
+ܒ	beth	none
+ܒ݁	beth and qushshaya	none
+ܒ݂	beth and rukkakha	none
+܆	colon skewed left	none
+܇	colon skewed right	none
+̈	combining diaeresis.	none
+܊	contraction	none
+ܕ	dalath	none
+ܕ݁	dalath and qushshaya	none
+ܕ݂	dalath and rukkakha	none
+ܖ	dotless dalath rish	none
+ܖ݁	dotless dalath rish and qushshaya	none
+ܖ݂	dotless dalath rish and rukkakha	none
+ܹ	dotted zlama angular	none
+ܸ	dotted zlama horizontal	none
+ܥ	e	none
+ܥ݁	e and qushshaya	none
+ܥ݂	e and rukkakha	none
+܀	end of paragraph	none
+ܽ	esasa above	none
+ܾ	esasa below	none
+݀	feminine dot	none
+ܤ	final semkath	none
+ܤ݁	final semkath and qushshaya	none
+ܤ݂	final semkath and rukkakha	none
+ܓ	gamal	none
+ܓ݁	gamal and qushshaya	none
+ܓ݂	gamal and rukkakha	none
+ܔ	gamal garshuni	none
+ܔ݁	gamal garshuni and qushshaya	none
+ܔ݂	gamal garshuni and rukkakha	none
+܍	harklean asteriscus	none
+܌	harklean metobelus	none
+܋	harklean obelus	none
+ܻ	hbasa  below	none
+ܺ	hbasa above	none
+ܼ	hbasa-esasa dotted	none
+ܗ	he	none
+ܗ݁	he and qushshaya	none
+ܗ݂	he and rukkakha	none
+ܚ	heth	none
+ܚ݁	heth and qushshaya	none
+ܚ݂	heth and rukkakha	none
+܅	horizontal colon	none
+ܟ	kaph	none
+ܟ݁	kaph and qushshaya	none
+ܟ݂	kaph and rukkakha	none
+ܠ	lamadh	none
+ܠ݁	lamadh and qushshaya	none
+ܠ݂	lamadh and rukkakha	none
+̄	macron above	none
+̱	macron below	none
+ܡ	mim	none
+ܡ݁	mim and qushshaya	none
+ܡ݂	mim and rukkakha	none
+݉	music	none
+ܢ	nun	none
+ܢ݁	nun and qushshaya	none
+ܢ݂	nun and rukkakha	none
+݇	oblique line above	none
+݈	oblique line below	none
+ܦ	pe	none
+ܦ݁	pe and qushshaya	none
+ܦ݂	pe and rukkakha	none
+ܭ	persian bheth	none
+ܯ	persian dhalath	none
+ܮ	persian ghamal	none
+ܰ	pthaha above	none
+ܱ	pthaha below	none
+ܲ	pthaha dotted	none
+ܩ	qaph	none
+ܩ݁	qaph and qushshaya	none
+ܩ݂	qaph and rukkakha	none
+݁	qushshaya	none
+ܶ	rbasa above	none
+ܷ	rbasa below	none
+ܧ	reversed pe	none
+ܧ݁	reversed pe and qushshaya	none
+ܧ݂	reversed pe and rukkakha	none
+ܪ	rish	none
+ܪ݁	rish and qushshaya	none
+ܪ݂	rish and rukkakha	none
+݂	rukkakha	none
+ܿ	rwaha	none
+ܨ	sadhe	none
+ܨ݁	sadhe and qushshaya	none
+ܨ݂	sadhe and rukkakha	none
+ܣ	semkath	none
+ܣ݁	semkath and qushshaya	none
+ܣ݂	semkath and rukkakha	none
+ܫ	shin	none
+ܫ݂	shin and rukkakha	none
+ݏ	sogdian fe	none
+ݎ	sogdian khaph	none
+ݍ	sogdian zhain	none
+܄	sublinear colon	none
+܉	sublinear colon skewed right	none
+܂	sublinear full stop	none
+ܑ	superscript alaph	none
+ܑ݁	superscript alaph  and qushshaya	none
+ܑ݂	superscript alaph  and rukkakha	none
+܃	supralinear colon	none
+܈	supralinear colon skewed left	none
+܁	supralinear full stop	none
+ܬ	taw	none
+ܬ݁	taw and qushshaya	none
+ܬ݂	taw and rukkakha	none
+ܛ	teth	none
+ܛ݁	teth and qushshaya	none
+ܛ݂	teth and rukkakha	none
+ܜ	teth garshuni	none
+ܜ݁	teth garshuni and qushshaya	none
+ܜ݂	teth garshuni and rukkakha	none
+݅	three dots above	none
+݆	three dots below	none
+݃	two vertical dots above	none
+݄	two vertical dots below	none
+ܘ	waw	none
+ܘ݁	waw and qushshaya	none
+ܘ݂	waw and rukkakha	none
+ܝ	yudh	none
+ܝ݁	yudh and qushshaya	none
+ܝ݂	yudh and rukkakha	none
+ܞ	yudh he	none
+ܞ݁	yudh he and qushshaya	none
+ܞ݂	yudh he and rukkakha	none
+ܙ	zain	none
+ܙ݁	zain and qushshaya	none
+ܙ݂	zain and rukkakha	none
+ܳ	zqapha above	none
+ܴ	zqapha below	none
+ܵ	zqapha dotted	none

@@ -1,0 +1,928 @@
+#Akkadian symbols.dic
+#A part of NonVisual Desktop Access (NVDA)
+#URL: http://www.nvda-project.org/
+#Copyright (c) 2024Matthew Yeater and Paul Geoghegan.
+#This file is covered by the GNU General Public License.
+
+𒀀	a	most	always
+𒀁	a times a	most	always
+𒀂	a times bad	most	always
+𒀃	a times gan2 tenu	most	always
+𒀄	a times ha	most	always
+𒀅	a times igi	most	always
+𒀆	a times lagar gunu	most	always
+𒀇	a times mush	most	always
+𒀈	a times sag	most	always
+𒀉	a2	most	always
+𒀊	ab	most	always
+𒀕	ab gunu	most	always
+𒀋	ab times ash2	most	always
+𒀌	ab times dun3 gunu	most	always
+𒀍	ab times gal	most	always
+𒀎	ab times gan2 tenu	most	always
+𒀏	ab times ha	most	always
+𒀐	ab times igi gunu	most	always
+𒀑	ab times imin	most	always
+𒀒	ab times lagab	most	always
+𒍰	ab times nun	most	always
+𒀓	ab times shesh	most	always
+𒀔	ab times u plus u plus u	most	always
+𒀖	ab2	most	always
+𒍱	ab2 times a	most	always
+𒀗	ab2 times balag	most	always
+𒀘	ab2 times gan2 tenu	most	always
+𒀙	ab2 times me plus en	most	always
+𒀚	ab2 times sha3	most	always
+𒀛	ab2 times tak4	most	always
+𒀜	ad	most	always
+𒀝	ak	most	always
+𒀞	ak times erin2	most	always
+𒀟	ak times shita plus gish	most	always
+𒀠	al	most	always
+𒀡	al times al	most	always
+𒀢	al times dim2	most	always
+𒀣	al times gish	most	always
+𒀤	al times ha	most	always
+𒀥	al times kad3	most	always
+𒀦	al times ki	most	always
+𒀧	al times she	most	always
+𒀨	al times ush	most	always
+𒀩	alan	most	always
+𒀪	aleph	most	always
+𒀫	amar	most	always
+𒍲	amar times kug	most	always
+𒀬	amar times she	most	always
+𒀭	an	most	always
+𒀮	an over an	most	always
+𒀰	an plus naga opposing an plus naga	most	always
+𒀱	an plus naga squared	most	always
+𒀯	an three times	most	always
+𒀲	anshe	most	always
+𒀳	apin	most	always
+𒀴	arad	most	always
+𒀵	arad times kur	most	always
+𒀶	arkab	most	always
+𒀷	asal2	most	always
+𒀸	ash	most	always
+𒀺	ash kaba tenu	most	always
+𒀼	ash over ash over ash	most	always
+𒀽	ash over ash over ash crossing ash over ash over ash	most	always
+𒀻	ash over ash tug2 over tug2 tug2 over tug2 pap	most	always
+𒀹	ash zida tenu	most	always
+𒀾	ash2	most	always
+𒀿	ashgab	most	always
+𒁀	ba	most	always
+𒁁	bad	most	always
+𒁂	bag3	most	always
+𒁃	bahar2	most	always
+𒁄	bal	most	always
+𒁅	bal over bal	most	always
+𒁆	balag	most	always
+𒁇	bar	most	always
+𒁈	bara2	most	always
+𒁉	bi	most	always
+𒁊	bi times a	most	always
+𒁋	bi times gar	most	always
+𒁌	bi times igi gunu	most	always
+𒁍	bu	most	always
+𒁐	bu crossing bu	most	always
+𒁎	bu over bu ab	most	always
+𒁏	bu over bu un	most	always
+𒁑	bulug	most	always
+𒁒	bulug over bulug	most	always
+𒁓	bur	most	always
+𒁔	bur2	most	always
+𒁕	da	most	always
+𒁖	dag	most	always
+𒁗	dag kisim5 times a plus mash	most	always
+𒁘	dag kisim5 times amar	most	always
+𒁙	dag kisim5 times balag	most	always
+𒁚	dag kisim5 times bi	most	always
+𒁛	dag kisim5 times ga	most	always
+𒁜	dag kisim5 times ga plus mash	most	always
+𒁝	dag kisim5 times gi	most	always
+𒁞	dag kisim5 times gir2	most	always
+𒁟	dag kisim5 times gud	most	always
+𒁠	dag kisim5 times ha	most	always
+𒁡	dag kisim5 times ir	most	always
+𒁢	dag kisim5 times ir plus lu	most	always
+𒁣	dag kisim5 times kak	most	always
+𒁤	dag kisim5 times la	most	always
+𒁥	dag kisim5 times lu	most	always
+𒁦	dag kisim5 times lu plus mash2	most	always
+𒁧	dag kisim5 times lum	most	always
+𒁨	dag kisim5 times ne	most	always
+𒁩	dag kisim5 times pap plus pap	most	always
+𒁪	dag kisim5 times si	most	always
+𒁫	dag kisim5 times tak4	most	always
+𒁬	dag kisim5 times u2 plus gir2	most	always
+𒍳	dag kisim5 times u2 plus mash	most	always
+𒁭	dag kisim5 times ush	most	always
+𒍴	dag3	most	always
+𒁮	dam	most	always
+𒁯	dar	most	always
+𒁰	dara3	most	always
+𒁱	dara4	most	always
+𒁲	di	most	always
+𒁳	dib	most	always
+𒁴	dim	most	always
+𒁵	dim times she	most	always
+𒁶	dim2	most	always
+𒁷	din	most	always
+𒁸	din kaskal u gunu dish	most	always
+𒁹	dish	most	always
+𒍵	dish plus shu	most	always
+𒁺	du	most	always
+𒁼	du gunu	most	always
+𒁻	du over du	most	always
+𒁽	du sheshig	most	always
+𒁾	dub	most	always
+𒁿	dub times esh2	most	always
+𒍶	dub times she	most	always
+𒂀	dub2	most	always
+𒂁	dug	most	always
+𒂂	dugud	most	always
+𒂃	duh	most	always
+𒂄	dun	most	always
+𒂅	dun3	most	always
+𒂆	dun3 gunu	most	always
+𒂇	dun3 gunu gunu	most	always
+𒂈	dun4	most	always
+𒂉	dur2	most	always
+𒂊	e	most	always
+𒂌	e over e nun over nun	most	always
+𒂋	e times pap	most	always
+𒂍	e2	most	always
+𒂎	e2 times a plus ha plus da	most	always
+𒂏	e2 times gar	most	always
+𒂐	e2 times mi	most	always
+𒂑	e2 times sal	most	always
+𒂒	e2 times she	most	always
+𒂓	e2 times u	most	always
+𒂔	edin	most	always
+𒂕	egir	most	always
+𒂖	el	most	always
+𒂗	en	most	always
+𒂛	en crossing en	most	always
+𒂜	en opposing en	most	always
+𒂝	en squared	most	always
+𒂘	en times gan2	most	always
+𒂙	en times gan2 tenu	most	always
+𒂚	en times me	most	always
+𒂞	eren	most	always
+𒂟	erin2	most	always
+𒂠	esh2	most	always
+𒂡	ezen	most	always
+𒂢	ezen times a	most	always
+𒂣	ezen times a plus lal	most	always
+𒂤	ezen times a plus lal times lal	most	always
+𒂥	ezen times an	most	always
+𒂦	ezen times bad	most	always
+𒂧	ezen times dun3 gunu	most	always
+𒂨	ezen times dun3 gunu gunu	most	always
+𒍷	ezen times gud	most	always
+𒂩	ezen times ha	most	always
+𒂪	ezen times ha gunu	most	always
+𒂫	ezen times igi gunu	most	always
+𒂬	ezen times kaskal	most	always
+𒂭	ezen times kaskal squared	most	always
+𒂮	ezen times ku3	most	always
+𒂯	ezen times la	most	always
+𒂰	ezen times lal times lal	most	always
+𒂱	ezen times li	most	always
+𒂲	ezen times lu	most	always
+𒍸	ezen times she	most	always
+𒂳	ezen times u2	most	always
+𒂴	ezen times ud	most	always
+𒂵	ga	most	always
+𒂶	ga gunu	most	always
+𒂷	ga2	most	always
+𒃭	ga2 over ga2	most	always
+𒂸	ga2 times a plus da plus ha	most	always
+𒂹	ga2 times a plus ha	most	always
+𒂺	ga2 times a plus igi	most	always
+𒂻	ga2 times ab2 tenu plus tab	most	always
+𒂼	ga2 times an	most	always
+𒍹	ga2 times an plus kak plus a	most	always
+𒂽	ga2 times ash	most	always
+𒍺	ga2 times ash2	most	always
+𒂾	ga2 times ash2 plus gal	most	always
+𒂿	ga2 times bad	most	always
+𒃀	ga2 times bar plus ra	most	always
+𒃁	ga2 times bur	most	always
+𒃂	ga2 times bur plus ra	most	always
+𒃃	ga2 times da	most	always
+𒃄	ga2 times di	most	always
+𒃅	ga2 times dim times she	most	always
+𒃆	ga2 times dub	most	always
+𒃇	ga2 times el	most	always
+𒃈	ga2 times el plus la	most	always
+𒃉	ga2 times en	most	always
+𒃊	ga2 times en times gan2 tenu	most	always
+𒃋	ga2 times gan2 tenu	most	always
+𒃌	ga2 times gar	most	always
+𒃍	ga2 times gi	most	always
+𒃎	ga2 times gi4	most	always
+𒃏	ga2 times gi4 plus a	most	always
+𒃐	ga2 times gir2 plus su	most	always
+𒃑	ga2 times ha plus lu plus esh2	most	always
+𒃒	ga2 times hal	most	always
+𒃓	ga2 times hal plus la	most	always
+𒃔	ga2 times hi plus li	most	always
+𒃕	ga2 times hub2	most	always
+𒃖	ga2 times igi gunu	most	always
+𒃗	ga2 times ish plus hu plus ash	most	always
+𒃘	ga2 times kak	most	always
+𒃙	ga2 times kaskal	most	always
+𒃚	ga2 times kid	most	always
+𒃛	ga2 times kid plus lal	most	always
+𒃜	ga2 times ku3 plus an	most	always
+𒃝	ga2 times la	most	always
+𒃞	ga2 times me plus en	most	always
+𒃟	ga2 times mi	most	always
+𒃠	ga2 times nun	most	always
+𒃡	ga2 times nun over nun	most	always
+𒃢	ga2 times pa	most	always
+𒃣	ga2 times sal	most	always
+𒃤	ga2 times sar	most	always
+𒃥	ga2 times she	most	always
+𒃦	ga2 times she plus tur	most	always
+𒃧	ga2 times shid	most	always
+𒃨	ga2 times sum	most	always
+𒃩	ga2 times tak4	most	always
+𒃪	ga2 times u	most	always
+𒃫	ga2 times ud	most	always
+𒃬	ga2 times ud plus du	most	always
+𒃮	gaba	most	always
+𒃯	gaba crossing gaba	most	always
+𒃰	gad	most	always
+𒃱	gad over gad gar over gar	most	always
+𒃲	gal	most	always
+𒃳	gal gad over gad gar over gar	most	always
+𒃴	galam	most	always
+𒃵	gam	most	always
+𒃶	gan	most	always
+𒃷	gan2	most	always
+𒃺	gan2 crossing gan2	most	always
+𒃹	gan2 over gan2	most	always
+𒃸	gan2 tenu	most	always
+𒃻	gar	most	always
+𒃼	gar3	most	always
+𒃽	gashan	most	always
+𒍻	ge22	most	always
+𒃾	geshtin	most	always
+𒃿	geshtin times kur	most	always
+𒄀	gi	most	always
+𒄃	gi crossing gi	most	always
+𒄁	gi times e	most	always
+𒄂	gi times u	most	always
+𒄄	gi4	most	always
+𒄆	gi4 crossing gi4	most	always
+𒄅	gi4 over gi4	most	always
+𒄇	gidim	most	always
+𒍼	gig	most	always
+𒄈	gir2	most	always
+𒄉	gir2 gunu	most	always
+𒄊	gir3	most	always
+𒄋	gir3 times a plus igi	most	always
+𒄌	gir3 times gan2 tenu	most	always
+𒄍	gir3 times igi	most	always
+𒄎	gir3 times lu plus igi	most	always
+𒄏	gir3 times pa	most	always
+𒄐	gisal	most	always
+𒄑	gish	most	always
+𒄒	gish crossing gish	most	always
+𒄕	gish tenu	most	always
+𒄓	gish times bad	most	always
+𒄔	gish times tak4	most	always
+𒄖	gu	most	always
+𒄗	gu crossing gu	most	always
+𒄘	gu2	most	always
+𒄝	gu2 gunu	most	always
+𒄙	gu2 times kak	most	always
+𒄚	gu2 times kak times igi gunu	most	always
+𒄛	gu2 times nun	most	always
+𒄜	gu2 times sal plus tug2	most	always
+𒄞	gud	most	always
+𒄡	gud over gud lugal	most	always
+𒄟	gud times a plus kur	most	always
+𒄠	gud times kur	most	always
+𒄢	gul	most	always
+𒄣	gum	most	always
+𒄤	gum times she	most	always
+𒄥	gur	most	always
+𒄦	gur7	most	always
+𒄧	gurun	most	always
+𒄨	gurush	most	always
+𒄩	ha	most	always
+𒄫	ha gunu	most	always
+𒄪	ha tenu	most	always
+𒄬	hal	most	always
+𒄭	hi	most	always
+𒄮	hi times ash	most	always
+𒄯	hi times ash2	most	always
+𒄰	hi times bad	most	always
+𒄱	hi times dish	most	always
+𒄲	hi times gad	most	always
+𒄳	hi times kin	most	always
+𒄴	hi times nun	most	always
+𒄵	hi times she	most	always
+𒄶	hi times u	most	always
+𒄷	hu	most	always
+𒄸	hub2	most	always
+𒄹	hub2 times an	most	always
+𒄺	hub2 times hal	most	always
+𒄻	hub2 times kaskal	most	always
+𒄼	hub2 times lish	most	always
+𒄽	hub2 times ud	most	always
+𒄾	hul2	most	always
+𒍽	hush	most	always
+𒄿	i	most	always
+𒅀	i a	most	always
+𒅁	ib	most	always
+𒅂	idim	most	always
+𒅃	idim over idim bur	most	always
+𒅄	idim over idim squared	most	always
+𒅅	ig	most	always
+𒅆	igi	most	always
+𒅇	igi dib	most	always
+𒅊	igi gunu	most	always
+𒅉	igi over igi shir over shir ud over ud	most	always
+𒅈	igi ri	most	always
+𒅋	il	most	always
+𒅌	il times gan2 tenu	most	always
+𒅍	il2	most	always
+𒅎	im	most	always
+𒅐	im crossing im	most	always
+𒅑	im opposing im	most	always
+𒅒	im squared	most	always
+𒅏	im times tak4	most	always
+𒅓	imin	most	always
+𒅔	in	most	always
+𒅕	ir	most	always
+𒅖	ish	most	always
+𒅗	ka	most	always
+𒅘	ka times a	most	always
+𒅙	ka times ad	most	always
+𒅚	ka times ad plus ku3	most	always
+𒍾	ka times anshe	most	always
+𒅛	ka times ash2	most	always
+𒍿	ka times ash3	most	always
+𒅜	ka times bad	most	always
+𒅝	ka times balag	most	always
+𒅞	ka times bar	most	always
+𒅟	ka times bi	most	always
+𒅠	ka times erin2	most	always
+𒅡	ka times esh2	most	always
+𒅢	ka times ga	most	always
+𒅣	ka times gal	most	always
+𒅤	ka times gan2 tenu	most	always
+𒅥	ka times gar	most	always
+𒅦	ka times gar plus sha3 plus a	most	always
+𒅧	ka times gi	most	always
+𒅨	ka times gir2	most	always
+𒎀	ka times gish	most	always
+𒅪	ka times gish crossing gish	most	always
+𒅩	ka times gish plus sar	most	always
+𒅫	ka times gu	most	always
+𒎁	ka times gud	most	always
+𒅬	ka times gur7	most	always
+𒎂	ka times hi times ash2	most	always
+𒅭	ka times igi	most	always
+𒅮	ka times im	most	always
+𒅯	ka times kak	most	always
+𒅰	ka times ki	most	always
+𒅱	ka times kid	most	always
+𒅲	ka times li	most	always
+𒅳	ka times lu	most	always
+𒎃	ka times lum	most	always
+𒅴	ka times me	most	always
+𒅵	ka times me plus du	most	always
+𒅶	ka times me plus gi	most	always
+𒅷	ka times me plus te	most	always
+𒅸	ka times mi	most	always
+𒅹	ka times mi plus nunuz	most	always
+𒅺	ka times ne	most	always
+𒅻	ka times nun	most	always
+𒎄	ka times pa	most	always
+𒅼	ka times pi	most	always
+𒅽	ka times ru	most	always
+𒅾	ka times sa	most	always
+𒅿	ka times sar	most	always
+𒆀	ka times sha	most	always
+𒆁	ka times she	most	always
+𒆂	ka times shid	most	always
+𒆃	ka times shu	most	always
+𒎅	ka times shul	most	always
+𒆄	ka times sig	most	always
+𒆅	ka times suhur	most	always
+𒆆	ka times tar	most	always
+𒎆	ka times tu	most	always
+𒆇	ka times u	most	always
+𒆈	ka times u2	most	always
+𒆉	ka times ud	most	always
+𒆊	ka times umum times pa	most	always
+𒎇	ka times ur2	most	always
+𒆋	ka times ush	most	always
+𒆌	ka times zi	most	always
+𒆍	ka2	most	always
+𒆎	ka2 crossing ka2	most	always
+𒆏	kab	most	always
+𒆐	kad2	most	always
+𒆑	kad3	most	always
+𒆒	kad4	most	always
+𒆓	kad5	most	always
+𒆔	kad5 over kad5	most	always
+𒆕	kak	most	always
+𒆖	kak times igi gunu	most	always
+𒆗	kal	most	always
+𒆙	kal crossing kal	most	always
+𒆘	kal times bad	most	always
+𒆚	kam2	most	always
+𒆛	kam4	most	always
+𒍯	kap elamite	most	always
+𒆜	kaskal	most	always
+𒆝	kaskal lagab times u over lagab times u	most	always
+𒆞	kaskal over kaskal lagab times u over lagab times u	most	always
+𒆟	kesh2	most	always
+𒆠	ki	most	always
+𒆡	ki times bad	most	always
+𒆢	ki times u	most	always
+𒆣	ki times ud	most	always
+𒆤	kid	most	always
+𒆥	kin	most	always
+𒆦	kisal	most	always
+𒆧	kish	most	always
+𒆨	kisim5	most	always
+𒆩	kisim5 over kisim5	most	always
+𒆪	ku	most	always
+𒆫	ku over hi times ash2 ku over hi times ash2	most	always
+𒆬	ku3	most	always
+𒆭	ku4	most	always
+𒆮	ku4 variant form	most	always
+𒆯	ku7	most	always
+𒆰	kul	most	always
+𒆱	kul gunu	most	always
+𒆲	kun	most	always
+𒆳	kur	most	always
+𒆴	kur opposing kur	most	always
+𒆵	kushu2	most	always
+𒆶	kwu318	most	always
+𒆷	la	most	always
+𒆸	lagab	most	always
+𒇫	lagab squared	most	always
+𒆹	lagab times a	most	always
+𒆺	lagab times a plus da plus ha	most	always
+𒆻	lagab times a plus gar	most	always
+𒆼	lagab times a plus lal	most	always
+𒆽	lagab times al	most	always
+𒆾	lagab times an	most	always
+𒆿	lagab times ash zida tenu	most	always
+𒇀	lagab times bad	most	always
+𒇁	lagab times bi	most	always
+𒇂	lagab times dar	most	always
+𒇃	lagab times en	most	always
+𒇄	lagab times ga	most	always
+𒇅	lagab times gar	most	always
+𒎈	lagab times gi	most	always
+𒇆	lagab times gud	most	always
+𒇇	lagab times gud plus gud	most	always
+𒇈	lagab times ha	most	always
+𒇉	lagab times hal	most	always
+𒇊	lagab times hi times nun	most	always
+𒇋	lagab times igi gunu	most	always
+𒇌	lagab times im	most	always
+𒇍	lagab times im plus ha	most	always
+𒇎	lagab times im plus lu	most	always
+𒇏	lagab times ki	most	always
+𒇐	lagab times kin	most	always
+𒇑	lagab times ku3	most	always
+𒇒	lagab times kul	most	always
+𒇓	lagab times kul plus hi plus a	most	always
+𒇔	lagab times lagab	most	always
+𒇕	lagab times lish	most	always
+𒇖	lagab times lu	most	always
+𒇗	lagab times lul	most	always
+𒇘	lagab times me	most	always
+𒇙	lagab times me plus en	most	always
+𒇚	lagab times mush	most	always
+𒇛	lagab times ne	most	always
+𒇜	lagab times she plus sum	most	always
+𒇝	lagab times shita plus gish plus erin2	most	always
+𒇞	lagab times shita plus gish tenu	most	always
+𒇟	lagab times shu2	most	always
+𒇠	lagab times shu2 plus shu2	most	always
+𒇡	lagab times sum	most	always
+𒇢	lagab times tag	most	always
+𒇣	lagab times tak4	most	always
+𒇤	lagab times te plus a plus su plus na	most	always
+𒇥	lagab times u	most	always
+𒇦	lagab times u plus a	most	always
+𒇧	lagab times u plus u plus u	most	always
+𒇨	lagab times u2 plus ash	most	always
+𒇩	lagab times ud	most	always
+𒇪	lagab times ush	most	always
+𒇬	lagar	most	always
+𒇯	lagar gunu	most	always
+𒇰	lagar gunu over lagar gunu she	most	always
+𒇭	lagar times she	most	always
+𒇮	lagar times she plus sum	most	always
+𒇱	lahshu	most	always
+𒇲	lal	most	always
+𒇳	lal times lal	most	always
+𒇴	lam	most	always
+𒇵	lam times kur	most	always
+𒇶	lam times kur plus ru	most	always
+𒇷	li	most	always
+𒇸	lil	most	always
+𒇹	limmu2	most	always
+𒇺	lish	most	always
+𒇻	lu	most	always
+𒇼	lu times bad	most	always
+𒇽	lu2	most	always
+𒈒	lu2 crossing lu2	most	always
+𒈓	lu2 opposing lu2	most	always
+𒈕	lu2 sheshig	most	always
+𒎉	lu2 sheshig times bad	most	always
+𒈔	lu2 squared	most	always
+𒈑	lu2 tenu	most	always
+𒇾	lu2 times al	most	always
+𒇿	lu2 times bad	most	always
+𒈀	lu2 times esh2	most	always
+𒎊	lu2 times esh2 plus lal	most	always
+𒈁	lu2 times esh2 tenu	most	always
+𒈂	lu2 times gan2 tenu	most	always
+𒈃	lu2 times hi times bad	most	always
+𒈄	lu2 times im	most	always
+𒈅	lu2 times kad2	most	always
+𒈆	lu2 times kad3	most	always
+𒈇	lu2 times kad3 plus ash	most	always
+𒈈	lu2 times ki	most	always
+𒈉	lu2 times la plus ash	most	always
+𒈊	lu2 times lagab	most	always
+𒈋	lu2 times me plus en	most	always
+𒈌	lu2 times ne	most	always
+𒈍	lu2 times nu	most	always
+𒎋	lu2 times shu	most	always
+𒈎	lu2 times si plus ash	most	always
+𒈏	lu2 times sik2 plus bu	most	always
+𒈐	lu2 times tug2	most	always
+𒈖	lu3	most	always
+𒈗	lugal	most	always
+𒈙	lugal opposing lugal	most	always
+𒈘	lugal over lugal	most	always
+𒈚	lugal sheshig	most	always
+𒈛	luh	most	always
+𒈜	lul	most	always
+𒈝	lum	most	always
+𒈞	lum over lum	most	always
+𒈟	lum over lum gar over gar	most	always
+𒈠	ma	most	always
+𒈢	ma gunu	most	always
+𒈡	ma times tak4	most	always
+𒈣	ma2	most	always
+𒈤	mah	most	always
+𒈥	mar	most	always
+𒈦	mash	most	always
+𒈧	mash2	most	always
+𒈨	me	most	always
+𒈩	mes	most	always
+𒎌	mesh	most	always
+𒈪	mi	most	always
+𒈫	min	most	always
+𒈬	mu	most	always
+𒈭	mu over mu	most	always
+𒈮	mug	most	always
+𒈯	mug gunu	most	always
+𒈰	munsub	most	always
+𒈱	murgu2	most	always
+𒈲	mush	most	always
+𒈸	mush crossing mush	most	always
+𒈶	mush over mush	most	always
+𒈷	mush over mush times a plus na	most	always
+𒈳	mush times a	most	always
+𒈴	mush times kur	most	always
+𒈵	mush times za	most	always
+𒈹	mush3	most	always
+𒈽	mush3 gunu	most	always
+𒈺	mush3 times a	most	always
+𒈻	mush3 times a plus di	most	always
+𒈼	mush3 times di	most	always
+𒎍	mush3 times za	most	always
+𒈿	na2	most	always
+𒎎	na4	most	always
+𒉀	naga	most	always
+𒉁	naga inverted	most	always
+𒉃	naga opposing naga	most	always
+𒉂	naga times shu tenu	most	always
+𒉄	nagar	most	always
+𒉆	nam	most	always
+𒉅	nam nutillu	most	always
+𒉇	nam2	most	always
+𒈾	nan	most	always
+𒉈	ne	most	always
+𒉋	ne sheshig	most	always
+𒉉	ne times a	most	always
+𒉊	ne times ud	most	always
+𒉌	ni	most	always
+𒉍	ni times e	most	always
+𒉎	ni2	most	always
+𒉏	nim	most	always
+𒉐	nim times gan2 tenu	most	always
+𒉑	nim times gar plus gan2 tenu	most	always
+𒎏	nin	most	always
+𒎐	nin9	most	always
+𒉒	ninda2	most	always
+𒉓	ninda2 times an	most	always
+𒉔	ninda2 times ash	most	always
+𒉕	ninda2 times ash plus ash	most	always
+𒎑	ninda2 times bal	most	always
+𒎒	ninda2 times gi	most	always
+𒉖	ninda2 times gud	most	always
+𒉗	ninda2 times me plus gan2 tenu	most	always
+𒉘	ninda2 times ne	most	always
+𒉙	ninda2 times nun	most	always
+𒉚	ninda2 times she	most	always
+𒉛	ninda2 times she plus a an	most	always
+𒉜	ninda2 times she plus ash	most	always
+𒉝	ninda2 times she plus ash plus ash	most	always
+𒉞	ninda2 times u2 plus ash	most	always
+𒉟	ninda2 times ush	most	always
+𒉠	nisag	most	always
+𒉡	nu	most	always
+𒉢	nu11	most	always
+𒎓	nu11 rotated ninety degrees	most	always
+𒉣	nun	most	always
+𒉫	nun crossing nun	most	always
+𒉬	nun crossing nun lagar over lagar	most	always
+𒉤	nun lagar times gar	most	always
+𒉥	nun lagar times mash	most	always
+𒉦	nun lagar times sal	most	always
+𒉧	nun lagar times sal over nun lagar times sal	most	always
+𒉨	nun lagar times ush	most	always
+𒉪	nun over nun	most	always
+𒉩	nun tenu	most	always
+𒉭	nunuz	most	always
+𒉮	nunuz ab2 times ashgab	most	always
+𒉯	nunuz ab2 times bi	most	always
+𒉰	nunuz ab2 times dug	most	always
+𒉱	nunuz ab2 times gud	most	always
+𒉲	nunuz ab2 times igi gunu	most	always
+𒉳	nunuz ab2 times kad3	most	always
+𒉴	nunuz ab2 times la	most	always
+𒉵	nunuz ab2 times ne	most	always
+𒉶	nunuz ab2 times sila3	most	always
+𒉷	nunuz ab2 times u2	most	always
+𒉸	nunuz kisim5 times bi	most	always
+𒉹	nunuz kisim5 times bi u	most	always
+𒉺	pa	most	always
+𒉻	pad	most	always
+𒉼	pan	most	always
+𒉽	pap	most	always
+𒉾	pesh2	most	always
+𒎔	pesh2 asterisk	most	always
+𒉿	pi	most	always
+𒊉	pi crossing pi	most	always
+𒊀	pi times a	most	always
+𒊁	pi times ab	most	always
+𒊂	pi times bi	most	always
+𒊃	pi times bu	most	always
+𒊄	pi times e	most	always
+𒊅	pi times i	most	always
+𒊆	pi times ib	most	always
+𒊇	pi times u	most	always
+𒊈	pi times u2	most	always
+𒎕	pir2	most	always
+𒊊	pirig	most	always
+𒊎	pirig opposing pirig	most	always
+𒊋	pirig times kal	most	always
+𒊌	pirig times ud	most	always
+𒊍	pirig times za	most	always
+𒊏	ra	most	always
+𒊐	rab	most	always
+𒊑	ri	most	always
+𒊒	ru	most	always
+𒊓	sa	most	always
+𒊕	sag	most	always
+𒊨	sag gunu	most	always
+𒊔	sag nutillu	most	always
+𒊧	sag over sag	most	always
+𒊖	sag times a	most	always
+𒊗	sag times du	most	always
+𒊘	sag times dub	most	always
+𒊙	sag times ha	most	always
+𒎖	sag times igi gunu	most	always
+𒊚	sag times kak	most	always
+𒊛	sag times kur	most	always
+𒊜	sag times lum	most	always
+𒊝	sag times mi	most	always
+𒊞	sag times nun	most	always
+𒊟	sag times sal	most	always
+𒊠	sag times shid	most	always
+𒊡	sag times tab	most	always
+𒊢	sag times u2	most	always
+𒊣	sag times ub	most	always
+𒊤	sag times um	most	always
+𒊥	sag times ur	most	always
+𒊦	sag times ush	most	always
+𒊩	sal	most	always
+𒊪	sal lagab times ash2	most	always
+𒊫	sanga2	most	always
+𒊬	sar	most	always
+𒊭	sha	most	always
+𒊮	sha3	most	always
+𒊯	sha3 times a	most	always
+𒊰	sha3 times bad	most	always
+𒊱	sha3 times gish	most	always
+𒊲	sha3 times ne	most	always
+𒊳	sha3 times shu2	most	always
+𒊴	sha3 times tur	most	always
+𒊵	sha3 times u	most	always
+𒊶	sha3 times u plus a	most	always
+𒊷	sha6	most	always
+𒊸	shab6	most	always
+𒊹	shar2	most	always
+𒊺	she	most	always
+𒊻	she hu	most	always
+𒊼	she over she gad over gad gar over gar	most	always
+𒊽	she over she tab over tab gar over gar	most	always
+𒊾	sheg9	most	always
+𒊿	shen	most	always
+𒋀	shesh	most	always
+𒋁	shesh2	most	always
+𒋂	sheshlam	most	always
+𒋃	shid	most	always
+𒋄	shid times a	most	always
+𒋅	shid times im	most	always
+𒋆	shim	most	always
+𒋇	shim times a	most	always
+𒋈	shim times bal	most	always
+𒋉	shim times bulug	most	always
+𒋊	shim times din	most	always
+𒋋	shim times gar	most	always
+𒋌	shim times igi	most	always
+𒋍	shim times igi gunu	most	always
+𒋎	shim times kushu2	most	always
+𒋏	shim times lul	most	always
+𒋐	shim times mug	most	always
+𒋑	shim times sal	most	always
+𒋒	shinig	most	always
+𒋓	shir	most	always
+𒋕	shir over shir bur over bur	most	always
+𒋔	shir tenu	most	always
+𒋖	shita	most	always
+𒋗	shu	most	always
+𒋘	shu over inverted shu	most	always
+𒋙	shu2	most	always
+𒋚	shubur	most	always
+𒋛	si	most	always
+𒋜	si gunu	most	always
+𒋝	sig	most	always
+𒋞	sig4	most	always
+𒋟	sig4 over sig4 shu2	most	always
+𒋠	sik2	most	always
+𒋡	sila3	most	always
+𒋢	su	most	always
+𒋣	su over su	most	always
+𒋤	sud	most	always
+𒋥	sud2	most	always
+𒋦	suhur	most	always
+𒋧	sum	most	always
+𒋨	sumash	most	always
+𒋩	sur	most	always
+𒋪	sur9	most	always
+𒋫	ta	most	always
+𒋬	ta asterisk	most	always
+𒋯	ta gunu	most	always
+𒋭	ta times hi	most	always
+𒋮	ta times mi	most	always
+𒋰	tab	most	always
+𒋱	tab over tab ni over ni dish over dish	most	always
+𒋲	tab squared	most	always
+𒋳	tag	most	always
+𒋴	tag times bi	most	always
+𒋵	tag times gud	most	always
+𒋶	tag times she	most	always
+𒋷	tag times shu	most	always
+𒋸	tag times tug2	most	always
+𒋹	tag times ud	most	always
+𒋺	tak4	most	always
+𒋻	tar	most	always
+𒋼	te	most	always
+𒋽	te gunu	most	always
+𒋾	ti	most	always
+𒋿	ti tenu	most	always
+𒎗	ti2	most	always
+𒌀	til	most	always
+𒌁	tir	most	always
+𒌃	tir over tir	most	always
+𒌄	tir over tir gad over gad gar over gar	most	always
+𒌂	tir times tak4	most	always
+𒌅	tu	most	always
+𒌆	tug2	most	always
+𒌇	tuk	most	always
+𒌈	tum	most	always
+𒌉	tur	most	always
+𒌊	tur over tur za over za	most	always
+𒌋	u	most	always
+𒌌	u gud	most	always
+𒌎	u over u pa over pa gar over gar	most	always
+𒌏	u over u sur over sur	most	always
+𒌐	u over u u reversed over u reversed	most	always
+𒌍	u u u	most	always
+𒌑	u2	most	always
+𒌒	ub	most	always
+𒌓	ud	most	always
+𒌙	ud gunu	most	always
+𒌔	ud kushu2	most	always
+𒌚	ud sheshig	most	always
+𒌛	ud sheshig times bad	most	always
+𒌕	ud times bad	most	always
+𒌖	ud times mi	most	always
+𒌗	ud times u plus u plus u	most	always
+𒌘	ud times u plus u plus u gunu	most	always
+𒌜	udug	most	always
+𒌝	um	most	always
+𒌞	um times lagab	most	always
+𒎘	um times me	most	always
+𒌟	um times me plus da	most	always
+𒌠	um times sha3	most	always
+𒌡	um times u	most	always
+𒌢	umbin	most	always
+𒌣	umum	most	always
+𒌤	umum times kaskal	most	always
+𒌥	umum times pa	most	always
+𒌦	un	most	always
+𒌧	un gunu	most	always
+𒌨	ur	most	always
+𒌩	ur crossing ur	most	always
+𒌪	ur sheshig	most	always
+𒌫	ur2	most	always
+𒌬	ur2 times a plus ha	most	always
+𒌭	ur2 times a plus na	most	always
+𒌮	ur2 times al	most	always
+𒌯	ur2 times ha	most	always
+𒌰	ur2 times nun	most	always
+𒌱	ur2 times u2	most	always
+𒌲	ur2 times u2 plus ash	most	always
+𒌳	ur2 times u2 plus bi	most	always
+𒌴	ur4	most	always
+𒌵	uri	most	always
+𒌶	uri3	most	always
+𒌷	uru	most	always
+𒌸	uru times a	most	always
+𒌹	uru times ashgab	most	always
+𒌺	uru times bar	most	always
+𒌻	uru times dun	most	always
+𒌼	uru times ga	most	always
+𒌽	uru times gal	most	always
+𒌾	uru times gan2 tenu	most	always
+𒌿	uru times gar	most	always
+𒍀	uru times gu	most	always
+𒍁	uru times ha	most	always
+𒍂	uru times igi	most	always
+𒍃	uru times im	most	always
+𒍄	uru times ish	most	always
+𒍅	uru times ki	most	always
+𒍆	uru times lum	most	always
+𒍇	uru times min	most	always
+𒍈	uru times pa	most	always
+𒍉	uru times she	most	always
+𒍊	uru times sig4	most	always
+𒍋	uru times tu	most	always
+𒍌	uru times u plus gud	most	always
+𒍍	uru times ud	most	always
+𒍎	uru times uruda	most	always
+𒍏	uruda	most	always
+𒍐	uruda times u	most	always
+𒍑	ush	most	always
+𒍒	ush times a	most	always
+𒍓	ush times ku	most	always
+𒍔	ush times kur	most	always
+𒍕	ush times tak4	most	always
+𒍗	ush2	most	always
+𒍘	ushumx	most	always
+𒍖	ushx	most	always
+𒍙	utuki	most	always
+𒎙	uu	most	always
+𒍚	uz3	most	always
+𒍛	uz3 times kaskal	most	always
+𒍜	uzu	most	always
+𒍝	za	most	always
+𒍟	za squared times kur	most	always
+𒍞	za tenu	most	always
+𒍠	zag	most	always
+𒍡	zamx	most	always
+𒍢	ze2	most	always
+𒍣	zi	most	always
+𒍤	zi over zi	most	always
+𒍥	zi3	most	always
+𒍦	zib	most	always
+𒍧	zib kaba tenu	most	always
+𒍨	zig	most	always
+𒍩	ziz2	most	always
+𒍪	zu	most	always
+𒍫	zu5	most	always
+𒍬	zu5 times a	most	always
+𒍭	zubur	most	always
+𒍮	zum	most	always

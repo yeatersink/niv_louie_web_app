@@ -1,0 +1,150 @@
+#Hebrew symbols.dic
+#A part of NonVisual Desktop Access (NVDA)
+#URL: http://www.nvda-project.org/
+#Copyright (c) 2024Matthew Yeater and Paul Geoghegan.
+#This file is covered by the GNU General Public License.
+
+א	alef	most	always
+֢	atnah hafukh	most	always
+֑	atnokta	most	always
+ע	ayin	most	always
+ב	bet	most	always
+בּ	bet with dagesh	most	always
+בּ	bet with dagesh	most	always
+בְּ	bet with dagesh sheva	most	always
+בְּ	bet with dagesh sheva	most	always
+בֿ	bet with rafe	most	always
+✔	check mark distinguishes same kind of varient	most	always
+❧	check marks end of transposition	most	always
+ּ	dagesh	most	always
+ד	dalet	most	always
+דּ	dalet with dagesh	most	always
+דְּ	dalet with dagesh sheva	most	always
+֧	darga	most	always
+֭	dehi	most	always
+װ	double vav	most	always
+ײ	double yod	most	always
+ײַ	double yod with patah	most	always
+ך	final kaf	most	always
+ם	final mem	most	always
+ן	final nun	most	always
+ף	final pe	most	always
+ץ	final tsadi	most	always
+׳	geresh	most	always
+֜	geresh	most	always
+֝	geresh muqdam	most	always
+״	gershayim	most	always
+֞	gershayim	most	always
+ג	gimel	most	always
+ֲ	hataf patah	most	always
+ֳ	hataf qamats	most	always
+ֱ	hataf segol	most	always
+ח	het	most	always
+ה	hey	most	always
+הּ	hey  with dagesh	most	always
+ִ	hiriq	most	always
+ִי	hiriq-yod	most	always
+ֺ	holam haser	most	always
+ֹ	holam malay	most	always
+וֹ	holam-vav	most	always
+֬	iluy	most	always
+כ	kaf	most	always
+כּ	kaf with dagesh	most	always
+כּ	kaf with dagesh	most	always
+כְּ	kaf with dagesh  sheva	most	always
+כְּ	kaf with dagesh sheva	most	always
+ל	lamed	most	always
+לּ	lamed with dagesh	most	always
+לְּ	lamed with dagesh sheva	most	always
+ׅ	lower dot	most	always
+֤	mahapakh	most	always
+־	maqaf	most	always
+✕	mark beginning of replacement	most	always
+✖	mark ends of replacement	most	always
+✗	mark for  insertion	most	always
+❚	mark indicates varrnt	most	always
+❑	mark that distinguishes between varient	most	always
+❙	mark that indicates alternative readings	most	always
+❘	mark that separates variations	most	always
+❦	marks beginning of transposition	most	always
+❥	marks distinguishes between varient	most	always
+❏	marks end of omited word	most	always
+✙	marks end of replaced text	most	always
+❍	marks omitted word	most	always
+❐	marks replaced word	most	always
+✘	marks varients with in apparatus	most	always
+֯	masora circle	most	always
+מ	mem	most	always
+מּ	mem with dagesh	most	always
+מְּ	mem with dagesh sheva	most	always
+֥	merkha	most	always
+֦	merkha kefula	most	always
+ֽ	meteg	most	always
+֣	munah	most	always
+נ	nun	most	always
+׆	nun hafukha	most	always
+נְּ	nun with  dagesh sheva	most	always
+נּ	nun with dagesh	most	always
+֫	ole	most	always
+׀	paseq	most	always
+֙	pashta	most	always
+ַ	patah	most	always
+֡	pazer	most	always
+פ	pe	most	always
+פּ	pe with dagesh	most	always
+פְּ	pe with dagesh sheva	most	always
+פֿ	pe with rafe	most	always
+֨	qadma	most	always
+ָ	qamats	most	always
+ׇ	qamats qatan	most	always
+֟	qarney para	most	always
+ק	qof	most	always
+קּ	qof with dagesh	most	always
+קְּ	qof with dagesh sheva	most	always
+ֻ	qubuts	most	always
+ֿ	rafe	most	always
+❁	reference to lxx	most	always
+ר	resh	most	always
+֗	revia	most	always
+ס	samekh	most	always
+ֶ	segol	most	always
+֒	segol - isolated	most	always
+֓	shalshelet	most	always
+ְ	sheva	most	always
+ש	shin	most	always
+ׁ	shin dot	most	always
+שׁ	shin with dot	most	always
+שְׁ	shin with dot and sheva	most	always
+ּוְ	shuriq sheva	most	always
+ּו	shuruq	most	always
+וּ	shuruq	most	always
+שׂ	sin	most	always
+ׂ	sin dot	most	always
+שְׂ	sin sheva	most	always
+׃	sof pasuq	most	always
+ת	tav	most	always
+תּ	tav with dagesh	most	always
+תְּ	tav with dagesh sheva	most	always
+תּ	tav with daggesh	most	always
+תְּ	tav with daggesh sheva	most	always
+֠	telisha gedola	most	always
+֩	telisha qetana	most	always
+ט	tet	most	always
+֛	tevir	most	always
+֖	tipeha	most	always
+צ	tsadi	most	always
+ֵ	tsere	most	always
+ֵי	tsere-yod	most	always
+ׄ	upper dot	most	always
+ו	vav	most	always
+ױ	vav yod	most	always
+֪	yerah ben yomo	most	always
+֚	yetiv	most	always
+י	yod	most	always
+יּ	yod with dagesh	most	always
+יְּ	yod with dagesh sheva	most	always
+֕	zaqef gadol	most	always
+֔	zaqef qatan	most	always
+֘	zarqa	most	always
+ז	zayin	most	always
+֮	zinor	most	always

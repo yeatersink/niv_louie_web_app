@@ -1,0 +1,143 @@
+#Syriac symbols.dic
+#A part of NonVisual Desktop Access (NVDA)
+#URL: http://www.nvda-project.org/
+#Copyright (c) 2024Matthew Yeater and Paul Geoghegan.
+#This file is covered by the GNU General Public License.
+
+܏	abbreviation mark	most	always
+ܐ	alaph	most	always
+ܐ݁	alaph and qushshaya	most	always
+ܐ݂	alaph and rukkakha	most	always
+݊	barrekh	most	always
+ܒ	beth	most	always
+ܒ݁	beth and qushshaya	most	always
+ܒ݂	beth and rukkakha	most	always
+܆	colon skewed left	most	always
+܇	colon skewed right	most	always
+̈	combining diaeresis.	most	always
+܊	contraction	most	always
+ܕ	dalath	most	always
+ܕ݁	dalath and qushshaya	most	always
+ܕ݂	dalath and rukkakha	most	always
+ܖ	dotless dalath rish	most	always
+ܖ݁	dotless dalath rish and qushshaya	most	always
+ܖ݂	dotless dalath rish and rukkakha	most	always
+ܹ	dotted zlama angular	most	always
+ܸ	dotted zlama horizontal	most	always
+ܥ	e	most	always
+ܥ݁	e and qushshaya	most	always
+ܥ݂	e and rukkakha	most	always
+܀	end of paragraph	most	always
+ܽ	esasa above	most	always
+ܾ	esasa below	most	always
+݀	feminine dot	most	always
+ܤ	final semkath	most	always
+ܤ݁	final semkath and qushshaya	most	always
+ܤ݂	final semkath and rukkakha	most	always
+ܓ	gamal	most	always
+ܓ݁	gamal and qushshaya	most	always
+ܓ݂	gamal and rukkakha	most	always
+ܔ	gamal garshuni	most	always
+ܔ݁	gamal garshuni and qushshaya	most	always
+ܔ݂	gamal garshuni and rukkakha	most	always
+܍	harklean asteriscus	most	always
+܌	harklean metobelus	most	always
+܋	harklean obelus	most	always
+ܻ	hbasa  below	most	always
+ܺ	hbasa above	most	always
+ܼ	hbasa-esasa dotted	most	always
+ܗ	he	most	always
+ܗ݁	he and qushshaya	most	always
+ܗ݂	he and rukkakha	most	always
+ܚ	heth	most	always
+ܚ݁	heth and qushshaya	most	always
+ܚ݂	heth and rukkakha	most	always
+܅	horizontal colon	most	always
+ܟ	kaph	most	always
+ܟ݁	kaph and qushshaya	most	always
+ܟ݂	kaph and rukkakha	most	always
+ܠ	lamadh	most	always
+ܠ݁	lamadh and qushshaya	most	always
+ܠ݂	lamadh and rukkakha	most	always
+̄	macron above	most	always
+̱	macron below	most	always
+ܡ	mim	most	always
+ܡ݁	mim and qushshaya	most	always
+ܡ݂	mim and rukkakha	most	always
+݉	music	most	always
+ܢ	nun	most	always
+ܢ݁	nun and qushshaya	most	always
+ܢ݂	nun and rukkakha	most	always
+݇	oblique line above	most	always
+݈	oblique line below	most	always
+ܦ	pe	most	always
+ܦ݁	pe and qushshaya	most	always
+ܦ݂	pe and rukkakha	most	always
+ܭ	persian bheth	most	always
+ܯ	persian dhalath	most	always
+ܮ	persian ghamal	most	always
+ܰ	pthaha above	most	always
+ܱ	pthaha below	most	always
+ܲ	pthaha dotted	most	always
+ܩ	qaph	most	always
+ܩ݁	qaph and qushshaya	most	always
+ܩ݂	qaph and rukkakha	most	always
+݁	qushshaya	most	always
+ܶ	rbasa above	most	always
+ܷ	rbasa below	most	always
+ܧ	reversed pe	most	always
+ܧ݁	reversed pe and qushshaya	most	always
+ܧ݂	reversed pe and rukkakha	most	always
+ܪ	rish	most	always
+ܪ݁	rish and qushshaya	most	always
+ܪ݂	rish and rukkakha	most	always
+݂	rukkakha	most	always
+ܿ	rwaha	most	always
+ܨ	sadhe	most	always
+ܨ݁	sadhe and qushshaya	most	always
+ܨ݂	sadhe and rukkakha	most	always
+ܣ	semkath	most	always
+ܣ݁	semkath and qushshaya	most	always
+ܣ݂	semkath and rukkakha	most	always
+ܫ	shin	most	always
+ܫ݂	shin and rukkakha	most	always
+ݏ	sogdian fe	most	always
+ݎ	sogdian khaph	most	always
+ݍ	sogdian zhain	most	always
+܄	sublinear colon	most	always
+܉	sublinear colon skewed right	most	always
+܂	sublinear full stop	most	always
+ܑ	superscript alaph	most	always
+ܑ݁	superscript alaph  and qushshaya	most	always
+ܑ݂	superscript alaph  and rukkakha	most	always
+܃	supralinear colon	most	always
+܈	supralinear colon skewed left	most	always
+܁	supralinear full stop	most	always
+ܬ	taw	most	always
+ܬ݁	taw and qushshaya	most	always
+ܬ݂	taw and rukkakha	most	always
+ܛ	teth	most	always
+ܛ݁	teth and qushshaya	most	always
+ܛ݂	teth and rukkakha	most	always
+ܜ	teth garshuni	most	always
+ܜ݁	teth garshuni and qushshaya	most	always
+ܜ݂	teth garshuni and rukkakha	most	always
+݅	three dots above	most	always
+݆	three dots below	most	always
+݃	two vertical dots above	most	always
+݄	two vertical dots below	most	always
+ܘ	waw	most	always
+ܘ݁	waw and qushshaya	most	always
+ܘ݂	waw and rukkakha	most	always
+ܝ	yudh	most	always
+ܝ݁	yudh and qushshaya	most	always
+ܝ݂	yudh and rukkakha	most	always
+ܞ	yudh he	most	always
+ܞ݁	yudh he and qushshaya	most	always
+ܞ݂	yudh he and rukkakha	most	always
+ܙ	zain	most	always
+ܙ݁	zain and qushshaya	most	always
+ܙ݂	zain and rukkakha	most	always
+ܳ	zqapha above	most	always
+ܴ	zqapha below	most	always
+ܵ	zqapha dotted	most	always

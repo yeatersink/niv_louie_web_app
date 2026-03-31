@@ -1,0 +1,894 @@
+Hex,Character,Name,Braille
+384,΄,tonos,
+385,΅,dialytika and oxia,
+387,·,greek semi-colon,
+0390+03C9+0345,ΐῳ,iota omega with dialytika and oxia,⠺⠔
+0390+03C9,ΐω,iota omega with dialytika and oxia,⠺
+390,ΐ,iota with dialytika and oxia isolated,
+03AC+0345,ᾴ,alpha with oxia,⠜⠔
+03AC,ά,alpha with oxia,⠜
+03AD+0345,έ,epsilon with oxia,⠫⠔
+03AD,έ,epsilon with oxia,⠫
+03AE+0345,ῄ,eta with oxia,⠿⠔
+03AE,ή,eta with oxia,⠿
+03AF+03C9+0345,ίῳ,iota omega with oxia,⠺⠔
+03AF+0345,ίͅ,iota with oxia,⠔
+03AF,ί,iota with oxia,⠔
+03B0+03C9+0345,ΰῳ,upsilon omega with dialytika and oxia,⠳⠺⠔
+03B0+03C9,ΰω,upsilon omega with dialytika and oxia,⠳⠺
+03B0,ΰ,upsilon with dialytika and oxia isolated,⠳
+03B1+0300+0345,ᾲ,alpha with varia,⠷⠔
+03B1+0300,ὰ,alpha with varia,⠷
+03B1+0301+0345,ᾴ,alpha with oxia,⠜⠔
+03B1+0301,ά,alpha with oxia,⠜
+03B1+0313+0300+0345,ᾂ,alpha with psili and varia,⠴⠷⠔
+03B1+0313+0300,ἂ,alpha with psili and varia,⠴⠷
+03B1+0313+0301+0345,ᾄ,alpha with psili and oxia,⠴⠜⠔
+03B1+0313+0301,ἄ,alpha with psili and oxia,⠴⠜
+03B1+0313+0342+0345,ᾆ,alpha with psili and perispomeni,⠴⠡⠔
+03B1+0313+0342,ἆ,alpha with psili and perispomeni,⠴⠡
+03B1+0313+0345,ᾀ,alpha with psili,⠴⠁⠔
+03B1+0313,ἀ,alpha with psili,⠴⠁
+03B1+0314+0300+0345,ᾃ,alpha with dasia and varia,⠓⠷⠔
+03B1+0314+0300,ἃ,alpha with dasia and varia,⠓⠷
+03B1+0314+0301+0345,ᾅ,alpha with dasia and oxia,⠓⠜⠔
+03B1+0314+0301,ἅ,alpha with dasia and oxia,⠓⠜
+03B1+0314+0342+0345,ᾇ,alpha with dasia and perispomeni,⠓⠡⠔
+03B1+0314+0342,ἇ,alpha with dasia and perispomeni,⠓⠡
+03B1+0314+0345,ᾁ,alpha with dasia,⠓⠁⠔
+03B1+0314,ἁ,alpha with dasia,⠓⠁
+03B1+0342+0345,ᾷ,alpha with perispomeni,⠡⠔
+03B1+0342,ᾶ,alpha with perispomeni,⠡
+03B1+0345,ᾳ,alpha,⠁⠔
+03B1+0390+0345,αΐͅ,alpha and iota with oxia and dialytika,⠁⠔
+03B1+0390,αΐ,alpha and iota with oxia and dialytika,⠁
+03B1+03AF+0345,αίͅ,alpha iota with oxia,⠁⠔
+03B1+03AF+03C9+0345,αίῳ,alpha iota Greek Omega with oxia,⠁⠺⠔
+03B1+03AF,αί,alpha iota with oxia,⠁
+03B1+03B0+0345,αΰͅ,alpha upsilon with dialytika and oxia,⠁⠳⠔
+03B1+03B0,αΰ,alpha upsilon with dialytika and oxia,⠁⠳
+03B1+03B9+0300+0345,αὶͅ,alpha iota with varia,⠁⠌⠔
+03B1+03B9+0300,αὶ,alpha iota with varia,⠁⠌
+03B1+03B9+0301+0345,αίͅ,alpha iota with oxia,⠁⠿⠔
+03B1+03B9+0301,αί,alpha iota with oxia,⠁⠿
+03B1+03B9+0313+0300+0345,αἲͅ,alpha iota with psili and varia,⠴⠁⠌⠔
+03B1+03B9+0313+0300,αἲ,alpha iota with psili and varia,⠴⠁⠌
+03B1+03B9+0313+0301+0345,αἴͅ,alpha iota with psili and oxia,⠴⠁⠿⠔
+03B1+03B9+0313+0301,αἴ,alpha iota with psili and oxia,⠴⠁⠿
+03B1+03B9+0313+0342+0345,αἶͅ,alpha iota with psili and perispomeni,⠴⠁⠩⠔
+03B1+03B9+0313+0342,αἶ,alpha iota with psili and perispomeni,⠴⠁⠩
+1F3E,ἶ,Capital Iota with Psili and Perispomeni,⠠⠴⠩
+03B1+03B9+0313+0345,αἰͅ,alpha iota with psili,⠴⠁⠊⠔
+03B1+03B9+0313,αἰ,alpha iota with psili,⠴⠁⠊
+03B1+03B9+0314+0300+0345,αἳͅ,alpha iota with dasia and varia,⠓⠁⠌⠔
+03B1+03B9+0314+0300,αἳ,alpha iota with dasia and varia,⠓⠁⠌
+03B1+03B9+0314+0301+0345,αἵͅ,alpha iota with dasia and oxia,⠓⠁⠿⠔
+03B1+03B9+0314+0301,αἵ,alpha iota with dasia and oxia,⠓⠁⠿
+03B1+03B9+0314+0342+0345,αἷͅ,alpha iota with dasia and perispomeni,⠓⠁⠩⠔
+03B1+03B9+0314+0342,αἷ,alpha iota with dasia and perispomeni,⠓⠁⠩
+03B1+03B9+0314+0345,αἱͅ,alpha iota with dasia,⠓⠁⠊⠔
+03B1+03B9+0314,αἱ,alpha iota with dasia,⠓⠁⠊
+03B1+03B9+0342+0345,αῖͅ,alpha iota with perispomeni,⠁⠩⠔
+03B1+03B9+0342,αῖ,alpha iota with perispomeni,⠁⠩
+03B1+03B9+0345,αιͅ,alpha iota,⠁⠊⠔
+03B1+03B9,αι,alpha iota,⠁⠊
+03B1+03C5+0300+0345,αὺͅ,alpha upsilon with varia,⠁⠾⠔
+03B1+03C5+0300,αὺ,alpha upsilon with varia,⠁⠾
+03B1+03C5+0301+0345,αύͅ,alpha upsilon with oxia,⠁⠳⠔
+03B1+03C5+0301,αύ,alpha upsilon with oxia,⠁⠳
+03B1+03C5+0313+0300+0345,αὒͅ,alpha upsilon with psili and varia,⠴⠁⠾⠔
+03B1+03C5+0313+0300,αὒ,alpha upsilon with psili and varia,⠴⠁⠾
+03B1+03C5+0313+0301+0345,αὔͅ,alpha upsilon with psili and oxia,⠴⠁⠳⠔
+03B1+03C5+0313+0301,αὔ,alpha upsilon with psili and oxia,⠴⠁⠳
+03B1+03C5+0313+0342+0345,αὖͅ,alpha upsilon with psili and perispomeni,⠴⠁⠧⠔
+03B1+03C5+0313+0342,αὖ,alpha upsilon with psili and perispomeni,⠴⠁⠧
+03B1+03C5+0313+0345,αὐͅ,alpha upsilon with psili,⠴⠁⠥⠔
+03B1+03C5+0313,αὐ,alpha upsilon with psili,⠴⠁⠥
+03B1+03C5+0314+0300+0345,αὓͅ,alpha upsilon with dasia and varia,⠓⠁⠾⠔
+03B1+03C5+0314+0300,αὓ,alpha upsilon with dasia and varia,⠓⠁⠾
+03B1+03C5+0314+0301+0345,αὕͅ,alpha upsilon with dasia and oxia,⠓⠁⠳⠔
+03B1+03C5+0314+0301,αὕ,alpha upsilon with dasia and oxia,⠓⠁⠳
+03B1+03C5+0314+0342+0345,αὗͅ,alpha upsilon with dasia and perispomeni,⠓⠁⠧⠔
+03B1+03C5+0314+0342,αὗ,alpha upsilon with dasia and perispomeni,⠓⠁⠧
+03B1+03C5+0314+0345,αὑͅ,alpha upsilon with dasia,⠓⠁⠥⠔
+03B1+03C5+0314,αὑ,alpha upsilon with dasia,⠓⠁⠥
+03B1+03C5+0342+0345,αῦͅ,alpha upsilon with perispomeni,⠁⠧⠔
+03B1+03C5+0342,αῦ,alpha upsilon with perispomeni,⠁⠧
+03B1+03C5+0345,αυͅ,alpha upsilon,⠁⠥⠔
+03B1+03C5,αυ,alpha upsilon,⠁⠥
+03B1+03CA+0300+0345,αῒͅ,alpha and iota with Graveand dialytika,⠁⠌⠔
+03B1+03CA+0300,αῒ,alpha and iota with Graveand dialytika,⠁⠌
+03B1+03CA+0301+0345,αΐͅ,alpha and iota with oxia and dialytika,⠁⠔
+03B1+03CA+0301,αΐ,alpha and iota with oxia and dialytika,⠁
+03B1+03CA+0342+0345,αῗͅ,alpha and iota with perispomeni and dialytika,⠁⠩⠔
+03B1+03CA+0342,αῗ,alpha and iota with perispomeni and dialytika,⠁⠩
+03B1+03CA+0345,αϊͅ,alpha and iota with dialytikaa,⠁⠊⠔
+03B1+03CA,αϊ,alpha and iota with dialytikaa,⠁⠊
+03B1+03CB+0300+0345,αῢͅ,alpha and upsilon with Graveand dialytika,⠁⠾⠔
+03B1+03CB+0300,αῢ,alpha and upsilon with Graveand dialytika,⠁⠾
+03B1+03CB+0301+0345,αΰͅ,alpha and upsilon with oxia and dialytika,⠁⠳⠔
+03B1+03CB+0301,αΰ,alpha and upsilon with oxia and dialytika,⠁⠳
+03B1+03CB+0342+0345,αῧͅ,alpha and upsilon with perispomeni and dialytika,⠁⠧⠔
+03B1+03CB+0342,αῧ,alpha and upsilon with perispomeni and dialytika,⠁⠧
+03B1+03CB+0345,αϋͅ,alpha and upsilon with dialytikaa,⠁⠥⠔
+03B1+03CB,αϋ,alpha and upsilon with dialytikaa,⠁⠥
+03B1+03CD+0345,αύͅ,alpha upsilon with oxia,⠁⠳⠔
+03B1+03CD,αύ,alpha upsilon with oxia,⠁⠳
+03B1,α,alpha,⠁
+03B2,β,beta,⠃
+03B3,γ,gamma,⠛
+03B4,δ,delta,⠙
+03B5+0300+0345,ὲͅ,epsilon with varia,⠉⠔
+03B5+0300,ὲ,epsilon with varia,⠉
+1F72,ὲ,epsilon with varia,⠉
+03B5+0301+0345,έͅ,epsilon with oxia,⠫⠔
+03B5+0301,έ,epsilon with oxia,⠫
+03B5+0313+0300+0345,ἒͅ,epsilon with psili and varia,⠴⠉⠔
+03B5+0313+0300,ἒ,epsilon with psili and varia,⠴⠉
+03B5+0313+0301+0345,ἔͅ,epsilon with psili and oxia,⠴⠫⠔
+03B5+0313+0301,ἔ,epsilon with psili and oxia,⠴⠫
+03B5+0313+0345,ἐͅ,epsilon with psili,⠴
+03B5+0313,ἐ,epsilon with psili,⠴⠑
+03B5+0314+0300+0345,ἓͅ,epsilon with dasia and varia,⠓⠉⠔
+03B5+0314+0300,ἓ,epsilon with dasia and varia,⠓⠉
+03B5+0314+0301+0345,ἕͅ,epsilon with dasia and oxia,⠓⠫⠔
+03B5+0314+0301,ἕ,epsilon with dasia and oxia,⠓⠫
+03B5+0314+0345,ἑͅ,epsilon with dasia,⠓⠑⠔
+03B5+0314,ἑ,epsilon with dasia,⠓⠑
+03B5+0345,εͅ,epsilon,⠑⠔
+03B5+0390+0345,εΐͅ,epsilon and iota with oxia and dialytika,⠑⠔
+03B5+0390,εΐ,epsilon and iota with oxia and dialytika,⠑
+03B5+03AF+0345,είͅ,epsilon iota with oxia,⠑⠔
+03B5+03AF,εί,epsilon iota with oxia,⠑
+03B5+03B0+0345,εΰͅ,epsilon upsilon with dialytika and oxia,⠑⠳⠔
+03B5+03B0,εΰ,epsilon upsilon with dialytika and oxia,⠑⠳
+03B5+03b9+0300+0345,εὲͅ,epsilon iota,⠑⠌⠔
+03B5+03b9+0300,εὲ,epsilon iota,⠑⠌
+03B5+03b9+0301+0345,εέͅ,epsilon iota,⠑⠔
+03B5+03b9+0301,εέ,epsilon iota,⠑
+03B5+03b9+0313+0300+0345,εἒͅ,epsilon iota,⠴⠑⠌⠔
+03B5+03b9+0313+0300,εἒ,epsilon iota,⠴⠑⠌
+03B5+03b9+0313+0301+0345,εἔͅ,epsilon iota,⠴⠑⠔
+03B5+03b9+0313+0301,εἔ,epsilon iota,⠴⠑
+03B5+03b9+0313+0342+0345,εἐ͂ͅ,epsilon iota,⠴⠑⠩⠔
+03B5+03b9+0313+0342,εἐ͂,epsilon iota,⠴⠑⠩
+03B5+03b9+0313+0345,εἐͅ,epsilon iota,⠴⠑⠊⠔
+03B5+03b9+0313,εἐ,epsilon iota,⠴⠑⠊
+03B5+03b9+0314+0300+0345,εἓͅ,epsilon iota,⠓⠑⠌⠔
+03B5+03b9+0314+0300,εἓ,epsilon iota,⠓⠑⠌
+03B5+03b9+0314+0301+0345,εἕͅ,epsilon iota,⠓⠑⠔
+03B5+03b9+0314+0301,εἕ,epsilon iota,⠓⠑
+03B5+03b9+0314+0342+0345,εἑ͂ͅ,epsilon iota,⠓⠑⠩⠔
+03B5+03b9+0314+0342,εἑ͂,epsilon iota,⠓⠑⠩
+03B5+03b9+0314+0345,εἑͅ,epsilon iota,⠓⠑⠊⠔
+03B5+03b9+0314,εἑ,epsilon iota,⠓⠑⠊
+03B5+03b9+0342+0345,εε͂ͅ,epsilon iota,⠑⠩⠔
+03B5+03b9+0342,εε͂,epsilon iota,⠑⠩
+03B5+03b9+0345,εεͅ,epsilon iota,⠑⠊⠔
+03B5+03b9,εε,epsilon iota,⠑⠊
+03B5+03C5+0300+0345,εὺͅ,epsilon upsilon,⠑⠾⠔
+03B5+03C5+0300,εὺ,epsilon upsilon,⠑⠾
+03B5+03C5+0301+0345,εύͅ,epsilon upsilon,⠑⠳⠔
+03B5+03C5+0301,εύ,epsilon upsilon,⠑⠳
+03B5+03C5+0313+0300+0345,εὺͅ,epsilon upsilon,⠴⠑⠾⠔
+03B5+03C5+0313+0300,εὺ,epsilon upsilon,⠴⠑⠾
+03B5+03C5+0313+0301+0345,εύͅ,epsilon upsilon,⠴⠑⠳⠔
+03B5+03C5+0313+0301,εύ,epsilon upsilon,⠴⠑⠳
+03B5+03C5+0313+0342+0345,εῦͅ,epsilon upsilon,⠴⠑⠧⠔
+03B5+03C5+0313+0342,εῦ,epsilon upsilon,⠴⠑⠧
+03B5+03C5+0313+0345,ευͅ,epsilon upsilon,⠴⠑⠥⠔
+03B5+03C5+0313,ευ,epsilon upsilon,⠴⠑⠥
+03B5+03C5+0314+0300+0345,εὓͅ,epsilon upsilon,⠓⠑⠾⠔
+03B5+03C5+0314+0300,εὓ,epsilon upsilon,⠓⠑⠾
+03B5+03C5+0314+0301+0345,εὕͅ,epsilon upsilon,⠓⠑⠳⠔
+03B5+03C5+0314+0301,εὕ,epsilon upsilon,⠓⠑⠳
+03B5+03C5+0314+0342+0345,εὕͅ,epsilon upsilon,⠓⠑⠧⠔
+03B5+03C5+0314+0342,εὕ,epsilon upsilon,⠓⠑⠧
+03B5+03C5+0314+0345,εὑͅ,epsilon upsilon,⠓⠑⠥⠔
+03B5+03C5+0314,εὑ,epsilon upsilon,⠓⠑⠥
+03B5+03C5+0342+0345,εύͅ,epsilon upsilon,⠑⠧⠔
+03B5+03C5+0342,εύ,epsilon upsilon,⠑⠧
+03B5+03C5+0345,ευͅ,epsilon upsilon,⠑⠥⠔
+03B5+03C5,ευ,epsilon upsilon,⠑⠥
+03B5+03CA+0300+0345,εῒͅ,epsilon and iota with Graveand dialytika,⠑⠌⠔
+03B5+03CA+0300,εῒ,epsilon and iota with Graveand dialytika,⠑⠌
+03B5+03CA+0301+0345,εΐͅ,epsilon and iota with oxia and dialytika,⠑⠔
+03B5+03CA+0301,εΐ,epsilon and iota with oxia and dialytika,⠑
+03B5+03CA+0342+0345,εῗͅ,epsilon and iota with perispomeni and dialytika,⠑⠩⠔
+03B5+03CA+0342,εῗ,epsilon and iota with perispomeni and dialytika,⠑⠩
+03B5+03CA+0345,εϊͅ,epsilon and iota with dialytikaa,⠑⠊⠔
+03B5+03CA,εϊ,epsilon and iota with dialytikaa,⠑⠊
+03B5+03CB+0300+0345,εῢͅ,epsilon and upsilon with Graveand dialytika,⠑⠾⠔
+03B5+03CB+0300,εῢ,epsilon and upsilon with Graveand dialytika,⠑⠾
+03B5+03CB+0301+0345,εΰͅ,epsilon and upsilon with oxia and dialytika,⠑⠳⠔
+03B5+03CB+0301,εΰ,epsilon and upsilon with oxia and dialytika,⠑⠳
+03B5+03CB+0342+0345,εῧͅ,epsilon and upsilon with perispomeni and dialytika,⠑⠧⠔
+03B5+03CB+0342,εῧ,epsilon and upsilon with perispomeni and dialytika,⠑⠧
+03B5+03CB+0345,εϋͅ,epsilon and upsilon with dialytikaa,⠑⠥⠔
+03B5+03CB,εϋ,epsilon and upsilon with dialytikaa,⠑⠥
+03B5+03CD+0345,εύͅ,epsilon upsilon with oxia,⠑⠳⠔
+03B5+03CD,εύ,epsilon upsilon with oxia,⠑⠳
+03B5,ε,epsilon,⠑
+03B6,ζ,zeta,⠵
+03B7+0300+0345,ῂ,eta with varia,⠮⠔
+03B7+0300,ὴ,eta with varia,⠮
+1F74,ὴ,eta with varia,⠮
+03B7+0301+0345,ῄ,eta with oxia,⠿⠔
+03B7+0301,ή,eta with oxia,⠿
+03B7+0313+0300+0345,ᾒ,eta with psili and varia,⠴⠮⠔
+03B7+0313+0300,ἢ,eta with psili and varia,⠴⠮
+03B7+0313+0301+0345,ᾔ,eta with psili and oxia,⠴⠿⠔
+03B7+0313+0301,ἤ,eta with psili and oxia,⠴⠿
+03B7+0313+0342+0345,ᾖ,eta with psili and perispomeni,⠴⠣⠔
+03B7+0313+0342,ἦ,eta with psili and perispomeni,⠴⠣
+03B7+0313+0345,ᾐ,eta with psili,⠴⠱⠔
+03B7+0313,ἠ,eta with psili,⠴⠱
+03B7+0314+0300+0345,ᾓ,eta with dasia and varia,⠓⠮⠔
+03B7+0314+0300,ἣ,eta with dasia and varia,⠓⠮
+03B7+0314+0301+0345,ᾕ,eta with dasia and oxia,⠓⠿⠔
+03B7+0314+0301,ἥ,eta with dasia and oxia,⠓⠿
+03B7+0314+0342+0345,ᾗ,eta with dasia and perispomeni,⠓⠣⠔
+03B7+0314+0342,ἧ,eta with dasia and perispomeni,⠓⠣
+03B7+0314+0345,ᾑ,eta with dasia,⠓⠱⠔
+03B7+0314,ἡ,eta with dasia,⠓⠱
+03B7+0342+0345,ῇ,eta with perispomeni,⠣⠔
+03B7+0342,ῆ,eta with perispomeni,⠣
+03B7+0345,ῃ,eta,⠱⠔
+03B7,η,eta,⠱
+03B8,θ,theta,⠹
+03B9+0300+0345,ὶͅ,iota with varia,⠌⠔
+03B9+0300,ὶ,iota with varia,⠌
+03B9+0301+0345,ίͅ,iota with oxia,⠔
+03B9+0301,ί,iota with oxia,
+03B9+0313+0300+0345,ἲͅ,iota with psili and varia,⠴⠌⠔
+03B9+0313+0300,ἲ,iota with psili and varia,⠴⠌
+03B9+0313+0301+0345,ἴͅ,iota with psili and oxia,⠴⠔
+03B9+0313+0301,ἴ,iota with psili and oxia,⠴
+03B9+0313+0342+0345,ἶͅ,iota with psili and perispomeni,⠴⠩⠔
+03B9+0313+0342,ἶ,iota with psili and perispomeni,⠴⠩
+03B9+0313+0345,ἰͅ,iota with psili,⠴⠊⠔
+03B9+0313,ἰ,iota with psili,⠴⠊
+03B9+0314+0300+0345,ἳͅ,iota with dasia and varia,⠓⠌⠔
+03B9+0314+0300,ἳ,iota with dasia and varia,⠓⠌
+03B9+0314+0301+0345,ἵͅ,iota with dasia and oxia,⠓⠔
+03B9+0314+0301,ἵ,iota with dasia and oxia,⠓
+03B9+0314+0342+0345,ἷͅ,iota with dasia and perispomeni,⠓⠩⠔
+03B9+0314+0342,ἷ,iota with dasia and perispomeni,⠓⠩
+03B9+0314+0345,ἱͅ,iota with dasia,⠓⠊⠔
+03B9+0314,ἱ,iota with dasia,⠓⠊
+03B9+0342+0345,ῖͅ,iota with perispomeni,⠩⠔
+03B9+0342,ῖ,iota with perispomeni,⠩
+03B9+0345,ιͅ,iota,⠊⠔
+03B9,ι,iota,⠊
+03BA,κ,kappa,⠅
+03BB,λ,lambda,⠇
+03BC,μ,mu,⠍
+03BD,ν,nu,⠝
+03BE,ξ,xi,⠭
+03BF+0300+0345,ὸͅ,omnichron with varia,⠔
+03BF+0300,ὸ,omnichron with varia,⠬
+03BF+0301+0345,όͅ,omnichron with oxia,⠪⠔
+03BF+0301,ό,omnichron with oxia,⠪
+03BF+0313+0300+0345,ὂͅ,omnichron with psili and varia,⠴⠬⠔
+03BF+0313+0300,ὂ,omnichron with psili and varia,⠴⠬
+03BF+0313+0301+0345,ὄͅ,omnichron with psili and oxia,⠴⠪⠔
+03BF+0313+0301,ὄ,omnichron with psili and oxia,⠴⠪
+03BF+0313+0345,ὀͅ,omnichron with psili,⠴⠕⠔
+03BF+0313,ὀ,omnichron with psili,⠴⠕
+03BF+0314+0300+0345,ὃͅ,omnichron with dasia and varia,⠓⠬⠔
+03BF+0314+0300,ὃ,omnichron with dasia and varia,⠓⠬
+03BF+0314+0301+0345,ὅͅ,omnichron with dasia and oxia,⠓⠪⠔
+03BF+0314+0301,ὅ,omnichron with dasia and oxia,⠓⠪
+03BF+0314+0345,ὁͅ,omnichron with dasia,⠓⠕⠔
+03BF+0314,ὁ,omnichron with dasia,⠓⠕
+03BF+0345,οͅ,omnichron,⠕⠔
+03BF+0390+0345,οΐͅ,omnichron and iota with oxia and dialytika,⠕⠔
+03BF+0390,οΐ,omnichron and iota with oxia and dialytika,⠕
+03BF+03AF+0345,οίͅ,omnichron iota with oxia,⠕⠔
+03BF+03AF,οί,omnichron iota with oxia,⠕
+03BF+03B0+0345,οΰͅ,omnichron upsilon with dialytika and oxia,⠕⠳⠔
+03BF+03B0,οΰ,omnichron upsilon with dialytika and oxia,⠕⠳
+03BF+03b9+0300+0345,οὶͅ,omnichron iota,⠕⠌⠔
+03BF+03b9+0300,οὶ,omnichron iota,⠕⠌
+03BF+03b9+0301+0345,οίͅ,omnichron iota,⠕⠔
+03BF+03b9+0301,οί,omnichron iota,⠕
+03BF+03b9+0313+0300+0345,οἲͅ,omnichron iota,⠴⠕⠌⠔
+03BF+03b9+0313+0300,οἲ,omnichron iota,⠴⠕⠌
+03BF+03b9+0313+0301+0345,οἴͅ,omnichron iota,⠴⠕⠔
+03BF+03b9+0313+0301,οἴ,omnichron iota,⠴⠕
+03BF+03b9+0313+0342+0345,οἶͅ,omnichron iota,⠴⠕⠩⠔
+03BF+03b9+0313+0342,οἶ,omnichron iota,⠴⠕⠩
+03BF+03b9+0313+0345,οἰͅ,omnichron iota,⠴⠕⠊⠔
+03BF+03b9+0313,οἰ,omnichron iota,⠴⠕⠊
+03BF+03b9+0314+0300+0345,οἳͅ,omnichron iota,⠓⠕⠌⠔
+03BF+03b9+0314+0300,οἳ,omnichron iota,⠓⠕⠌
+03BF+03b9+0314+0301+0345,οἵͅ,omnichron iota,⠓⠕⠔
+03BF+03b9+0314+0301,οἵ,omnichron iota,⠓⠕
+03BF+03b9+0314+0342+0345,οἷͅ,omnichron iota,⠓⠕⠩⠔
+03BF+03b9+0314+0342,οἷ,omnichron iota,⠓⠕⠩
+03BF+03b9+0314+0345,οἱͅ,omnichron iota,⠓⠕⠊⠔
+03BF+03b9+0314,οἱ,omnichron iota,⠓⠕⠊
+03BF+03b9+0342+0345,οῖͅ,omnichron iota,⠕⠩⠔
+03BF+03b9+0342,οῖ,omnichron iota,⠕⠩
+03BF+03b9+0345,οιͅ,omnichron iota,⠕⠊⠔
+03BF+03b9,οι,omnichron iota,⠕⠊
+03BF+03C5+0300+0345,οὺͅ,omnichron upsilon with varia,⠕⠾⠔
+03BF+03C5+0300,οὺ,omnichron upsilon with varia,⠕⠾
+03BF+03C5+0301+0345,ούͅ,omnichron upsilon with oxia,⠕⠳⠔
+03BF+03C5+0301,ού,omnichron upsilon with oxia,⠕⠳
+03BF+03C5+0313+0300+0345,οὒͅ,omnichron upsilon with psili and varia,⠴⠕⠾⠔
+03BF+03C5+0313+0300,οὒ,omnichron upsilon with psili and varia,⠴⠕⠾
+03BF+03C5+0313+0301+0345,οὔͅ,omnichron upsilon with psili and oxia,⠴⠕⠳⠔
+03BF+03C5+0313+0301,οὔ,omnichron upsilon with psili and oxia,⠴⠕⠳
+03BF+03C5+0313+0342+0345,οὖͅ,omnichron upsilon with psili and perispomeni,⠴⠕⠧⠔
+03BF+03C5+0313+0342,οὖ,omnichron upsilon with psili and perispomeni,⠴⠕⠧
+03BF+03C5+0313+0345,οὐͅ,omnichron upsilon with psili,⠴⠕⠥⠔
+03BF+03C5+0313,οὐ,omnichron upsilon with psili,⠴⠕⠥
+03BF+03C5+0314+0300+0345,οὓͅ,omnichron upsilon with dasia and varia,⠓⠕⠾⠔
+03BF+03C5+0314+0300,οὓ,omnichron upsilon with dasia and varia,⠓⠕⠾
+03BF+03C5+0314+0301+0345,οὕͅ,omnichron upsilon with dasia and oxia,⠓⠕⠳⠔
+03BF+03C5+0314+0301,οὕ,omnichron upsilon with dasia and oxia,⠓⠕⠳
+03BF+03C5+0314+0342+0345,οὗͅ,omnichron upsilon with dasia and perispomeni,⠓⠕⠧⠔
+03BF+03C5+0314+0342,οὗ,omnichron upsilon with dasia and perispomeni,⠓⠕⠧
+03BF+03C5+0314+0345,οὑͅ,omnichron upsilon with dasia,⠓⠕⠥⠔
+03BF+03C5+0314,οὑ,omnichron upsilon with dasia,⠓⠕⠥
+03BF+03C5+0342+0345,οῦͅ,omnichron upsilon with perispomeni,⠕⠧⠔
+03BF+03C5+0342,οῦ,omnichron upsilon with perispomeni,⠕⠧
+03BF+03C5+0345,ουͅ,omnichron upsilon,⠕⠥⠔
+03BF+03C5,ου,omnichron upsilon,⠕⠥
+03BF+03CA+0300+0345,οῒͅ,omnichron and iota with Graveand dialytika,⠕⠌⠔
+03BF+03CA+0300,οῒ,omnichron and iota with Graveand dialytika,⠕⠌
+03BF+03CA+0301+0345,οΐͅ,omnichron and iota with oxia and dialytika,⠕⠔
+03BF+03CA+0301,οΐ,omnichron and iota with oxia and dialytika,⠕
+03BF+03CA+0342+0345,οῗͅ,omnichron and iota with perispomeni and dialytika,⠕⠩⠔
+03BF+03CA+0342,οῗ,omnichron and iota with perispomeni and dialytika,⠕⠩
+03BF+03CA+0345,οϊͅ,omnichron and iota with dialytikaa,⠕⠊⠔
+03BF+03CA,οϊ,omnichron and iota with dialytikaa,⠕⠊
+03BF+03CB+0300+0345,οῢͅ,omnichron and upsilon with Graveand dialytika,⠕⠾⠔
+03BF+03CB+0300,οῢ,omnichron and upsilon with Graveand dialytika,⠕⠾
+03BF+03CB+0301+0345,οΰͅ,omnichron and upsilon with oxia and dialytika,⠕⠳⠔
+03BF+03CB+0301,οΰ,omnichron and upsilon with oxia and dialytika,⠕⠳
+03BF+03CB+0342+0345,οῧͅ,omnichron and upsilon with perispomeni and dialytika,⠕⠧⠔
+03BF+03CB+0342,οῧ,omnichron and upsilon with perispomeni and dialytika,⠕⠧
+03BF+03CB+0345,οϋͅ,omnichron and upsilon with dialytikaa,⠕⠥⠔
+03BF+03CB,οϋ,omnichron and upsilon with dialytikaa,⠕⠥
+03BF+03CD+0345,ούͅ,omnichron upsilon with oxia,⠕⠳⠔
+03BF+03CD,ού,omnichron upsilon with oxia,⠕⠳
+03BF,ο,omnichron,⠕
+03C0,π,pi,⠏
+03C1+0314,ῥ,rho with dasia,⠓⠗
+03C1,ρ,rho,⠗
+03C2+',ς,final sigma,⠎
+"03C2+',","ς,",final sigma comma,⠎⠂
+03C2+'.,ς.,final sigma period,⠎⠲
+03C2+0387,ς·,final sigma teleia,⠎
+03C2,ς,final sigma isolated,⠎
+03C3,σ,sigma,⠎
+03C4,τ,tau,⠞
+03C5+0300+0345,ὺͅ,upsilon with varia,⠾⠔
+03C5+0300,ὺ,upsilon with varia,⠾⠔
+1F7A,ὺ,upsilon with varia,⠾⠔
+03C5+0301+0345,ύͅ,upsilon with oxia,⠳⠔
+03C5+0301,ύ,upsilon with oxia,⠳
+03C5+0313+0300+0345,ὒͅ,upsilon with psili and varia,⠴⠾⠔
+03C5+0313+0300,ὒ,upsilon with psili and varia,⠴⠾
+03C5+0313+0301+0345,ὔͅ,upsilon with psili and oxia,⠴⠳⠔
+03C5+0313+0301,ὔ,upsilon with psili and oxia,⠴⠳
+03C5+0313+0342+0345,ὖͅ,upsilon with psili and perispomeni,⠴⠧⠔
+03C5+0313+0342,ὖ,upsilon with psili and perispomeni,⠴⠧
+03C5+0313+0345,ὐͅ,upsilon with psili,⠴⠥⠔
+03C5+0313,ὐ,upsilon with psili,⠴⠥
+03C5+0314+0300+0345,ὓͅ,upsilon with dasia and varia,⠓⠾⠔
+03C5+0314+0300,ὓ,upsilon with dasia and varia,⠓⠾
+03C5+0314+0301+0345,ὕͅ,upsilon with dasia and oxia,⠓⠳⠔
+03C5+0314+0301,ὕ,upsilon with dasia and oxia,⠓⠳
+03C5+0314+0342+0345,ὗͅ,upsilon with dasia and perispomeni,⠓⠧⠔
+03C5+0314+0342,ὗ,upsilon with dasia and perispomeni,⠓⠧
+03C5+0314+0345,ὑͅ,upsilon with dasia,⠓⠥⠔
+03C5+0314,ὑ,upsilon with dasia,⠓⠥
+03C5+0342+0345,ῦͅ,upsilon with perispomeni,⠧⠔
+03C5+0342,ῦ,upsilon with perispomeni,⠧
+03C5+0345,υͅ,upsilon,⠥⠔
+03C5+0390+0345,υΐͅ,upsilon and iota with oxia and dialytika,⠥⠔
+03C5+0390,υΐ,upsilon and iota with oxia and dialytika,⠥
+03C5+03AF+0345,υίͅ,upsilon iota with oxia,⠥⠔
+03C5+03AF,υί,upsilon iota with oxia,⠥
+03C5+03b9+0300+0345,υὲͅ,upsilon iota,⠥⠌⠔
+03C5+03b9+0300,υὲ,upsilon iota,⠥⠌
+03C5+03b9+0301+0345,υέͅ,upsilon iota,⠥⠔
+03C5+03b9+0301,υέ,upsilon iota,⠥
+03C5+03b9+0313+0300+0345,υἒͅ,upsilon iota,⠴⠥⠌⠔
+03C5+03b9+0313+0300,υἒ,upsilon iota,⠴⠥⠌
+03C5+03b9+0313+0301+0345,υἔͅ,upsilon iota,⠴⠥⠔
+03C5+03b9+0313+0301,υἔ,upsilon iota,⠴⠥
+03C5+03b9+0313+0342+0345,υἐ͂ͅ,upsilon iota,⠴⠥⠩⠔
+03C5+03b9+0313+0342,υἐ͂,upsilon iota,⠴⠥⠩
+03C5+03b9+0313+0345,υἐͅ,upsilon iota,⠴⠥⠊⠔
+03C5+03b9+0313,υἐ,upsilon iota,⠴⠥⠊
+03C5+03b9+0314+0300+0345,υἓͅ,upsilon iota,⠓⠥⠌⠔
+03C5+03b9+0314+0300,υἓ,upsilon iota,⠓⠥⠌
+03C5+03b9+0314+0301+0345,υἕͅ,upsilon iota,⠓⠥⠔
+03C5+03b9+0314+0301,υἕ,upsilon iota,⠓⠥
+03C5+03b9+0314+0342+0345,υἑ͂ͅ,upsilon iota,⠓⠥⠩⠔
+03C5+03b9+0314+0342,υἑ͂,upsilon iota,⠓⠥⠩
+03C5+03b9+0314+0345,υἑͅ,upsilon iota,⠓⠥⠊⠔
+03C5+03b9+0314,υἑ,upsilon iota,⠓⠥⠊
+03C5+03b9+0342+0345,υε͂ͅ,upsilon iota,⠥⠩⠔
+03C5+03b9+0342,υε͂,upsilon iota,⠥⠩
+03C5+03b9+0345,υεͅ,upsilon iota,⠥⠊⠔
+03C5+03b9,υε,upsilon iota,⠥⠊
+03C5+03CA+0300+0345,υῒͅ,upsilon and iota with Graveand dialytika,⠥⠌⠔
+03C5+03CA+0300,υῒ,upsilon and iota with Graveand dialytika,⠥⠌
+03C5+03CA+0301+0345,υΐͅ,upsilon and iota with oxia and dialytika,⠥⠔
+03C5+03CA+0301,υΐ,upsilon and iota with oxia and dialytika,⠥
+03C5+03CA+0342+0345,υῗͅ,upsilon and iota with perispomeni and dialytika,⠥⠩⠔
+03C5+03CA+0342,υῗ,upsilon and iota with perispomeni and dialytika,⠥⠩
+03C5+03CA+0345,υϊͅ,upsilon and iota with dialytikaa,⠥⠊⠔
+03C5+03CA,υϊ,upsilon and iota with dialytikaa,⠥⠊
+03C5,υ,upsilon,⠥
+03C6,φ,phi,⠋
+03C7,χ,chi,⠯
+03C8,ψ,psi,⠽
+03C9+0300+0345,ῲ,omega with varia,⠟⠔
+03C9+0300,ὼ,omega with varia,⠟
+03C9+0301+0345,ῴ,omega with oxia,⠚⠔
+03C9+0301,ώ,omega with oxia,⠚
+03C9+0313+0300+0345,ᾢ,omega with psili and varia,⠴⠟⠔
+03C9+0313+0300,ὢ,omega with psili and varia,⠴⠟
+03C9+0313+0301+0345,ᾤ,omega with psili and oxia,⠴⠚⠔
+03C9+0313+0301,ὤ,omega with psili and oxia,⠴⠚
+03C9+0313+0342+0345,ᾦ,omega with psili and perispomeni,⠴⠸⠔
+03C9+0313+0342,ὦ,omega with psili and perispomeni,⠴⠸
+03C9+0313+0345,ᾠ,omega with psili,⠴⠺⠔
+03C9+0313,ὠ,omega with psili,⠴⠺
+03C9+0314+0300+0345,ᾣ,omega with dasia and varia,⠓⠟⠔
+03C9+0314+0300,ὣ,omega with dasia and varia,⠓⠟
+03C9+0314+0301+0345,ᾥ,omega with dasia and oxia,⠓⠚⠔
+03C9+0314+0301,ὥ,omega with dasia and oxia,⠓⠚
+03C9+0314+0342+0345,ᾧ,omega with dasia and perispomeni,⠓⠸⠔
+03C9+0314+0342,ὧ,omega with dasia and perispomeni,⠓⠸
+03C9+0314+0345,ᾡ,omega with dasia,⠓⠺⠔
+03C9+0314,ὡ,omega with dasia,⠓⠺
+03C9+0342+0345,ῷ,omega with perispomeni,⠸⠔
+03C9+0342,ῶ,omega with perispomeni,⠸
+03C9+0345,ῳ,omega,⠺⠔
+03C9,ω,omega,⠺
+03CA+0300+0345,ῒͅ,iota with dialytika and Graveisolated,⠌⠔
+03CA+0300,ῒ,iota with dialytika and Graveisolated,⠌
+03CA+0301+0345,ΐͅ,iota with dialytika and oxia isolated,⠔
+03CA+0301,ΐ,iota with dialytika and oxia isolated,
+03CA+0342+0345,ῗͅ,iota with dialytika and perispomenia isolated,⠩⠔
+03CA+0342,ῗ,iota with dialytika and perispomenia isolated,⠩
+03CA+0345,ϊͅ,iota with dialytikaa isolated,⠊⠔
+03CA,ϊ,iota with dialytikaa isolated,⠊
+03CB+0300+0345,ῢͅ,upsilon with dialytika and Graveisolated,⠾⠔
+03CB+0300,ῢ,upsilon with dialytika and Graveisolated,⠾
+03CB+0301+0345,ΰͅ,upsilon with dialytika and oxia isolated,⠳⠔
+03CB+0301,ΰ,upsilon with dialytika and oxia isolated,⠳
+03CB+0342+0345,ῧͅ,upsilon with dialytika and perispomenia isolated,⠧⠔
+03CB+0342,ῧ,upsilon with dialytika and perispomenia isolated,⠧
+03CB+0345,ϋͅ,upsilon with dialytika isolated,⠥⠔
+03CB,ϋ,upsilon with dialytika isolated,⠥
+03CC+0345,όͅ,omnichron with oxia,⠪⠔
+03CC,ό,omicron with oxia,⠪
+1FF8,ὸ,omicron with Varia,⠪⠔
+03CD+0345,ύͅ,upsilon with oxia,⠳⠔
+03CD,ύ,upsilon with oxia,⠳
+03CE+0345,ῴ,omega with oxia,⠚⠔
+03CE,ώ,omega with oxia,⠚
+03CF,Ϗ,CAPITAL KAI SYMBOL,
+03D0,ϐ,BETA SYMBOL,
+03D1,ϑ,THETA SYMBOL,
+03D2,ϒ,UPSILON WITH HOOK SYMBOL,
+03D3,ϓ,UPSILON WITH ACUTE AND HOOK SYMBOL,
+03D4,ϔ,UPSILON WITH DIAERESIS AND HOOK SYMBOL,⠥
+03D5,ϕ,PHI SYMBOL,⠋
+03D6,ϖ,PI SYMBOL,⠏
+03D7,ϗ,KAI SYMBOL,⠯
+03D8,Ϙ,ARCHAIC KOPPA,⠢⠟
+03D9,ϙ,ARCHAIC KOPPA,⠢⠟
+03DA,Ϛ,STIGMA,⠢⠧
+03DB,ϛ,STIGMA,⠢⠧
+03DC,Ϝ,DIGAMMA,⠢⠧
+03DD,ϝ,DIGAMMA,⠢⠧
+03DE,Ϟ,KOPPA,⠢⠟
+03DF,ϟ,KOPPA,⠢⠟
+3,Ϡ,SAMPI,⠢⠮
+30,ϡ,SAMPI,⠢⠮
+300,Ϣ,COPTIC CAPITAL SHEI,⠲⠩
+3000,ϣ,COPTIC SHEI,⠩
+30000,Ϥ,COPTIC CAPITAL FEI,⠲⠫
+300000,ϥ,COPTIC FEI,⠫
+3000000,Ϧ,COPTIC CAPITAL KHEI,⠲⠡
+30000000,ϧ,COPTIC KHEI,⠡
+300000000,Ϩ,COPTIC CAPITAL HORI,⠲⠓
+3000000000,ϩ,COPTIC HORI,⠓
+03EA,Ϫ,COPTIC CAPITAL GANGIA,⠲⠚
+03EB,ϫ,COPTIC GANGIA,⠚
+03EC,Ϭ,COPTIC CAPITAL SHIMA,⠲⠣
+03ED,ϭ,COPTIC SHIMA,⠣
+03EE,Ϯ,COPTIC CAPITAL DEI,⠲⠳
+03EF,ϯ,COPTIC DEI,⠳
+03F0,ϰ,KAPPA SYMBOL,⠅
+03F1,ϱ,RHO SYMBOL,⠗
+03F2,ϲ,LUNATE SIGMA SYMBOL,⠑
+03F3,ϳ,YOT,⠽
+03F4,ϴ,CAPITAL THETA SYMBOL,⠹
+03F5,ϵ,LUNATE EPSILON SYMBOL,⠑
+03F6,϶,REVERSED LUNATE EPSILON SYMBOL,⠡⠡
+03F7,Ϸ,CAPITAL SHO,⠎
+03F8,ϸ,SHO,⠎
+03F9,Ϲ,CAPITAL LUNATE SIGMA SYMBOL,⠡⠡
+03FA,Ϻ,CAPITAL SAN,⠲⠎
+03FB,ϻ,SAN,⠎
+03FC,ϼ,RHO WITH STROKE SYMBOL,⠗
+03FD,Ͻ,CAPITAL REVERSED LUNATE SIGMA SYMBOL,⠲⠡⠡
+03FE,Ͼ,CAPITAL DOTTED LUNATE SIGMA SYMBOL,⠡⠡
+03FF,Ͽ,CAPITAL REVERSED DOTTED LUNATE SIGMA SYMBOL,⠡⠡
+391,Α,Capitol Alpha,⠠⠁
+392,Β,Capitol Beta,⠠⠃
+393,Γ,Capitol Gamma,⠠⠛
+394,Δ,Capitol Delta,⠠⠙
+395,Ε,Capitol Epsilon,⠠⠑
+396,Ζ,Capitol Zeta,⠠⠵
+397,Η,Capitol Eta,⠠⠱
+398,Θ,Capitol Theta,⠠⠹
+399,Ι,Capitol Iota,⠠⠊
+039A,Κ,Capitol Kappa,⠠⠅
+039B,Λ,Capitol Lambda,⠠⠇
+039C,Μ,Capitol Mu,⠠⠍
+039D,Ν,Capitol Nu,⠠⠝
+039E,Ξ,Capital Xi,⠠⠭
+039F,Ο,Capitol Omicron,⠠⠕
+03A0,Π,Capitol Pi,⠠⠏
+03A1,Ρ,Capitil rho,⠠⠗
+03A3,Σ,Capitol Sigma,⠠⠎
+03C2,ς,Final Sigma,⠎
+03A4,Τ,Capital Tau,⠠⠞
+03A5,Υ,Capitol Upsilon,⠠⠥
+03A6,Φ,Capitol Fi,⠠⠋
+03A7,Χ,Capitol Chi,⠠⠯
+03A8,Ψ,Capitol Psi,⠠⠽
+03A9,Ω,Capitol Omega,⠠⠺
+1F08,ἀ,Capital Alpha with Psili,⠠⠴⠁
+2000000,⸆,raised interpolation marker,⠗⠍
+1F0C,ἄ,Capital Alpha with Psili and Oxia,⠠⠴⠜
+1F76,ὶ,Iota with Varia,⠌
+2713,✓,Check mark Ends Omission,⠪
+2714,✔,Check Mark Distinguishes Same kind of Varient ,⠷
+2715,✕,Mark beginning of Replacement,⠗
+2716,✖,Mark Ends of Replacement,⠺
+2717,✗,Mark for  Insertion,⠊
+2718,✘,Marks Varients with in Apparatus,⠔
+2719,✙,  Marks end of Replaced text,⠾
+2741,❁,Reference to LXX,⠇⠭⠭
+274D,❍,Marks Omitted Word,⠕
+274F,❏,Marks End of Omited word,⠕
+2750,❐,Marks Replaced Word,⠗
+2751,❑,Mark that Distinguishes between Varient,⠟
+2758,❘,Mark that separates variations,⠳
+2759,❙,Mark that indicates Alternative readings,⠞
+275A,❚,Mark indicates varrnt punctuation,⠉
+2765,❥,Marks distinguishes between varient,⠜⠣⠕⠱⠏⠜ ⠣⠌⠕⠱⠏⠜
+2766,❦,Marks beginning of transposition,⠣⠣⠕⠱⠏⠜ ⠣⠌⠕⠱⠏⠜
+2767,❧,Check Marks end of transposition,⠱
+,*,star,⠡
+,+,plus,⠬
+,/,slash,⠌
+,\\,back slash,⠳
+,=,equals,⠿
+,_,line,⠢
+,^,carrot,⠘
+,<,less,⠣
+,>,greater,⠜
+,[,left bracket,⠪
+,],right bracket,⠻
+,(,left paren,⠷
+,),right paren,⠾
+,#,number,⠸
+,$,dollar,⠫
+,&,and,⠯
+,%,percent,⠩
+,-,dash,⠤
+,!,bang,⠮
+,:,colon,⠱
+,;,semi,⠰
+,?,question,⠹
+,.,dot,⠲
+,',tick,⠄
+,",",comma,⠂
+,"""",quote,⠠⠶
+, , , 
+,1,1,⠁
+,2,2,⠃
+,3,3,⠉
+,4,4,⠙
+,5,5,⠑
+,6,6,⠋
+,7,7,⠛
+,8,8,⠓
+,9,9,⠊
+,0,0,⠚
+2E02,⸂,Left Substitution Bracket,⠪
+1F10,ἐ,Epsilon with Psili,⠴
+1FF7,ῷ,Omega with Perispomeni and Ypogegrammeni,⠸⠔
+1FE6,ῦ,Upsilon with Perispomeni,⠧
+1F74,ὴ,Eta with Varia,⠮
+1FC6,ῆ,Eta with Perispomeni,⠣
+1F26,ἦ,Eta with Psili and Perispomeni,⠴⠣
+2E00,⸀,Right Angle Substitution Marker,⠻
+2E01,⸁,Right Angle Dotted Substitution Marker,⠻
+2E03,⸃,Right Substitution Bracket,⠻
+1F78,ὸ,Omicron with Varia,⠪⠔
+1F50,ὐ,Upsilon with Psili,⠴⠥
+2E06,⸆,Raised Interpolation Marker,⠿⠿
+1F04,ἄ, alpha with Psili,⠴⠁
+1F10,ἐ,Epsilon with Psili,⠴
+03BF,ο,Omicron,⠕
+
+
+777
+grave/varia+0300,a→(,e→c,:→!,i→/,o→+,u→),w→q
+acute/oxia +0301,a→>,e→$,:→=,i→],o→[,u→\,w→j
+circum/perispomeni +0342,a→*,,:→<,i→%,,u→v,w→#
+Accent,Effect
+smooth/psili +0313,0v (v=vowel)
+rough/dasia +0314,hv (v=vowel)
+Accent,Effect
+subscript/ypogegramei +0345,add 9
+Accent,Effect
+dialytika,2 (between vowels)
+
+Greek vowels
+
+
+U+1F0x
+ἀ,Alpha with smooth breather,0a
+ἁ,Alpha with rough breather,ha
+ἂ,Alpha acute with smooth breather,0>
+ἃ,Alphah acute with rough breather,h>
+ἄ,Alpha grave with smooth breather,0)
+ἅ,Alpha grave with rough breather,h)
+ἆ,Alpha circumflex with smooth breather,0*
+ἇ,Alpha circumflex with rough breather,h*
+Ἀ,Capital Alpha with smooth breather,⠨0a
+Ἁ,Capital Alpha with rough breather,⠨ha
+Ἂ,Capital Alpha acute with smooth breather,⠨0>
+Ἃ,Capital Alpha with rough breather,⠨h>
+Ἄ,Capital Alpha grave with Smooth breather,⠨0)
+Ἅ,Capital Alpha with grave with rough breather,⠨h)
+Ἆ,Capital Alpha circumflex with smooth breather,⠨0*
+Ἇ,Capital Alpha circumflex with rough breather,⠨h*
+U+1F1x
+ἐ,Epsilon with smooth breather,0e
+ἑ,Epsilon with rough breather,he
+ἒ,Epsilon grave with xmooth breather,0c
+ἓ,Epsilon grave with rough breather,hc
+ἔ,Epsilon acute with smooth breather,0$
+ἕ,Epsilon acute with rough breather,h$
+Ἐ,CAPITAL Epsilon with cmooth breather,⠨0e
+Ἑ,CAPITAL Epsilon with rough breather,⠨he
+Ἒ,CAPITAL Epsilon grave with smooth breather,⠨0c
+Ἓ,CAPITAL Epsilon grave with rough breather,⠨hc
+Ἔ,Cpaital Epsilon acute with smooth breather,⠨0$
+Ἕ,Capital Epsilon acute with rough breather,⠨h$
+U+1F2x
+ἠ,Eta with smooth breather,0⠱
+ἡ,Eta with rough breather,h⠱
+ἢ,Eta grave with smooth breather,0⠮
+ἣ,Eta grave with rough breather,h⠮
+ἤ,Eta acute with smooth breather,0⠿
+ἥ,Eta acute with rough breather,h⠿
+ἦ,Eta circumflex with smooth breather,0⠜
+ἧ,Eta circumflex with rough breather,h⠜
+Ἠ,Capital Eta with smooth breather,⠨0⠱
+Ἡ,Capital Eta with rough breather,⠨h⠱
+Ἢ,Capital Eta grave with smooth breather,⠨0⠮
+Ἣ,CAPITAL Eta with rough breather,⠨h⠮
+Ἤ,Capital Eta acute with smooth breather,⠨0
+Ἥ,Capital Eta acute with rough breather,⠨h⠿
+Ἦ,Capital Eta circumflex with smooth breather,⠨0<
+Ἧ,Capital Eta circumflex with rough breather,⠨0<
+U+1F3x
+ἰ,Iota with smooth breather,0i
+ἱ,Iota with rough breather,hi
+ἲ,Iota grave with smooth breather,0⠌
+ἳ,Iota grave with rough breather,h⠌
+ἴ,Iota acute with smooth breather,0⠻
+ἵ,Iota acute with rough breather,h⠻
+ἶ,Iota circumflex with smooth breather,0⠩
+ἷ,Iota circumflex with rough breather,h⠩
+Ἰ,Capital Iota with smooth breather,⠨0i
+Ἱ,Capital Iota with rough breather,⠨hi
+Ἲ,Capital Iota grave with smooth breather,⠨0⠌
+Ἳ,Capital Iota grave with rough breather,⠨h⠌
+Ἴ,Capital Iota acute with smooth breather,⠨0⠻
+Ἵ,Capital Iota with rough breather,⠨h⠻
+Ἶ,Capital Iota circumflex with smooth breather,⠨0⠩
+Ἷ,Capital Iota circumflex with rough breather,⠨h⠩
+U+1F4x
+ὀ,Omicron with smooth breather,0o
+ὁ,Omicron with rough breather,ho
+ὂ,Omicron grave with smooth breather,0⠬
+ὃ,Omicron grave with rough breather,h⠬
+ὄ,Omicron acute with smooth breather,0⠪
+ὅ,Omicron acute with rough breather,h⠪
+Ὀ,CAPITAL Omicron with smooth breather,⠨0o
+Ὁ,Capital Omicron with rough breather,⠨ho
+Ὂ,Capital Omicron grave with smooth breather,⠨0⠬
+Ὃ,Capital Omicron grave with rough breather,⠨h⠬
+Ὄ,Capital acute with smooth breather,⠨0⠪
+Ὅ,Capital Omicron acute with rough breather,⠨h⠪
+U+1F5x
+ὐ,Upsilon with smooth breather,0u
+ὑ,Upsilon with rough breather,hu
+ὒ,Upsilon grave with smooth breather,0⠾
+ὓ,Upsilon grave with rough breather,h⠾
+ὔ,Upsilon acute with smooth breather,0⠳
+ὕ,Upsilon acute with rough breather,h⠳
+ὖ,UPSILON circumflex with smooth breather,0v
+ὗ,Upsilon circumflex with rough breather,hv
+Ὑ,CAPITAL UPSILON with rough breather,⠨hu
+Ὓ,Capital UPSILON grave with rough breather,⠨h⠻
+Ὕ,Capital UPSILON acute with rough breather,⠨h⠳
+Ὗ,Capital UPSILON circumflex with rough breather,⠨hv
+U+1F6x
+ὠ,Omega with smooth breather,0w
+ὡ,Omega with rough breather,hw
+ὢ,Omega grave with smooth breather,0q
+ὣ,Omega with rough breather,hq
+ὤ,Omega acute with smooth breather,0j
+ὥ,Omega acute with rough breather,hj
+ὦ,Omega circumflex with smooth breather,0⠼
+ὧ,Omega circumflex with rough breather,h⠼
+Ὠ,Capital Omega with smooth breather,⠨0w
+Ὡ,Capital Omega with rough breather,⠨hw
+Ὢ,CAPITAL omega grave with smooth breather,⠨0q
+Ὣ,CAPITAL Omega with rough breather,⠨hq
+Ὤ,Capital omega acute with smooth breather,⠨0j
+Ὥ,Capital Omega acute with rough breather,⠨hj
+Ὦ,Capital Omega circumflex with smooth breather,⠨0⠼
+Ὧ,CAPITAL omega circumflex with rough breather,⠨h⠼
+888
+U+1F7x
+ὰ,Alpha with acute,⠷
+ά,,⠜
+ὲ,,c
+έ,,⠫
+ὴ,,⠮
+ή,,⠿
+ὶ,,⠌
+ί,,⠻
+ὸ,,⠬
+ό,,⠪
+ὺ,,⠾
+ύ,,⠳
+ὼ,,⠟
+ώ,,j
+U+1F8x
+ᾀ,,0a9
+ᾁ,,ha9
+ᾂ,,0⠷9
+ᾃ,,h⠷9
+ᾄ,,0⠜9
+ᾅ,,h⠜9
+ᾆ,,0⠡9
+ᾇ,,h⠡9
+ᾈ,,⠨0a9
+ᾉ,,⠨ha9
+ᾊ,,⠨0⠷9
+ᾋ,,⠨h⠷9
+ᾌ,,⠨0⠙9
+ᾍ,,⠨h⠙9
+ᾎ,,⠨0⠡9
+ᾏ⠨h⠡9
+U+1F9x
+ᾐ,,0⠱9
+ᾑ,,h⠱9
+ᾒ,,0⠹9
+ᾓ,,h⠹9
+ᾔ,,0⠿9
+ᾕ,,h⠿9
+ᾖ,,0⠣9
+ᾗ,,h⠣9
+ᾘ,,⠨0⠱9
+ᾙ,,⠨h⠱9
+ᾚ,,⠨0⠹9
+ᾛ,,⠨h⠹9
+ᾜ,,⠨0⠿9
+ᾝ,,⠨h⠿9
+ᾞ,,⠨0⠣9
+ᾟ,,⠨h⠣9
+U+1FAx
+ᾠ,,0w9
+ᾡ,,hw9
+ᾢ,,0q9
+ᾣ,,hq9
+ᾤ,,0j9
+ᾥ,,hj9
+ᾦ,,0⠼9
+ᾧ,,h⠼9
+ᾨ,,⠨0w9
+ᾩ,,⠨hw9
+ᾪ,,⠨0q9
+ᾫ,,⠨hq9
+ᾬ,,⠨0j9
+ᾭ,,⠨hj9
+ᾮ,,⠨0⠼9
+ᾯ,,⠨0⠼9
+U+1FBx
+ᾰ,,aa
+ᾱ,,a1
+ᾲ,,⠷9
+ᾳ,,a9
+ᾴ,,⠜9⠌
+ᾶ,,⠡
+ᾷ,,⠡9
+Ᾰ,,⠨a
+Ᾱ,,⠨a1
+Ὰ,,⠨⠷
+Ά,,⠨⠜
+ᾼ,,⠨a9
+᾽,,⠄
+ι,,i
+᾿,,⠄
+U+1FCx
+῀,,⠮9
+῁,,⠱9
+ῂ,,⠿9⠌
+ῃ,,⠣
+ῄ,,⠣9
+ῆ,,⠨c
+ῇ,,⠨⠫
+Ὲ,,⠨⠮
+Έ,,⠨⠿
+Ὴ,,⠨⠱9
+Ή,,⠄
+ῌ,,⠄
+῍,,⠄
+῎
+῏
+U+1FDx
+ῐ
+ῑ
+ῒ
+ΐ  
+ῖ
+ῗ
+Ῐ
+Ῑ
+Ὶ
+Ί 
+῝
+῞
+῟
+U+1FEx
+ῠ
+ῡ
+ῢ
+ΰ
+ῤ
+ῥ
+ῦ
+ῧ
+Ῠ
+Ῡ
+Ὺ
+Ύ
+Ῥ
+῭
+΅
+`
+U+1FFx  
+ῲ
+ῳ
+ῴ 
+ῶ
+ῷ
+Ὸ
+Ό
+Ὼ
+Ώ
+ῼ
+´
+῾ 

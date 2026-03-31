@@ -1,0 +1,82 @@
+Character,Hex,Type,Name,Braille
+𒈦𒌋𒌋,12226+1230B+1230B,always,mash-man,⠍⠁⠎⠓⠤⠍⠁⠝
+𒋩,122000000000,letter,sur,⠎⠥⠗
+𒈦𒌋,12226+1230B,always,gidim₂,⠛⠊⠙⠊⠍
+,12364+121b8,always,numun2,numun2
+𒉆𒂟,12246+1209F,always,buru5,⠃⠥⠗⠥⠢
+𒄷𒋛,12137+122db,always,u5,⠥⠢
+,165buru14,always,12098+12099,buru14 
+𒋥,12200000,letter,cita3,⠉⠊⠞⠁⠒
+􀀇,100007,letter,buru5v,⠃⠥⠗⠥⠢
+,always,tur3,12263+121ec,
+,always,accur,"12038+122e9""",
+𒃷,120f7,letter,gan2,⠛⠁⠝
+𒋛,122db,letter,SI',⠠⠎⠠⠊⠄
+𒄘,12118,letter,gu2,⠛⠥
+𒋺,122fa,letter,Tak4,⠠⠞⠁⠅⠲
+𒄛,1211b,letter,usan,⠥⠎⠁⠝
+𒄙,12119,letter,dur,⠙⠥⠗
+𒃰,120f0,letter,gad,⠛⠁⠙
+𒈻,1223b,letter,sed,⠎⠑⠙
+𒈹,12239,letter,muc3,⠍⠥⠉⠒
+𒄘,12118,letter,gun,⠛⠥⠝
+𒈽,1223d,letter,muc2,⠍⠥⠉
+𒌦,12326,letter,Un,⠠⠥⠝
+𒄽,1213d,letter,hub,⠓⠥⠃
+𒍪,1236a,letter,zu,⠵⠥
+𒆏,1218f,letter,kab,⠅⠁⠃
+𒉦,12266,letter,cilam,⠉⠊⠇⠁⠍
+,akkil,always,120F0+122FA+12111,akkil
+𒋢,12200,letter,su,⠎⠥
+𒀿,1203f,letter,acgab,⠁⠉⠛⠁⠃
+𒌢,12322,letter,umbin,⠥⠍⠃⠊⠝
+𒋒,122d2,letter,cinig,⠉⠊⠝⠊⠛
+𒃱,120f1,letter,kinda,⠅⠊⠝⠙⠁
+𒉥,12265,letter,immal,⠊⠍⠍⠁⠇
+𒂗,12097,letter,en,⠑⠝
+𒃸,120f8,letter,gan2,⠛⠁⠝
+𒁰,12070,letter,dar3,⠙⠁⠗⠒
+𒁴,12074,letter,dim,⠙⠊⠍
+𒁵,12075,letter,mun,⠍⠥⠝
+𒁑,12051,letter,bulug,⠃⠥⠇⠥⠛
+𒊿,122bf,letter,cen,⠉⠑⠝
+𒋭,122ed,letter,lal ,⠇⠁⠇ 
+𒆯,121af,letter,ku7,⠅⠥⠶
+𒊓,12293,letter,sa,⠎⠁
+𒀸,12038,letter,ac,⠁⠉
+𒄀,12100,letter,gi,⠛⠊
+𒉩,12269,letter,nun,⠝⠥⠝
+𒉡,12261,letter,nu,⠝⠥
+𒈮,1222e,letter,mug,⠍⠥⠛
+𒁷,12077,letter,din,⠙⠊⠝
+𒋾,122fe,letter,ti,⠞⠊
+𒆰,121b0,letter,numun,⠝⠥⠍⠥⠝
+𒋓,122d3,letter,cir,⠉⠊⠗
+𒁁,12041,letter,bad,⠃⠁⠙
+𒊒,12292,letter,ru,⠗⠥
+𒁇,12047,letter,bar,⠃⠁⠗
+𒈾,1223e,letter,na,⠝⠁
+𒆑,12191,letter,kad3,⠅⠁⠙⠒
+𒆐,12190,letter,kad2,⠅⠁⠙
+𒉫,1226b,letter,Nun Crossing Nun,⠠⠝⠥⠝ ⠠⠉⠗⠕⠎⠎⠊⠝⠛ ⠠⠝⠥⠝
+𒋺,122fa,letter,kid2,⠅⠊⠙
+𒄃,12103,letter,gil,⠛⠊⠇
+𒈦,12226,letter,mac,⠍⠁⠉
+𒑏,1244f,letter,ban₂,⠃⠁⠝
+𒉣,12263,letter,nun,⠝⠥⠝
+𒄷,12137,letter,hu,⠓⠥
+𒊑,12291,letter,ri,⠗⠊
+𒀭,1202d,letter,an,⠁⠝
+𒍣,12363,letter,zi,⠵⠊
+𒁀,12040,letter,ba,⠃⠁
+𒅅,12145,letter,ig,⠊⠛
+𒉆,12246,letter,nam,⠝⠁⠍
+𒆲,121b2,letter,kun,⠅⠥⠝
+𒈧,12227,letter,mac2,⠍⠁⠉
+𒈯,1222f,letter,zadim,⠵⠁⠙⠊⠍
+𒀞,1201e,letter,me3,⠍⠑⠒
+𒀝,1201D,letter,ag,⠁⠛
+𒀴,12034,letter,arad,⠁⠗⠁⠙
+,120,idigna,12226+12118+120fc,124
+,126,mud,12137+1212d,137
+,238,sa4,12137+1223f,138

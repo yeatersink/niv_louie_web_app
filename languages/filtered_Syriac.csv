@@ -1,0 +1,138 @@
+Character,Hex,Type,Name,Braille
+ܪ݂,072A+0742,always,RISH and RUKKAKHA,⠗⠄
+ܕ݂,0715+0742,always,DALATH and RUKKAKHA,⠙⠄
+ܖ݂,0716+0742,always,DOTLESS DALATH RISH and RUKKAKHA,⠢⠙⠄
+ܗ݁,0717+0741,always,HE and QUSHSHAYA,⠓⠂
+ܗ݂,0717+0742,always,HE and RUKKAKHA,⠓⠄
+ܣ݂,0723+0742,always,SEMKATH and RUKKAKHA,⠎⠄
+ܘ݁,0718+0741,always,WAW and QUSHSHAYA,⠺⠂
+ܘ݂,0718+0742,always,WAW and RUKKAKHA,⠺⠄
+ܣ݁,0723+0741,always,SEMKATH and QUSHSHAYA,⠎⠂
+ܙ݁,0719+0741,always,ZAIN and QUSHSHAYA,⠵⠂
+ܙ݂,0719+0742,always,ZAIN and RUKKAKHA,⠵⠄
+ܚ݁,071A+0741,always,HETH and QUSHSHAYA,⠭⠂
+ܚ݂,071A+0742,always,HETH and RUKKAKHA,⠭⠄
+ܫ݂,072B+0742,always,SHIN and RUKKAKHA,⠩⠄
+ܛ݁,071B+0741,always,TETH and QUSHSHAYA,⠞⠂
+ܛ݂,071B+0742,always,TETH and RUKKAKHA,⠞⠄
+ܢ݂,0722+0742,always,NUN and RUKKAKHA,⠝⠄
+ܜ݁,071C+0741,always,TETH GARSHUNI and QUSHSHAYA,⠢⠞⠂
+ܜ݂,071C+0742,always,TETH GARSHUNI and RUKKAKHA,⠢⠞⠄
+ܢ݁,0722+0741,always,NUN and QUSHSHAYA,⠝⠂
+ܝ݁,071D+0741,always,YUDH and QUSHSHAYA,⠚⠂
+ܝ݂,071D+0742,always,YUDH and RUKKAKHA,⠚⠄
+ܞ݁,071E+0741,always,YUDH HE and QUSHSHAYA,⠚⠓⠂
+ܞ݂,071E+0742,always,YUDH HE and RUKKAKHA,⠚⠓⠄
+ܡ݂,0721+0742,always,MIM and RUKKAKHA,⠍⠄
+ܟ݁,071F+0741,always,KAPH and QUSHSHAYA,⠅⠂
+ܟ݂,071F+0742,always,KAPH and RUKKAKHA,⠅⠄⠄
+ܡ݁,0721+0741,always,MIM and QUSHSHAYA,⠍⠂
+ܠ݁,0720+0741,always,LAMADH and QUSHSHAYA,⠇⠂
+ܖ݁,0716+0741,always,DOTLESS DALATH RISH and QUSHSHAYA,⠢⠙⠂
+ܤ݁,0724+0741,always,FINAL SEMKATH and QUSHSHAYA,⠢⠎⠂
+ܕ݁,0715+0741,always,DALATH and QUSHSHAYA,⠙⠂
+ܑ݁,0711+0741,always,SUPERSCRIPT ALAPH  and QUSHSHAYA,⠢⠁⠂
+ܪ݁,072A+0741,always,RISH and QUSHSHAYA,⠗⠂
+ܩ݂,0729+0742,always,QAPH and RUKKAKHA,⠟⠄
+ܩ݁,0729+0741,always,QAPH and QUSHSHAYA,⠟⠂
+ܬ݁,072C+0741,always,TAW and QUSHSHAYA,⠳⠂
+ܨ݂,0728+0742,always,SADHE and RUKKAKHA,⠮⠄
+ܨ݁,0728+0741,always,SADHE and QUSHSHAYA,⠮⠂
+ܬ݂,072C+0742,always,TAW and RUKKAKHA,⠳⠄
+ܧ݂,0727+0742,always,REVERSED PE and RUKKAKHA,⠢⠏⠄
+ܧ݁,0727+0741,always,REVERSED PE and QUSHSHAYA,⠢⠏⠂
+ܦ݂,0726+0742,always,PE and RUKKAKHA,⠏⠄
+ܦ݁,0726+0741,always,PE and QUSHSHAYA,⠏⠂
+ܐ݁,0710+0741,always,ALAPH and QUSHSHAYA,⠁⠂
+ܐ݂,0710+0742,always,ALAPH and RUKKAKHA,⠁⠄
+ܑ݂,0711+0742,always,SUPERSCRIPT ALAPH  and RUKKAKHA,⠢⠁⠄
+ܒ݂,0712+0742,always,BETH and RUKKAKHA,⠃⠄
+ܤ݂,0724+0742,always,FINAL SEMKATH and RUKKAKHA,⠢⠎⠄
+ܔ݂,0714+0742,always,GAMAL GARSHUNI and RUKKAKHA,⠢⠛⠄
+ܔ݁,0714+0741,always,GAMAL GARSHUNI and QUSHSHAYA,⠢⠛⠂
+ܓ݂,0713+0742,always,GAMAL and RUKKAKHA,⠛⠄
+ܥ݁,0725+0741,always,E and QUSHSHAYA,⠫⠂
+ܓ݁,0713+0741,always,GAMAL and QUSHSHAYA,⠛⠂
+ܒ݁,0712+0741,always,BETH and QUSHSHAYA,⠃⠂
+ܥ݂,0725+0742,always,E and RUKKAKHA,⠫⠄
+ܠ݂,0720+0742,always,LAMADH and RUKKAKHA,⠇⠄
+ܬ,072C,letter,TAW,⠳
+ܭ,072D,letter,PERSIAN BHETH,⠢
+ܱ,0731,letter,Pthaha BELOW,⠡
+ܮ,072E,letter,PERSIAN GHAMAL,⠢⠶
+ܯ,072F,letter,PERSIAN DHALATH,⠢⠲
+ܰ,0730,letter,Pthaha ABOVE,⠷
+ܫ,072B,letter,SHIN,⠩
+ܲ,0732,letter,Pthaha DOTTED,⠉
+܀,0700,punctuation,END OF PARAGRAPH,⠲⠏
+ܳ,0733,letter,Zqapha ABOVE,⠜
+݃,0743,letter,TWO VERTICAL DOTS ABOVE,⠲⠃
+̄,0304,punctuation,macron above,⠘⠈⠤
+̱,0331,punctuation,Macron Below,⠘⠈⠤
+ݏ,074F,letter,SOGDIAN FE,⠢⠋
+ݎ,074E,letter,SOGDIAN KHAPH,⠢⠅
+ݍ,074D,letter,SOGDIAN ZHAIN,⠢⠵
+݊,074A,letter,BARREKH,⠲⠧
+݉,0749,letter,MUSIC,⠲⠩
+݈,0748,letter,OBLIQUE LINE BELOW,⠲
+݇,0747,letter,OBLIQUE LINE ABOVE,⠲⠘
+݆,0746,letter,THREE DOTS BELOW,⠴
+݅,0745,letter,THREE DOTS ABOVE,⠲⠓
+݄,0744,letter,TWO VERTICAL DOTS BELOW,⠴⠲
+݂,0742,letter,RUKKAKHA,⠄
+ܴ,0734,letter,Zqapha BELOW,⠱
+݁,0741,letter,QUSHSHAYA,⠂
+݀,0740,letter,FEMININE DOT,⠐⠋
+ܿ,073F,letter,Rwaha,⠕
+ܾ,073E,letter,ESASA BELOW,⠧
+ܽ,073D,letter,ESASA ABOVE,⠥
+ܼ,073C,letter,Hbasa-Esasa DOTTED,⠢
+ܻ,073B,letter,Hbasa  BELOW,⠔
+ܺ,073A,letter,Hbasa ABOVE,⠊
+ܹ,0739,letter,DOTTED ZLAMA ANGULAR,⠸
+ܷ,0737,letter,Rbasa BELOW,⠢
+ܶ,0736,letter,Rbasa ABOVE,⠑
+ܵ,0735,letter,Zqapha DOTTED,⠣
+ܸ,0738,letter,DOTTED ZLAMA HORIZONTAL,⠌
+ܡ,0721,letter,MIM,⠍
+ܪ,072A,letter,RISH,⠗
+ܕ,0715,letter,DALATH,⠙
+ܓ,0713,letter,GAMAL,⠛
+ܒ,0712,letter,BETH,⠃
+ܑ,0711,letter,SUPERSCRIPT ALAPH,⠢⠁
+ܐ,0710,always,ALAPH,⠁
+܏,070F,punctuation,ABBREVIATION MARK,⠲⠁
+܍,070D,punctuation,HARKLEAN ASTERISCUS,⠴⠲⠔
+܌,070C,punctuation,HARKLEAN METOBELUS,⠲⠍
+܋,070B,punctuation,HARKLEAN OBELUS,⠲⠕
+܊,070A,punctuation,CONTRACTION,⠲⠄
+܉,0709,punctuation,SUBLINEAR COLON SKEWED RIGHT,⠲⠎
+܈,0708,punctuation,SUPRALINEAR COLON SKEWED LEFT,⠲⠱
+܇,0707,punctuation,COLON SKEWED RIGHT,⠴
+܆,0706,punctuation,COLON SKEWED LEFT,⠦
+܅,0705,punctuation,HORIZONTAL COLON,⠴⠲⠒
+܄,0704,punctuation,SUBLINEAR COLON,⠲⠤
+܃,0703,punctuation,SUPRALINEAR COLON,⠲⠉
+܂,0702,punctuation,SUBLINEAR FULL STOP,⠲
+ܔ,0714,letter,GAMAL GARSHUNI,⠢⠛
+ܖ,0716,letter,DOTLESS DALATH RISH,⠢⠙
+ܩ,0729,letter,QAPH,⠟
+ܗ,0717,letter,HE,⠓
+ܨ,0728,letter,SADHE,⠮
+ܧ,0727,letter,REVERSED PE,⠢⠏
+ܦ,0726,letter,PE ,⠏
+ܥ,0725,letter,E,⠫
+ܤ,0724,letter,FINAL SEMKATH,⠢⠎
+ܣ,0723,letter,SEMKATH,⠎
+ܢ,0722,letter,NUN,⠝
+܁,0701,punctuation,SUPRALINEAR FULL STOP,⠖
+ܠ,0720,letter,LAMADH,⠇
+ܟ,071F,letter,KAPH,⠅
+ܞ,071E,letter,YUDH HE,⠚⠓
+ܝ,071D,letter,YUDH,⠚
+ܜ,071C,letter,TETH GARSHUNI,⠢⠞
+ܛ,071B,letter,TETH,⠞
+ܚ,071A,letter,HETH,⠭
+ܙ,0719,letter,ZAIN,⠵
+ܘ,0718,letter,WAW,⠺
+̈,0308,punctuation, Combining Diaeresis.,⠘⠒

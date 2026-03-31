@@ -1,0 +1,180 @@
+
+# liblouis: Amharic
+#
+#-display-name: Amharic
+#-index-name: Amharic uncontracted
+#+language: amh
+#+type:literary
+#+contraction:no
+#+system:amh
+#+dots:6
+
+#-license: lgpl-2.1
+
+# This file is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This file is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this file; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+# liblouis  comes with ABSOLUTELY NO WARRANTY.
+
+
+# for more information on braille in the Amharic language, please read this paper:
+# <https://www.researchgate.net/publication/303773888_RECOGNITION_OF_AMHARIC_BRAILLE>
+# The standard for Amharic has been set by the community mentioned above.
+
+# This braille code was developed by a group of both blind and sighted scholars
+# in an academic setting.
+#-maintainer: Paul Geoghegan <contact@envisionly.tech>
+#-maintainer: Matityhau Yeshurun <yeatersink@gmail.com>
+# Copyright 2024 Matt Yeater and Paul Geoghegan
+
+# letter op code characters
+letter ? 34-12-2456-24  # bwi
+letter ? 236  #    je
+letter ? 236  # tze
+letter ጀ 245-26  # ja
+letter ጁ 245-136  # ju
+letter ጂ 245-24  # ji
+letter ጃ 245-1  #    jaa
+letter ጄ 245-15  #    jee
+letter ጆ 245-135  #    jo
+letter ጇ 1346  #    jwa
+letter ገ 1245-26  #    ga
+letter ጉ 1245-136  #    gu
+letter ጊ 1245-24  #            gi
+letter ጋ 1245-1  # gaa
+letter ጌ 1245-15  # gee
+letter ግ 1245  # ge
+letter ጎ 1245-135  # go
+letter ጏ 1245-1346  # goa
+letter ጐ 1245-2456-26  # gwa
+letter ጒ 1245-2456-24  # gwi
+letter ጓ 1245-1346  # gwaa
+letter ጔ 1245-2456-15  # gwee
+letter ጕ 1245-2456-136  # gwe
+letter ጘ 1245-26  # gga
+letter ጙ 1245-136  # ggu
+letter ጚ 1245-24  # ggi
+letter ጛ 1245-1  # ggaa
+letter ጜ 1245-15  # ggee
+letter ጝ 1245-1245  # gge
+letter ጞ 1245-1245-135  # ggo
+letter ጠ 23456-26  # tha
+letter ጡ 12356-136  # thu
+letter ጢ 23456-24  # thi
+letter ጣ 23456-1  # thaa
+letter ጤ 23456-15  # thee
+letter ጥ 23456  # the
+letter ጦ 23456-135  # tho
+letter ጧ 23456-1346  # thwa
+letter ጨ 14-26  # cha
+letter ጩ 14-136  # chu
+letter ጪ 14-24  # chi
+letter ጫ 14-1  # chaa
+letter ጬ 14-15  # chee
+letter ጭ 14  # che
+letter ጮ 14-135  # cho
+letter ጯ 14-1346  # chwa
+letter ጰ 235-26  # pha
+letter ጱ 235-136  # phu
+letter ጲ 235-24  # phi
+letter ጳ 235-1  # phaa
+letter ጴ 235-15  # phee
+letter ጵ 235-2  # phe
+letter ጶ 235-135  # pho
+letter ጷ 235-1346  # phwa
+letter ጸ 2346-26  # tsa
+letter ጹ 2346-136  # tsu
+letter ጺ 2346-24  # tsi
+letter ጻ 2346-1  # tsaa
+letter ጼ 2346-15  # tsee
+letter ጽ 2346  # tse
+letter ጾ 2346-135  # tso
+letter ጿ 2346-1346  # tswa
+letter ፀ 12346-26  # tza
+letter ፁ 12346-136  # tzu
+letter ፂ 12346-24  # tzi
+letter ፃ 12346-1  # tzaa
+letter ፄ 12346-15  # tzee
+letter ፆ 12346-356  # tzo
+letter ፇ 12346-1346  # tzoa
+letter ፈ 124-26  # fa
+letter ፉ 124-136  # fu
+letter ፊ 124-24  # fi
+letter ፋ 124-1  # faa
+letter ፌ 124-15  # fee
+letter ፍ 124  # fe
+letter ፎ 124-135  # fo
+letter ፏ 124-1346  # fwa
+letter ፐ 1234-26  # pa
+letter ፑ 1234-136  # pu
+letter ፒ 1234-24  # pi
+letter ፓ 1234-1  # paa
+letter ፔ 1234  # pee
+letter ፕ 1234-135  # pe
+letter ፖ 1234-13456  # po
+letter ፗ 1235-13456-26  # pwa
+letter ፘ 134-13456-26  # rya
+letter ፙ 124-13456-26  # mya
+letter ፚ 456  # fya
+letter ፠ 156  # section mark
+letter ፡ 0  # wordspace
+letter ። 256  # full stop
+letter ፣ 1  # comma
+letter ፤ 256  # semicolon
+letter ፥ 256-25  # colon
+letter ፦ 156  # preface colon
+letter ፧ 236  # question mark
+letter ፨ 2356-156  # paragraph separator
+letter ፩ 123456-1  # one
+letter ፪ 123456-12  # two
+letter ፫ 123456-14  # three
+letter ፬ 123456-145  # four
+letter ፭ 123456-15  # five
+letter ፮ 123456-124  # six
+letter ፯ 123456-1245  # seven
+letter ፰ 123456-125  # eight
+letter ፱ 123456-24  # nine
+letter ፲ 123456-1-245  # ten
+letter ፳ 123456-12-245  # twenty
+letter ፴ 123456-14-245  # thirty
+letter ፵ 123456-145-245  # forty
+letter ፶ 123456-15-245  # fifty
+letter ፷ 123456-124-245  # sixty
+letter ፸ 123456-1245-245  # seventy
+letter ፹ 123456-125-245  # eighty
+letter ፺ 123456-24-245  # ninety
+letter ፻ 123456-1-245-245  # hundred
+letter ፼ 123456-1-245-245-245  # ten thousand
+letter ᎀ 34-234-134-2456-1  #    sebatbeit mwa
+letter ᎁ 34-134-2456-24  # mwi
+letter ᎂ 34-134-2456-15  # mwee
+letter ᎃ 34-134-2456-15  #    mwe
+letter ᎄ 34-234-12-2456-1  # sebatbeit bwa
+letter ᎆ 34-12-2456-15  # bwee
+letter ᎇ 34-12-2456-15  # bwe
+letter ᎈ 34-234-124-2456-1  # sebatbeit fwa
+letter ᎉ 34-124-2456-24  # fwi
+letter ᎊ 34-124-2456-15  # fwee
+letter ᎋ 34-124-2456-15  # fwe
+letter ᎌ 34-234-1234-2456-1  # sebatbeit pwa
+letter ᎎ 34-1234-2456-15  # pwee
+letter ᎏ 34-1234-2456-24  # pwe
+letter ᎐ 34-13456  # yizet
+letter ᎑ 34-145  # deret
+letter ᎒ 34-1235-1235  # rikrik
+letter ᎓ 34-1235  # short rikrik
+letter ᎔ 34-145-124  # difat
+letter ᎕ 34-13  # kenat
+letter ᎖ 34-14-125  # chiret
+letter ᎗ 34-125  # hidet
+letter ᎘ 34-145-125  # deret hidet

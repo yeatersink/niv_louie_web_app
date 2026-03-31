@@ -1,0 +1,41 @@
+[
+    {
+        "name": "hebrew3",
+        "summary": "hebrew1",
+        "description": "This is hebrew test",
+        "author": "me",
+        "version": "1.1",
+        "minimum_version": "2026.1",
+        "last_tested_version": "2026.1",
+        "locale": "heb",
+        "included_projects": [
+            "test_hebrew_characters"
+        ]
+    },
+    {
+        "name": "Hebrew 2",
+        "summary": "heb2",
+        "description": "this is a test",
+        "author": "me",
+        "version": "1.1",
+        "minimum_version": "2026.1",
+        "last_tested_version": "2026.1",
+        "locale": "heb",
+        "included_projects": [
+            "test_hebrew"
+        ]
+    },
+    {
+        "name": "Hebrew4 ",
+        "summary": "hebrew",
+        "description": "This is a test",
+        "author": "me",
+        "version": "1.0",
+        "minimum_version": "2026.1",
+        "last_tested_version": "2026.1",
+        "locale": "heb",
+        "included_projects": [
+            "test_hebrew_characters"
+        ]
+    }
+]

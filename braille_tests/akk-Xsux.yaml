@@ -1,0 +1,23 @@
+
+# Yaml Test For Akkadian
+
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved. This file is offered as-is,
+# without any warranty.
+
+display: unicode.dis
+table:
+  language: akk-Xsux
+  __assert-match: akk-Xsux.utb
+flags: { testmode: forward }
+tests:
+  - ["𒌉𒍑", "⠞⠥⠗⠥⠩"]
+  - ["𐎁𐎐", "⠃⠝"]
+  - ["Mārum ", "⠠⠍⠈⠤⠁⠗⠥⠍ "]
+  - ["suḫru", "⠎⠥⠡⠗⠥"]
+  - ["ben-ni", "⠃⠑⠝⠤⠝⠊"]
+  - ["ܒܪܐ", "⠃⠗⠁"]
+  - ["בֵּן", "⠃⠌⠝"]
+  - ["Son", "⠠⠎⠕⠝"]
+  - ["", ""]

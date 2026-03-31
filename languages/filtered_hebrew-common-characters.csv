@@ -1,0 +1,362 @@
+Character,Hex,Type,Name,Braille
+שֲּׁ,05E9+05B2+05BC+05C1,always,sin  hataf patah,⠐⠱⠒
+שֵּׁ,05E9+05B5+05BC+05C1,always,sin with tsere,⠐⠱⠌
+שִּׁ,05E9+05B4+05C1+05BC,always,shin  with dot and hiriq,⠐⠩⠊
+שָּׂ,05E9+05B8+05BC+05C2,always,sin  qamats,⠐⠱⠣
+שֱּׂ,05E9+05B1+05BC+05C2,always,sin  hataf segol,⠐⠱⠢
+שֳּׁ,05E9+05B3+05BC+05C1,always,sin  hataf qamats,⠐⠱⠜
+שֲּׂ,05E9+05B2+05C2+05BC,always,sin  hataf patah,⠐⠱⠒
+שֱּׁ,05E9+05B1+05BC+05C1,always,sin  hataf segol,⠐⠱⠢
+שָּׁ,05E9+05B8+05BC+05C1,always,sin  qamats,⠐⠱⠣
+שַּׁ,05E9+05B7+05BC+05C1,always,sin with patah,⠐⠱⠉
+שֶּׁ,05E9+05B6+05BC+05C1,always,sin with segol,⠐⠱⠑
+שִּׁ,05E9+05B4+05BC+05C1,always,sin with hiriq,⠐⠱⠊
+שֶּׁ,05E9+05B6+05C1+05BC,always,shin with dot,⠐⠩⠑
+שֲּׂ,05E9+05B2+05BC+05C2,always,sin  hataf patah,⠐⠱⠒
+שֳּׂ,05E9+05B3+05BC+05C2,always,sin  hataf qamats,⠐⠱⠜
+שִּׂ,05E9+05B4+05C2+05BC,always,sin with hiriq,⠐⠱⠊
+שֵּׂ,05E9+05B5+05C2+05BC,always,sin with tsere,⠐⠱⠌
+שֶּׂ,05E9+05B6+05C2+05BC,always,sin with segol,⠐⠱⠑
+שַּׂ,05E9+05B7+05C2+05BC,always,sin with patah,⠐⠱⠉
+שָּׂ,05E9+05B8+05C2+05BC,always,sin  qamats,⠐⠱⠣
+שֱּׂ,05E9+05B1+05C2+05BC,always,sin  hataf segol,⠐⠱⠢
+שֳּׁ,05E9+05B3+05C1+05BC,always,shin with dot and hataf qamats,⠐⠩⠜
+שֵּׁ,05E9+05B5+05C1+05BC,always,shin with dot,⠐⠩⠌
+שֳּׂ,05E9+05B3+05C2+05BC,always,sin  hataf qamats,⠐⠱⠜
+שֶּׂ,05E9+05B6+05BC+05C2,always,sin with segol,⠐⠱⠑
+שַּׂ,05E9+05B7+05BC+05C2,always,sin with patah,⠐⠱⠉
+שַּׁ,05E9+05B7+05C1+05BC,always,shin with dot,⠐⠩⠉
+שָּׁ,05E9+05B8+05C1+05BC,always,shin with dot and qamats,⠐⠩⠣
+שִּׂ,05E9+05B4+05BC+05C2,always,sin with hiriq,⠐⠱⠊
+שֵּׂ,05E9+05B5+05BC+05C2,always,sin with tsere,⠐⠱⠌
+שֲּׁ,05E9+05B2+05C1+05BC,always,shin with dot and hataf patah,⠐⠩⠒
+פֵּ,05E4+005B5+05BC,always,pe with dagesh,⠏⠌
+לֱּ,05DC+05B1+05BC,always,lamed dagesh with hataf segol,⠐⠇⠢
+כֲּ,05DB+05B2+05BC,always,kaf dagesh with hataf patah,⠅⠒
+כֱּ,05DB+05B1+05BC,always,kaf dagesh with hataf segol,⠅⠢
+כָּ,05DB+05B8+05BC,always,kaf dagesh with qamats,⠅⠣
+כַּ,05DB+05B7+05BC,always,kaf with dagesh,⠅⠉
+כֶּ,05DB+05B6+05BC,always,kaf with dagesh,⠅⠑
+מֳּ,05DE+05B3+05BC,always,mem dagesh  hataf qamats,⠐⠍⠜
+שֱׁ,05E9+05B1+05C1,always,shin with dot and hataf segol,⠩⠢
+שֲׁ,05E9+05B2+05C1,always,shin with dot and hataf patah,⠩⠒
+מֲּ,05DE+05B2+05BC,always,mem dagesh  hataf patah,⠐⠍⠒
+שָׁ,05E9+05B8+05C1,always,shin with dot and qamats,⠩⠣
+שַׁ,05E9+05B7+05C1,always,shin with dot,⠩⠉
+שֶׁ,05E9+05B6+05C1,always,shin with dot,⠩⠑
+שֵׁ,05E9+05B5+05C1,always,shin with dot,⠩⠌
+שִׁ,05E9+05B4+05C1,always,shin  with dot and hiriq,⠩⠊
+כֵּ,05DB+05B5+05BC,always,kaf with dagesh,⠅⠌
+כֳּ,05DB+05B3+05BC,always,kaf dagesh with hataf qamats,⠅⠜
+מֶּ,05DE+05B6+05BC,always,mem  dagesh with segol,⠐⠍⠑
+מֱּ,05DE+05B1+05BC,always,mem dagesh  hataf segol,⠐⠍⠢
+מָּ,05DE+05B8+05BC,always,mem dagesh  qamats,⠐⠍⠣
+מַּ,05DE+05B7+05BC,always,mem  dagesh with patah,⠐⠍⠉
+לֲּ,05DC+05B2+05BC,always,lamed dagesh with hataf patah,⠐⠇⠒
+מֵּ,05DE+05B5+05BC,always,mem  dagesh with tsere,⠐⠍⠌
+מִּ,05DE+05B4+05BC,always,mem  dagesh with hiriq,⠐⠍
+שֳׁ,05E9+05B3+05C1,always,shin with dot and hataf qamats,⠩⠜
+כֳּ,05DB+05B3+05BC,always,kaf dagesh  hataf qamats,⠅⠜
+שֱׁ,05E9+05B1+05C1,always,shin with dot and hataf segol,⠐⠩⠢
+לִּ,05DC+05B4+05BC,always,lamed  dagesh with hiriq,⠐⠇⠊
+לֵּ,05DC+05B5+05BC,always,lamed with dagesh,⠐⠇⠌
+לֶּ,05DC+05B6+05BC,always,lamed with dagesh,⠐⠇⠑
+לַּ,05DC+05B7+05BC,always,lamed with dagesh,⠐⠇⠉
+לָּ,05DC+05B8+05BC,always,lamed dagesh with qamats,⠐⠇⠣
+לֳּ,05DC+05B3+05BC,always,lamed dagesh with hataf qamats,⠐⠇⠜
+שֱׂ,05E9+05B1+05C2,always,sin with hataf segol,⠱⠢
+רֳּ,05E8+05B3+05BC,always,resh dagesh with hataf qamats,⠐⠗⠜
+רֲּ,05E8+05B2+05BC,always,resh dagesh with hataf patah,⠐⠗⠒
+פַּ,05E4+05B7+05BC,always,pe with dagesh,⠏⠉
+קֱּ,05E7+05B1+05BC,always,qof dagesh  hataf segol,⠐⠟⠢
+קָּ,05E7+05B8+05BC,always,qof dagesh  qamats,⠐⠟⠣
+קַּ,05E7+05B7+05BC,always,qof  dagesh with patah,⠐⠟⠉
+קֶּ,05E7+05B6+05BC,always,qof  dagesh with segol,⠐⠟⠑
+קֵּ,05E7+05B5+05BC,always,qof  dagesh with tsere,⠐⠟⠌
+קִּ,05E7+05B4+05BC,always,qof  dagesh with hiriq,⠐⠟⠊
+קֳּ,05E7+05B3+05BC,always,qof dagesh with hataf qamats,⠐⠟⠜
+קֲּ,05E7+05B2+05BC,always,qof dagesh with hataf patah,⠐⠟⠒
+קֱּ,05E7+05B1+05BC,always,qof dagesh with hataf segol,⠐⠟⠢
+קָּ,05E7+05B8+05BC,always,qof dagesh with qamats,⠐⠟⠣
+קַּ,05E7+05B7+05BC,always,qof with dagesh,⠐⠟⠉
+פִּ,05E4+05B4+05BC,always,pe  dagesh with hiriq,⠏⠊
+פֶּ,05E4+05B6+05BC,always,pe with dagesh,⠏⠑
+פָּ,05E4+05B8+05BC,always,pe dagesh with qamats,⠏⠣
+רֱּ,05E8+05B1+05BC,always,resh dagesh with hataf segol,⠐⠗⠢
+פֱּ,05E4+05B1+05BC,always,pe dagesh with hataf segol,⠏⠢
+פֲּ,05E4+05B2+05BC,always,pe dagesh with hataf patah,⠏⠒
+פֳּ,05E4+05B3+05BC,always,pe dagesh with hataf qamats,⠏⠜
+קֶּ,05E7+05B6+05BC,always,qof with dagesh,⠐⠟⠑
+קֵּ,05E7+05B5+05BC,always,qof with dagesh,⠐⠟⠌
+קִּ,05E7+05B4+05BC,always,qof  dagesh with hiriq,⠐⠟⠊
+צֳּ,05E6+05B3+05BC,always,resh dagesh with hataf qamats,⠐⠗⠮
+צֲּ,05E6+05B2+05BC,always,tsadi dagesh with hataf patah,⠐⠮⠒
+צֱּ,05E6+05B1+05BC,always,tsadi dagesh with hataf segol,⠐⠮⠢
+צָּ,05E6+05B8+05BC,always,tsadi dagesh with qamats,⠐⠮⠣
+צַּ,05E6+05B7+05BC,always,tsadi with dagesh,⠐⠮⠉
+צֶּ,05E6+05B6+05BC,always,tsadi with dagesh,⠐⠮⠑
+צֵּ,05E6+05B5+05BC,always,tsadi with dagesh,⠐⠮⠌
+קֲּ,05E7+05B2+05BC,always,qof dagesh  hataf patah,⠐⠟⠒
+עֳּ,05E2+05B3+05BC,always,ayin dagesh with hataf qamats,⠐⠫⠮
+עֲּ,05E2+05B2+05BC,always,ayin dagesh with hataf patah,⠐⠫⠒
+עֱּ,05E2+05B1+05BC,always,ayin dagesh with hataf segol,⠐⠫⠢
+רָּ,05E8+05B8+05BC,always,Resh dagesh with qamats,⠐⠗⠣
+רַּ,05E8+05B7+05BC,always,resh with dagesh,⠐⠗⠉
+נִּ,05E0+05B4+05BC,always,nun  dagesh with hiriq,⠐⠝⠊
+נֵּ,05E0+05B5+05BC,always,nun with dagesh,⠐⠝⠌
+נֶּ,05E0+05B6+05BC,always,nun with dagesh,⠐⠝⠑
+נַּ,05E0+05B7+05BC,always,nun with dagesh,⠐⠝⠉
+נָּ,05E0+05B8+05BC,always,nun dagesh with qamats,⠐⠝⠣
+נֱּ,05E0+05B1+05BC,always,nun dagesh with hataf segol,⠐⠝⠢
+נֲּ,05E0+05B2+05BC,always,nun dagesh with hataf patah,⠐⠝⠒
+נֳּ,05E0+05B3+05BC,always,nun dagesh with hataf qamats,⠐⠝⠜
+רֶּ,05E8+05B6+05BC,always,Resh with dagesh,⠐⠗⠑
+רֵּ,05E8+05B5+05BC,always,Resh with dagesh,⠐⠗⠌
+רִּ,05E8+05B4+05BC,always,Resh dagesh with hiriq,⠐⠗⠊
+סִּ,05E1+05B4+05BC,always,samekh dagesh with hiriq,⠐⠎⠊
+סֵּ,05E1+05B5+05BC,always,samekh with dagesh,⠐⠎⠌
+סֶּ,05E1+05B6+05BC,always,samekh with dagesh,⠐⠎⠑
+סַּ,05E1+05B7+05BC,always,samekh with dagesh,⠐⠎⠉
+סָּ,05E1+05B8+05BC,always,samekh dagesh with qamats,⠐⠎⠣
+סֱּ,05E1+05B1+05BC,always,samekh dagesh with hataf segol,⠐⠎⠢
+סֲּ,05E1+05B2+05BC,always,samekh dagesh with hataf patah,⠐⠎⠒
+סֳּ,05E1+05B3+05BC,always,samekh dagesh with hataf qamats,⠐⠎⠮
+קֳּ,05E7+05B3+05BC,always,qof dagesh  hataf qamats,⠐⠟⠜
+עִּ,05E2+05B4+05BC,always,ayin dagesh with hiriq,⠐⠫⠊
+עֵּ,05E2+05B5+05BC,always,ayin with dagesh,⠐⠫⠌
+עֶּ,05E2+05B6+05BC,always,ayin with dagesh,⠐⠫⠑
+עַּ,05E2+05B7+05BC,always,ayin with dagesh,⠐⠫⠉
+עָּ,05E2+05B8+05BC,always,ayin dagesh with qamats,⠐⠫⠣
+כִּ,05DB+05B4+05BC,always,kaf  dagesh with hiriq,⠅⠊
+צִּ,05E6+05B4+05BC,always,Tsadi dagesh with hiriq,⠐⠮⠊
+דִּ,05D3+05B4+05BC,always,dalet  dagesh with hiriq,⠐⠙⠊
+בֳּ,05D1+05B3+05BC,always,bet dagesh with hataf qamats,⠃⠜
+בֵּ,05D1+05B5+05BC,always,bet  dagesh with tsere,⠃⠌
+בֶּ,05D1+05B6+05BC,always,bet  dagesh with segol,⠃⠑
+בַּ,05D1+05B7+05BC,always,bet  dagesh with patah,⠃⠉
+בָּ,05D1+05B8+05BC,always,bet dagesh qamats,⠃⠣
+קְּ,05E7+05BC+05B0,always,qof with dagesh sheva,⠐⠟⠄
+בֱּ,05D1+05B1+05BC,always,bet dagesh  hataf segol,⠃⠢
+בֲּ,05D1+05B2+05BC,always,bet dagesh  hataf patah,⠃⠒
+בֳּ,05D1+05B3+05BC,always,bet dagesh  hataf qamats,⠃⠜
+תַּ,05EA+05B7+05BC,always,tav with dagesh,⠳⠉
+תֶּ,05EA+05B6+05BC,always,tav with dagesh,⠳⠑
+תֵּ,05EA+05B5+05BC,always,tav with dagesh,⠳⠌
+גִּ,05D2+05B4+05BC,always,gimel dagesh with hiriq,⠐⠛⠊
+גֵּ,05D2+05B5+05BC,always,gimel dagesh with tsere,⠐⠛⠌
+גֶּ,05D2+05B6+05BC,always,gimel dagesh with segol,⠐⠛⠑
+גַּ,05D2+05B7+05BC,always,gimel dagesh with patah,⠐⠛⠉
+גָּ,05D2+05B8+05BC,always,Gimel dagesh  qamats,⠐⠛⠣
+גֱּ,05D2+05B1+05BC,always,Gimel dagesh  hataf segol,⠐⠛⠢
+גֲּ,05D2+05B2+05BC,always,Gimel dagesh  hataf patah,⠐⠛⠒
+גֳּ,05D2+05B3+05BC,always,Gimel dagesh  hataf qamats,⠐⠙⠜
+תִּ,05EA+05B4+05BC,always,tav  dagesh with hiriq,⠳⠊
+שִׂ,05E9+05B4+05C2,always,sin with hiriq,⠱⠊
+דֵּ,05D3+05B5+05BC,always,dalet with dagesh,⠐⠙⠌
+דֶּ,05D3+05B6+05BC,always,dalet with dagesh,⠐⠙⠑
+בִּ,05D1+05B4+05BC,always,bet  dagesh with hiriq,⠃⠊
+בֲּ,05D1+05B2+05BC,always,bet dagesh with hataf patah,⠃⠒
+דָּ,05D3+05B8+05BC,always,dalet dagesh with qamats,⠐⠙⠣
+בֱּ,05D1+05B1+05BC,always,bet dagesh with hataf segol,⠃⠢
+כְּ,05DB+05BC+05B0,always,kaf with dagesh sheva,⠅⠄
+יְּ,05D9+05BC+05B0,always,Yod with dagesh sheva,⠐⠚⠄
+ּוְ,05BC+05D5+05B0,always,Shuriq sheva,⠥⠄
+דְּ,05D3+05BC+05B0,always,dalet with dagesh sheva,⠐⠙⠄
+נְּ,05E0+05BC+05B0,always,nun with  dagesh sheva,⠐⠝⠄
+בְּ,05D1+05B0+05BC,always,bet with dagesh sheva,⠃⠄
+תֳּ,05EA+05B3+05BC,always,tav dagesh with hataf qamats,⠳⠜
+אִּ,05D0+05B4+05BC,always,alef dagesh with hiriq,⠐⠁⠊
+אֵּ,05D0+05B5+05BC,always,alef dagesh with tsere,⠐⠁⠌
+אֶּ,05D0+05B6+05BC,always,alef dagesh with segol,⠐⠁⠑
+אַּ,05D0+05B7+05BC,always,alef dagesh with patah,⠐⠁⠉
+אָּ,05D0+05B8+05BC,always,alef dagesh  qamats,⠐⠁⠣
+אֱּ,05D0+05B1+05BC,always,alef dagesh  hataf segol,⠐⠁⠢
+אֲּ,05D0+05B2+05BC,always,alef dagesh  hataf patah,⠐⠁⠒
+אֳּ,05D0+05B3+05BC,always,alef dagesh  hataf qamats,⠐⠁⠜
+תֲּ,05EA+05B2+05BC,always,tav dagesh with hataf patah,⠳⠒
+תֱּ,05EA+05B1+05BC,always,tav dagesh with hataf segol,⠳⠢
+תָּ,05EA+05B8+05BC,always,tav dagesh with qamats,⠳⠣
+בִּ,05D1+05B4+05BC,always,bet  dagesh with hiriq,⠃⠊
+בֵּ,05D1+05B5+05BC,always,bet with dagesh,⠃⠌
+בֶּ,05D1+05B6+05BC,always,bet with dagesh,⠃⠑
+בַּ,05D1+05B7+05BC,always,bet with dagesh,⠃⠉
+בָּ,05D1+05B8+05BC,always,bet dageshwith qamats,⠃⠣
+דַּ,05D3+05B7+05BC,always,dalet with dagesh,⠐⠙⠉
+דֱּ,05D3+05B1+05BC,always,dalet dagesh with hataf segol,⠐⠙⠢
+לְּ,05DC+05BC+05B0,always,lamed with dagesh sheva,⠐⠇⠄
+חֲּ,05D7+05B2+05BC,always,het dagesh  hataf patah,⠐⠭⠒
+טִּ,05D8+05B4+05BC,always,tet dagesh with hiriq,⠐⠞⠊
+טֵּ,05D8+05B5+05BC,always,tet dagesh with tsere,⠐⠞⠌
+טֶּ,05D8+05B6+05BC,always,tet dagesh with segol,⠐⠞⠑
+טַּ,05D8+05B7+05BC,always,tet dagesh with patah,⠐⠞⠉
+טָּ,05D8+05B8+05BC,always,tet dagesh  qamats,⠐⠞⠣
+טֱּ,05D8+05B1+05BC,always,tet dagesh  hataf segol,⠐⠚⠢
+טֲּ,05D8+05B2+05BC,always,tet dagesh  hataf patah,⠐⠞⠒
+טֳּ,05D8+05B3+05BC,always,tet dagesh  hataf qamats,⠐⠞⠜
+יִּ,05D9+05B4+05BC,always,Yod dagesh with hiriq,⠐⠚⠊
+יֵּ,05D9+05B5+05BC,always,Yod dagesh with tsere,⠐⠚⠌
+יֶּ,05D9+05B6+05BC,always,Yod dagesh with segol,⠐⠚⠑
+יַּ,05D9+05B7+05BC,always,Yod dagesh with patah,⠐⠚⠉
+יָּ,05D9+05B8+05BC,always,Yod dagesh  qamats,⠐⠚⠣
+יֱּ,05D9+05B1+05BC,always,Yod dagesh  hataf segol,⠐⠚⠢
+יֲּ,05D9+05B2+05BC,always,Yod dagesh  hataf patah,⠐⠚⠒
+יֳּ,05D9+05B3+05BC,always,Yod dagesh  hataf qamats,⠐⠚⠜
+שֳׂ,05E9+05B3+05C2,always,sin with hataf qamats,⠱⠜
+שֲׂ,05E9+05B2+05C2,always,sin with hataf patah,⠱⠒
+תְּ,05EA+05BC+05B0,always,tav with dagesh sheva,⠳⠄
+שָׂ,05E9+05B8+05C2,always,sin with qamats,⠱⠣
+שַׂ,05E9+05B7+05C2,always,sin,⠱⠉
+שֶׂ,05E9+05B6+05C2,always,sin,⠱⠑
+שֵׂ,05E9+05B5+05C2,always,sin,⠱⠌
+חֳּ,05D7+05B3+05BC,always,Hex dagesh  hataf qamats,⠐⠭⠜
+חֱּ,05D7+05B1+05BC,always,het dagesh  hataf segol,⠐⠭⠢
+דֲּ,05D3+05B2+05BC,always,dalet dagesh with hataf patah,⠐⠙⠒
+חָּ,05D7+05B8+05BC,always,Hex dagesh  qamats,⠐⠭⠣
+דֳּ,05D3+05B3+05BC,always,dalet dagesh with hataf qamats,⠐⠙⠜
+שְׁ,05E9+05B0+05C1,always, Shin with dot and sheva,⠩⠄
+שְׂ,05E9+05B0+05C2,always, Sin sheva,⠱⠄
+הִּ,05D4+05B4+05BC,always,heydagesh with hiriq,⠐⠓⠊
+הֵּ,05D4+05B5+05BC,always,Hey dagesh with tsere,⠐⠓⠌
+הֶּ,05D4+05B6+05BC,always,Hey dagesh with segol,⠐⠓⠑
+הַּ,05D4+05B7+05BC,always,Hey dagesh with patah,⠐⠓⠉
+הָּ,05D4+05B8+05BC,always,Hey dagesh  qamats,⠐⠓⠣
+הֱּ,05D4+05B1+05BC,always,Hey dagesh  hataf segol,⠐⠓⠢
+הֲּ,05D4+05B2+05BC,always,Hey dagesh  hataf patah,⠐⠓⠒
+הֳּ,05D4+05B3+05BC,always,Hey dagesh  hataf qamats,⠐⠓⠜
+זִּ,05D6+05B4+05BC,always,zayin dagesh with hiriq,V⠐⠵⠊
+זֵּ,05D6+05B5+05BC,always,zayin dagesh with tsere,⠐⠵⠌
+זֶּ,05D6+05B6+05BC,always,zayin dagesh with segol,⠐⠵⠑
+זַּ,05D6+05B7+05BC,always,zayin dagesh with patah,⠐⠵⠉
+זָּ,05D6+05B8+05BC,always,zayin dagesh  qamats,⠐⠵⠣
+זֱּ,05D6+05B1+05BC,always,zayin dagesh  hataf segol,⠐⠵⠢
+זֲּ,05D6+05B2+05BC,always,zayin dagesh  hataf patah,⠐⠵⠒
+זֳּ,05D6+05B3+05BC,always,zayin dagesh  hataf qamats,⠐⠵⠜
+חִּ,05D7+05B4+05BC,always,het dagesh with hiriq,⠐⠭⠊
+חֵּ,05D7+05B5+05BC,always,het dagesh with tsere,⠐⠭⠌
+חֶּ,05D7+05B6+05BC,always,het dagesh with segol,⠐⠭⠑
+חַּ,05D7+05B7+05BC,always,Hex dagesh with patah,⠐⠭⠉
+מְּ,05DE+05BC+05B0,always,mem with dagesh sheva,⠐⠍⠄
+שׂ,05E9+05C2,always,sin,⠱
+קּ,05E7+05BC,always,qof with dagesh,⠐⠟
+כְּ,FB3B+05B0,always,KAF with dagesh  sheva,⠅⠄
+בְּ,FB31+05B0,always,Bet with dagesh sheva,⠃⠄
+רּ,05E8+05BC,always,Resh with dagesh,⠐⠗
+תּ,05EA+05BC,always,tav with dagesh,⠳
+שׁ,05E9+05C1,always,shin with dot,⠩
+צּ,05E6+05BC,letter,tsadi with dagesh,⠐⠮
+"ן""",05DF+0022,nofor always,final Nun with quote,⠝⠠⠶
+תְּ,FB4A+05B0,always,tav with daggesh sheva,⠳⠄
+גּ,05D2+05BC,letter,gimel with dagesh,⠐⠛
+אּ,05D0+05BC,letter,alef with dagesh,⠐⠁
+ם!,05DD+0021,nofor always,final Mem with  exclamation,⠍⠖
+ם?,05DD+003F,nofor always,final Mem with  question,⠍⠰⠦
+ם),05DD+0029,nofor always,final Mem with  right parenthesis,⠍⠐⠜
+ם”,05DD+201D,nofor always,final Mem with right quote,⠍⠴
+"ם""",05DD+0022,nofor always,final Mem with quote,⠍⠠⠶
+םְ,05DD+05B0,nofor always,final Mem with sheva ,⠍⠄
+ם ,05DD+0020,nofor always,final Mem with  space,⠍ 
+ם־,05DD+05BE,nofor always,final Mem with  Mediq,⠍⠤
+דּ,05D3+05BC,always,dalet with dagesh,⠐⠙
+ן.,05DF+002E,nofor always,final Nun with  period,⠝⠲
+"ן,",05DF+002C,nofor always,final Nun with  comma,⠝⠂
+ן!,05DF+0021,nofor always,final Nun with  exclamation,⠝⠖
+ן?,05DF+003F,nofor always,final Nun with  question,⠝⠰⠦
+ן),05DF+0029,nofor always,final Nun with  right parenthesis,⠝⠐⠜
+ן”,05DF+201D,nofor always,final Nun with right quote,⠝⠴
+"ם,",05DD+002C,nofor always,final Mem with  comma,⠍⠂
+ם.,05DD+002E,nofor always,final Mem with  period,⠍⠲
+טּ,05D8+05BC,letter,tet with dagesh,⠐⠞
+ךְ,05DA+05B0,nofor always,final kaf with sheva,⠡⠄
+"ך,",05DA+002C,nofor always,final kaf with comma,⠡⠂
+ך!,05DA+0021,nofor always,final kaf with exclamation,⠡⠖
+ך?,05DA+003F,nofor always,final kaf with  question,⠡⠰⠦
+ך),05DA+0029,nofor always,final kaf with  right parenthesis,⠡⠐⠜
+ך”,05DA+201D,nofor always,final kaf with right quote,⠡⠴
+"ך""",05DA+0022,nofor always,final kaf with quote,⠡⠠⠶
+ך ,05DA+0020,final kaf with  space,⠡ ,
+ץ־,05E5+05BE,nofor alwsays,final tsadi with Mediq,⠮⠤
+ך־,05DA+05BE,nofor always,final kaf with  Mediq,⠡⠤
+כּ,05DB+05BC,always,kaf with dagesh,⠅
+כּ,05DB+05BC,always,kaf dagesh  hataf patah,⠅⠒
+בּ,05D1+05BC,always,bet with dagesh,⠃
+יּ,05D9+05BC,always,Yod with dagesh,⠐⠚
+לּ,05DC+05BC,always,lamed with dagesh,⠐⠇
+חּ,05D7+05BC,letter,het with dagesh,⠐⠭
+בּ,05D1+05BC,always,bet with dagesh,⠃
+ןְ,05DF+05B0,nofor always,final Nun with sheva,⠝
+ן ,05DF+0020,nofor always,final Nun with  space,⠝ 
+ףְ,05E3+05B0,nofor always,final Pe with furtive patah,⠋⠉
+ף ,05E3+0020,nofor always,final Pe with  space,⠋ 
+ף־,05E3+05BE,nofor always,final Pe with Mediq,⠋⠤
+פּ,05E4+05BC,always,pe with dagesh,⠏
+וֹ,05D5+05B9,always,holam-vav,⠕
+הּ,05D4+05BC,letter,hey with dagesh,⠐⠓
+ץ.,05E5+002E,nofor always,final tsadi with  period,⠮⠲
+"ץ,",05E5+002C,nofor always,final tsadi with  comma,⠮⠂
+ץ!,05E5+0021,nofor always,final tsadi with  exclamation,⠮⠖
+ץ?,05E5+003F,nofor always,final tsadi with  question,⠮⠰⠦
+ץ),05E5+0029,nofor always,final tsadi with  right parenthesis,⠮⠐⠜
+ץ”,05E5+201D,nofor always,final tsadi with right quote,⠮⠴
+"ץ""",05E5+0022,nofor always,final tsadi with quote,⠮⠠⠶
+ץְ,05E5+05B0,nofor always,final tsadi with sheva,⠮⠄
+ץ ,05E5+0020,nofor always,final tsadi with space,⠮ 
+"ף""",05E3+0022,nofor always,final Pe with quote,⠋⠠⠶
+ף”,05E3+201D,nofor always,final Pe with right quote,⠋⠴
+ף),05E3+0029,nofor always,final Pe with  right parenthesis,⠋⠐⠜
+ֵי,05B5+05D9,always,tsere-yod*,⠼
+ן־,05DF+05BE,nofor always,final Nun with Mediq,⠝⠤
+נּ,05E0+05BC,always,nun with dagesh,⠐⠝
+זּ,05D6+05BC,letter,zayin with dagesh,⠐⠵
+סּ,05E1+05BC,letter,samekh,⠐⠎
+ף?,05E3+003F,nofor always,final Pe with  question,⠋⠰⠦
+ּו,05BC+05D5,always,shuruq,⠥
+וּ,05D5+05BC,always,shuruq,⠥
+ִי,05B4+05D9,always,hiriq-yod,⠔
+ף.,05E3+002E,nofor always,final Pe with  period,⠋⠲
+"ף,",05E3+002C,nofor always,final Pe with  comma,⠋⠂
+ף!,05E3+0021,nofor always,final Pe with  exclamation,⠋⠖
+ך.,05DA+002E,nofor always,final kaf with  period,⠡⠲
+בּ,FB31,always,Bet with dagesh,⠃
+ג,05D2,letter,gimel,⠛
+ב,05D1,letter,bet,⠧
+צ,05E6,letter,tsadi,⠮
+ת,05EA,always,tav,⠹
+תּ,FB4A,always,tav with daggesh,⠳
+א,05D0,letter,alef,⠁
+ּ,05BC,letter,dagesh,⠐
+ֺ,05BA,letter,holam haser,⠪
+ֹ,05B9,letter,holam Malay,⠕
+ָ,05B8,letter,qamats*,⠣
+ַ,05B7,letter,patah*,⠉
+ֶ,05B6,letter,segol*,⠑
+ֵ,05B5,letter,tsere*,⠌
+ִ,05B4,letter,hiriq*,⠊
+ֳ,05B3,letter,hataf qamats*,⠜
+ֲ,05B2,letter,hataf patah,⠒
+ֻ,05BB,letter,qubuts*,⠬
+ל,05DC,letter,lamed,⠇
+ד,05D3,letter,dalet,⠙
+ש,05E9,letter,Shin,⠩
+ץ,05E5,letter,noback  final tsadi,⠮
+פ,05E4,letter,Pe,⠋
+ף,05E3,letter,noback  final pe,⠋
+ע,05E2,letter,ayin with dagesh,⠐⠫
+ק,05E7,letter,qof,⠟
+ר,05E8,letter,resh,⠗
+ע,05E2,letter,ayin,⠫
+ס,05E1,letter,samekh with dagesh,⠎
+נ,05E0,letter,nun,⠝
+ֱ,05B1,letter,hataf segol,⠢
+ן,05DF,letter,noback  final nun,⠝
+ה,05D4,letter,hey,⠓
+מ,05DE,letter,mem,⠍
+ם,05DD,noback letter,final mem,⠍
+כ,05DB,letter,kaf,⠡
+כּ,FB3B,always,KAF with dagesh ,⠅
+ך,05DA,noback letter,final kaf,⠡
+י,05D9,always,Yod with dagesh,⠚
+ט,05D8,letter,tet,⠞
+ח,05D7,letter,het,⠭
+ז,05D6,letter,zayin,⠵
+ו,05D5,letter,vav,⠺
+ְ,05B0,letter,sheva,⠄

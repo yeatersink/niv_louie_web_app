@@ -1,0 +1,77 @@
+Character,Hex,Type,Name,Braille
+é,000E9,lowercase,E WITH ACUTE,⠘⠌⠑
+á,00E1,lowercase,A WITH ACUTE,⠘⠌⠁
+₂,2082,digit,SUBSCRIPT TWO,⠢⠼⠃
+₉,2089,digit,SUBSCRIPT NINE,⠢⠼⠊
+₈,2088,digit,SUBSCRIPT EIGHT,⠢⠼⠓
+₇,2087,digit,SUBSCRIPT SEVEN,⠢⠼⠛
+₆,2086,digit,SUBSCRIPT SIX,⠢⠼⠋
+₅,2085,digit,SUBSCRIPT FIVE,⠢⠼⠑
+₄,2084,digit,SUBSCRIPT FOUR,⠢⠼⠙
+₃,2083,digit,SUBSCRIPT THREE,⠢⠼⠉
+₁,2081,digit,SUBSCRIPT ONE,⠢⠼⠁
+ʿ,02BF,letter,LEFT HALF RING,⠐⠫
+ʾ,02BE,letter,RIGHT HALF RING,⠫
+×,00D7,math,MULTIPLICATION SIGN,⠐⠦
+Ŋ,014A,uppercase,CAPITAL ENG,⠠⠐⠚
+ŋ,014B,lowercase,ENG,⠐⠚
+Ḫ,1E2A,uppercase,CAPITAL H WITH BREVE BELOW,⠠⠡
+ḫ,1E2B,lowercase,H WITH BREVE BELOW,⠡
+ₓ,2093,letter,SUBSCRIPT SMALL X,⠢⠭
+⸢,2E22,punctuation,TOP LEFT HALF BRACKET,⠨⠣
+⸣,2E23,punctuation,TOP RIGHT HALF BRACKET,⠨⠜
+⸤,2E24,punctuation,BOTTOM LEFT HALF BRACKET,⠨⠣
+ꟳ,A7F3,uppercase,Subscript Capitol f,⠨⠠⠋
+ₘ,2098,lowercase,Subscript m,⠨⠍
+ᴹ,1D39,uppercase,Subscript Capitol m,⠨⠠⠍
+Ṯ,1E6E,uppercase,Capital T with Line Below,⠠⠹
+ṯ,1E6F,lowercase,T with Line Below,⠹
+Ǵ,01F4,uppercase,Capitol G with ACUTE,⠠⠘⠌⠛
+ǵ,01F5,lowercase,G with Acute,⠘⠌⠛
+Ẓ,1E92,uppercase,Capital Z with Dot Below,⠠⠐⠵
+ẓ,1E93,letter,Z with Dot Below,⠐⠵
+ᵈ,1D48,lowercase,subscript D,⠨⠙
+󑴰,1D30,uppercase,Subscript Capitol d,⠨
+Ḏ,1E0E,uppercase,Capitol D with line below,⠠⠰⠙
+ḏ,1E0F,lowercase,D with line below,⠰⠙
+ʳ,02B3,lowercase,SMALL R,⠗
+⸥,2E25,punctuation,BOTTOM RIGHT HALF BRACKET,⠨⠜
+Ṭ,1E6C,uppercase,CAPITAL T WITH DOT BELOW,⠠⠐⠞
+ṭ,1E6D,lowercase,T WITH DOT BELOW,⠐⠞
+Ṣ,1E62,uppercase,CAPITAL S WITH DOT BELOW,⠠⠐⠎
+ṣ,1E63,lowercase,S WITH DOT BELOW,⠐⠎
+Ì,00CC,uppercase,CAPITAL I WITH GRAVE,⠠⠘⠡⠊
+È,00C8,uppercase,CAPITAL E WITH GRAVE,⠠⠘⠡⠑
+À,00C0,uppercase,CAPITAL A WITH GRAVE,⠠⠘⠡⠁
+ù,00F9,lowercase,U WITH GRAVE,⠘⠡⠥
+ì,00EC,lowercase,I WITH GRAVE,⠘⠡⠊
+è,00E8,lowercase,E WITH GRAVE,⠘⠡⠑
+à,00E0,lowercase,A WITH GRAVE,⠘⠡⠁
+Ś,015A,uppercase,CAPITAL S WITH ACUTE,⠠⠘⠌⠎
+ś,015B,lowercase,S WITH ACUTE,⠘⠌⠎
+Ú,00DA,uppercase,CAPITAL U WITH ACUTE,⠠⠘⠌⠥
+Í,00CD,uppercase,CAPITAL I WITH ACUTE,⠠⠘⠌⠊
+É,00C9,uppercase,CAPITAL E WITH ACUTE,⠠⠘⠌⠑
+Á,00C1,uppercase,CAPITAL A WITH ACUTE,⠠⠘⠌⠁
+ú,00FA,lowercase,U WITH ACUTE,⠘⠌⠥
+í,00ED,lowercase,I WITH ACUTE,⠘⠌⠊
+Ù,00D9,uppercase,CAPITAL U WITH GRAVE,⠠⠘⠡⠥
+ᶠ,1DA0,lowercase,Subscript f,⠨⠋
+î,00EE,lowercase,I WITH CIRCUMFLEX,⠘⠩⠊
+Û,00DB,uppercase,CAPITAL U WITH CIRCUMFLEX,⠠⠘⠩⠥
+ū,016B,lowercase,U WITH MACRON,⠈⠤⠥
+š,0161,lowercase,S WITH CARON,⠩
+Ī,012A,uppercase,CAPITAL I WITH MACRON,⠠⠈⠤⠊
+Ū,016A,uppercase,CAPITAL U WITH MACRON,⠠⠈⠤⠥
+â,00E2,lowercase,A WITH CIRCUMFLEX,⠘⠩⠁
+ê,00EA,lowercase,E WITH CIRCUMFLEX,⠘⠩⠑
+ī,012B,lowercase,I WITH MACRON,⠈⠤⠊
+û,00FB,lowercase,U WITH CIRCUMFLEX,⠘⠩⠥
+Â,00C2,uppercase,CAPITAL A WITH CIRCUMFLEX,⠠⠘⠩⠁
+Ê,00CA,uppercase,CAPITAL E WITH CIRCUMFLEX,⠠⠘⠩⠑
+Î,00CE,uppercase,CAPITAL I WITH CIRCUMFLEX,⠠⠘⠩⠊
+Š,160,uppercase,CAPITAL S WITH CARON,⠠⠩
+ā,101,lowercase,A WITH MACRON,⠈⠤⠁
+Ē,112,uppercase,CAPITAL E WITH MACRON,⠠⠈⠤⠑
+Ā,100,uppercase,CAPITAL A WITH MACRON,⠠⠈⠤⠁
+ē,113,lowercase,E WITH MACRON,⠈⠤⠑

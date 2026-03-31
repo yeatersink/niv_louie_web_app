@@ -1,0 +1,144 @@
+Char,Hex,Type,Name,Braille
+ጟ,U+131f +BE4Fsyllable ggwaa,letter,ggwa,
+ጀ,U+1300D+BE30,letter,ja,⠚⠢
+፩,U+1369 +BE99,letter,one,⠿⠁
+፣,U+1363 +BE93,letter,comma,⠁
+፤,U+1364 +BE94,letter,semicolon,⠲
+፥,U+1365 +BE95,letter,colon,⠲⠒
+፦,U+1366 +BE96,letter,preface colon,⠱
+፧,U+1367 +BE97,letter,question mark,⠦
+፨,U+1368 +BE98,letter,paragraph separator,⠶⠱
+፪,U+136a +BE9A,letter,two,⠿⠃
+፲,U+1372 +BEA2,letter,ten,⠿⠁⠚
+፫,U+136b +BE9B,letter,three,⠿⠉
+፬,U+136c +BE2C,letter,four,⠿⠙
+፭,U+136d +BE9D,letter,five,⠿⠑
+፮,U+136e +BE9E,letter,six,⠿⠋
+፯,U+136f +BE9F,letter,seven,⠿⠛
+፰,U+1370 +BEA0,letter,eight,⠿⠓
+።,U+1362 +BE92,letter,full stop,⠲
+፡,U+1361 +BE91,letter,wordspace, 
+፠,U+1360 +BE90,letter,section mark,⠱
+ፓ,U+1353 +BE83,letter,paa,⠏⠁
+ፍ,U+134d +BE7D,letter,fe,⠋
+ፎ,U+134e +BE7E,letter,fo,⠋⠕
+ፏ,U+134f +BE7F,letter,fwa,⠋⠭
+ፐ,U+1350 +BE80,letter,pa,⠏⠢
+ፑ,U+1351 +BE81,letter,pu,⠏⠥
+ፒ,U+1352 +BE82,letter,pi,⠏⠊
+ፔ,U+1354 +BE84,letter,pee,⠏
+፟,U+135f +BE8F,letter,combining gemination mark,
+ፕ,U+1355 +BE85,letter,pe,⠏⠕
+ፖ,U+1356 +BE86,letter,po,⠏⠽
+ፗ,U+1357 +BE87,letter,pwa,⠗⠽⠢
+ፘ,U+1358 +BE88,letter,rya,⠍⠽⠢
+ፙ,U+1359 +BE89,letter,mya,⠋⠽⠢
+ፚ,U+135a +BE8A,letter,fya,⠸
+፱,U+1371 +BEA1,letter,nine,⠿⠊
+፳,U+1373 +BEA3,letter,twenty,⠿⠃⠚
+ፋ,U+134b +BE7B,letter,faa,⠋⠁
+᎐,U+1390 +BF40,letter,yizet,⠌⠽
+ᎊ,U+138a +BF3A,letter,fwee,⠌⠋⠺⠑
+ᎋ,U+138b +BF3B,letter,fwe,⠌⠋⠺⠑
+ᎌ,U+138c +BF3C,letter,sebatbeit pwa,⠌⠎⠏⠺⠁
+ᎍ,U+138d +BF3D,letter,pwi/pwi,
+ᎎ,U+138e +BF3E,letter,pwee,⠌⠏⠺⠑
+ᎏ,U+138f +BF3F,letter,pwe,⠌⠏⠺⠊
+᎑,U+1391 +BF41,letter,deret,⠌⠙
+ᎈ,U+1388 +BF38,letter,sebatbeit fwa,⠌⠎⠋⠺⠁
+᎒,U+1392 +BF42,letter,rikrik,⠌⠗⠗
+᎓,U+1393 +BF43,letter,short rikrik,⠌⠗
+᎔,U+1394 +BF44,letter,difat,⠌⠙⠋
+᎕,U+1395 +BF45,letter,kenat,⠌⠅
+᎖,U+1396 +BF46,letter,chiret,⠌⠉⠓
+᎗,U+1397 +BF47,letter,hidet,⠌⠓
+ᎉ,U+1389 +BF39,letter,fwi,⠌⠋⠺⠊
+ᎇ,U+1387 +BF37,letter,bwe,⠌⠃⠺⠑
+፴,U+1374 +BEA4,letter,thirty,⠿⠉⠚
+፻,U+137b +BEAB,letter,hundred,⠿⠁⠚⠚
+፵,U+1375 +BEA5,letter,forty,⠿⠙⠚
+፶,U+1376 +BEA6,letter,fifty,⠿⠑⠚
+፷,U+1377 +BEA7,letter,sixty,⠿⠋⠚
+፸,U+1378 +BEA8,letter,seventy,⠿⠛⠚
+፹,U+1379 +BEA9,letter,eighty,⠿⠓⠚
+፺,U+137a +BEAA,letter,ninety,⠿⠊⠚
+፼,U+137c +BEAC,letter,ten thousand,⠿⠁⠚⠚⠚
+ᎆ,U+1386 +BF36,letter,bwee,⠌⠃⠺⠑
+ᎀ,U+1380 +BF30,letter,   sebatbeit mwa,⠌⠎⠍⠺⠁
+ᎁ,U+1381 +BF31,letter,mwi,⠌⠍⠺⠊
+ᎂ,U+1382 +BF32,letter,mwee,⠌⠍⠺⠑
+ᎃ,U+1383 +BF33,letter,   mwe,⠌⠍⠺⠑
+ᎄ,U+1384 +BF34,letter,sebatbeit bwa,⠌⠎⠃⠺⠁
+?,U+1385 +BF35,letter,bwi,⠌⠃⠺⠊
+ፌ,U+134c +BE7C,letter,fee,⠋⠑
+ፊ,U+134a +BE7A,letter,fi,⠋⠊
+ጁ,U+1301D+BE31,letter,ju,⠚⠥
+ጝ,U+131d +BE4D,letter,gge,⠛⠛
+ጕ,U+1315 +BE45,letter,gwe,⠛⠺⠥
+ጘ,U+1318 +BE48,letter,gga,⠛⠢
+ጙ,U+1319 +BE49,letter,ggu,⠛⠥
+ጚ,U+131a +BE4A,letter,ggi,⠛⠊
+ጛ,U+131b +BE4B,letter,ggaa,⠛⠁
+ጜ,U+131c +BE4C,letter,ggee,⠛⠑
+ጞ,U+131e +BE4E,letter,ggo,⠛⠛⠕
+ጓ,U+1313 +BE43,letter,gwaa,⠛⠭
+ጠ,U+1320 +BE50,letter,tha,⠾⠢
+ጡ,U+1321 +BE51,letter,thu,⠷⠥
+ጢ,U+1322 +BE52,letter,thi,⠾⠊
+ጣ,U+1323 +BE53,letter,thaa,⠾⠁
+ጤ,U+1324 +BE54,letter,thee,⠾⠑
+ጥ,U+1325 +BE55,letter,the,⠾
+ጔ,U+1314 +BE44,letter,gwee,⠛⠺⠑
+ጒ,U+1312 +BE42,letter,gwi,⠛⠺⠊
+ፉ,U+1349 +BE79,letter,fu,⠋⠥
+ገ,U+1308D+BE38,letter,   ga,⠛⠢
+ጂ,U+1302D+BE32,letter,ji,⠚⠊
+ጃ,U+1303D+BE33,letter,   jaa,⠚⠁
+ጄ,U+1304D+BE34,letter,   jee,⠚⠑
+?,U+1305D+BE35,letter,   je,⠦
+ጆ,U+1306D+BE36,letter,   jo,⠚⠕
+ጇ,U+1307D+BE37,letter,   jwa,⠭
+ጉ,U+1309D+BE39,letter,   gu,⠛⠥
+ጐ,U+1310 +BE40,letter,gwa,⠛⠺⠢
+ጊ,U+130aD+BE3A,letter,           gi,⠛⠊
+ጋ,U+130bD+BE3B,letter,gaa,⠛⠁
+ጌ,U+130c +BE3C,letter,gee,⠛⠑
+ግ,U+130d +BE3D,letter,ge,⠛
+ጎ,U+130e +BE3E,letter,go,⠛⠕
+ጏ,U+130f +BE3F,letter,goa,⠛⠭
+ጦ,U+1326 +BE56,letter,tho,⠾⠕
+ጧ,U+1327 +BE57,letter,thwa,⠾⠭
+ጨ,U+1328 +BE58,letter,cha,⠉⠢
+ፁ,U+1341 +BE71,letter,tzu,⠯⠥
+ጻ,U+133b +BE6B,letter,tsaa,⠮⠁
+ጼ,U+133c +BE6C,letter,tsee,⠮⠑
+ጽ,U+133d +BE6D,letter,tse,⠮
+ጾ,U+133e +BE6E,letter,tso,⠮⠕
+ጿ,U+133f +BE6F,letter,tswa,⠮⠭
+ፀ,U+1340 +BE70,letter,tza,⠯⠢
+ፂ,U+1342 +BE72,letter,tzi,⠯⠊
+ጩ,U+1329 +BE59,letter,chu,⠉⠥
+ፃ,U+1343 +BE73,letter,tzaa,⠯⠁
+ፄ,U+1344 +BE74,letter,tzee,⠯⠑
+?,U+1345 +BE75,letter,tze,⠦
+ፆ,U+1346 +BE76,letter,tzo,⠯⠴
+ፇ,U+1347 +BE77,letter,tzoa,⠯⠭
+ፈ,U+1348 +BE78,letter,fa,⠋⠢
+ጺ,U+133a +BE6A,letter,tsi,⠮⠊
+ጹ,U+1339 +BE69,letter,tsu,⠮⠥
+ጸ,U+1338 +BE68,letter,tsa,⠮⠢
+ጷ,U+1337 +BE67,letter,phwa,⠖⠭
+ጶ,U+1336 +BE66,letter,pho,⠖⠕
+ጵ,U+1335 +BE65,letter,phe,⠖⠂
+ጴ,U+1334 +BE64,letter,phee,⠖⠑
+ጳ,U+1333 +BE63,letter,phaa,⠖⠁
+ጲ,U+1332 +BE62,letter,phi,⠖⠊
+ጱ,U+1331 +BE61,letter,phu,⠖⠥
+ጰ,U+1330 +BE60,letter,pha,⠖⠢
+ጯ,U+132f +BE5F,letter,chwa,⠉⠭
+ጮ,U+132e +BE5E,letter,cho,⠉⠕
+ጭ,U+132d +BE5D,letter,che,⠉
+ጬ,U+132c +BE5C,letter,chee,⠉⠑
+ጫ,U+132b +BE5B,letter,chaa,⠉⠁
+ጪ,U+132a +BE5A,letter,chi,⠉⠊
+᎘,U+1398 +BF48,letter,deret hidet,⠌⠙⠓

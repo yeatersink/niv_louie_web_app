@@ -1,0 +1,61 @@
+#test_hebrew symbols.dic
+#Copyright (c) 2024 Matthew Yeater and Paul Geoghegan.
+#This file is covered by the GNU General Public License.
+
+symbols:
+אּ	alef with dagesh	none
+ב	bet	none
+בּ	bet with dagesh	none
+בּ	bet with dagesh	none
+ּ	dagesh	none
+דּ	dalet with dagesh	none
+ך	final kaf	none
+ם	final mem	none
+ן	final nun	none
+ף	final pe	none
+ץ	final tsadi	none
+ג	gimel	none
+גּ	gimel with dagesh	none
+חּ	het with dagesh	none
+כ	kaf	none
+כּ	kaf with dagesh	none
+כּ	kaf with dagesh	none
+לּ	lamed with dagesh	none
+א	letter alef	none
+ע	letter ayin	none
+עּ	letter ayin with dagesh	none
+ד	letter dalet	none
+ח	letter het	none
+ה	letter hey	none
+הּ	letter hey with dagesh	none
+ל	letter lamed	none
+מ	letter mem	none
+נ	letter nun	none
+נּ	letter nun with dagesh	none
+ק	letter qof	none
+קּ	letter qof with dagesh	none
+ר	letter resh	none
+רּ	letter resh with dagesh	none
+ס	letter samekh	none
+סּ	letter samekh with dagesh	none
+שׁ	letter shin with dot	none
+שּׁ	letter shin with dot and dagesh	none
+שּׁ	letter shin with dot and dagesh	none
+שׂ	letter sin	none
+שּׂ	letter sin with dagesh	none
+תּ	letter tav with dagesh	none
+ט	letter tet	none
+טּ	letter tet with dagesh	none
+צ	letter tsadi	none
+צּ	letter tsadi with dagesh	none
+מּ	mem with dagesh	none
+פ	pe	none
+פּ	pe with dagesh	none
+ש	shin	none
+ת	tav	none
+תּ	tav with daggesh	none
+ו	vav	none
+י	yod	none
+יּ	yod with dagesh	none
+ז	zayin	none
+זּ	zayin with dagesh	none

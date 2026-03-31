@@ -1,0 +1,32 @@
+
+# Yaml Test For Hebrew
+
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved. This file is offered as-is,
+# without any warranty.
+
+display: unicode.dis
+table:
+  language: hbo
+  __assert-match: hbo.utb
+flags: { testmode: forward }
+tests:
+  - ["֯֯בָּרָ֣א", "⠸⠍⠸⠍⠃⠣⠗⠣⠨⠥⠁"]
+  - ["֯֯אֱלֹהִ֑ים", "⠸⠍⠸⠍⠁⠢⠇⠕⠓⠊⠆⠚⠍"]
+  - ["אֵ֥ת", "⠁⠌⠨⠍⠹"]
+  - ["הַשָּׁמַ֖יִם", "⠓⠉⠐⠩⠣⠍⠉⠨⠞⠔⠍"]
+  - ["֯֯וְאֵ֥ת", "⠸⠍⠸⠍⠺⠄⠁⠌⠨⠍⠹"]
+  - ["הָאָֽרֶץ׃", "⠓⠣⠁⠣⠈⠗⠑⠮⠲"]
+  - ["וְהָאָ֗רֶ֯ץ", "⠺⠄⠓⠣⠁⠣⠨⠗⠗⠑⠸⠍⠮"]
+  - ["הָיְתָ֥ה", "⠓⠣⠚⠄⠹⠣⠨⠍⠓"]
+  - ["תֹ֨הוּ֙", "⠹⠕⠨⠏⠓⠥⠨⠌"]
+  - ["וָבֹ֔ה֯וּ", "⠺⠣⠧⠕⠂⠓⠸⠍⠥"]
+  - ["וְחֹ֖שֶׁ֯ךְ", "⠺⠄⠭⠕⠨⠞⠩⠑⠸⠍⠡⠄"]
+  - ["עַל־פְּנֵ֣י", "⠐⠫⠉⠇⠤⠋⠄⠐⠝⠌⠨⠥⠚"]
+  - ["תְה֑וֹם", "⠹⠄⠓⠆⠕⠍"]
+  - ["וְר֣וּחַ", "⠺⠄⠗⠨⠥⠥⠭⠉"]
+  - ["֯֯אֱלֹהִ֔ים", "⠸⠍⠸⠍⠁⠢⠇⠕⠓⠊⠂⠚⠍"]
+  - ["מְרַחֶ֖֯פֶת", "⠍⠄⠗⠉⠭⠑⠨⠞⠸⠍⠋⠑⠹"]
+  - ["עַל־פְּנֵ֥י", "⠐⠫⠉⠇⠤⠋⠄⠐⠝⠌⠨⠍⠚"]
+  - ["הַמָּֽיִם.", "⠓⠉⠐⠍⠣⠈⠔⠍⠲"]

@@ -1,0 +1,81 @@
+#Transliterated-Cuneiform symbols.dic
+#Copyright (c) 2024Matthew Yeater and Paul Geoghegan.
+#This file is covered by the GNU General Public License.
+
+symbols:
+á	a with acute	none
+â	a with circumflex	none
+à	a with grave	none
+ā	a with macron	none
+⸤	bottom left half bracket	none
+⸥	bottom right half bracket	none
+Á	capital a with acute	none
+Â	capital a with circumflex	none
+À	capital a with grave	none
+Ā	capital a with macron	none
+É	capital e with acute	none
+Ê	capital e with circumflex	none
+È	capital e with grave	none
+Ē	capital e with macron	none
+Ŋ	capital eng	none
+Ḫ	capital h with breve below	none
+Í	capital i with acute	none
+Î	capital i with circumflex	none
+Ì	capital i with grave	none
+Ī	capital i with macron	none
+Ś	capital s with acute	none
+Š	capital s with caron	none
+Ṣ	capital s with dot below	none
+Ṭ	capital t with dot below	none
+Ṯ	capital t with line below	none
+Ú	capital u with acute	none
+Û	capital u with circumflex	none
+Ù	capital u with grave	none
+Ū	capital u with macron	none
+Ẓ	capital z with dot below	none
+Ḏ	capitol d with line below	none
+Ǵ	capitol g with acute	none
+ḏ	d with line below	none
+é	e with acute	none
+ê	e with circumflex	none
+è	e with grave	none
+ē	e with macron	none
+ŋ	eng	none
+ǵ	g with acute	none
+ḫ	h with breve below	none
+í	i with acute	none
+î	i with circumflex	none
+ì	i with grave	none
+ī	i with macron	none
+ʿ	left half ring	none
+×	multiplication sign	none
+ʾ	right half ring	none
+ś	s with acute	none
+š	s with caron	none
+ṣ	s with dot below	none
+ʳ	small r	none
+󑴰	subscript capitol d	none
+ꟳ	subscript capitol f	none
+ᴹ	subscript capitol m	none
+ᵈ	subscript d	none
+₈	subscript eight	none
+ᶠ	subscript f	none
+₅	subscript five	none
+₄	subscript four	none
+ₘ	subscript m	none
+₉	subscript nine	none
+₁	subscript one	none
+₇	subscript seven	none
+₆	subscript six	none
+ₓ	subscript small x	none
+₃	subscript three	none
+₂	subscript two	none
+ṭ	t with dot below	none
+ṯ	t with line below	none
+⸢	top left half bracket	none
+⸣	top right half bracket	none
+ú	u with acute	none
+û	u with circumflex	none
+ù	u with grave	none
+ū	u with macron	none
+ẓ	z with dot below	none

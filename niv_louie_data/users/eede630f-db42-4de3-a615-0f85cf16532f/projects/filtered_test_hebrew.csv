@@ -1,0 +1,57 @@
+Character,Hex,Type,Name,Braille
+שּׂ,05E9+05BC+05C2,always,letter sin with dagesh,⠐⠱
+שּׁ,05E9+05BC+05C1,always,letter shin with dot and dagesh,⠐⠩
+שּׁ,05E9+05C1+05BC,always,letter shin with dot and dagesh,⠐⠩
+רּ,05E8+05BC,always,letter Resh with dagesh,⠐⠗
+חּ,05D7+05BC,always,het with dagesh,⠐⠭
+עּ,05E2+05BC,always,letter ayin with dagesh,⠐⠫
+נּ,05E0+05BC,always,letter nun with dagesh,⠐⠝
+מּ,05DE+05BC,always,mem with dagesh,⠐⠍
+פּ,05E4+05BC,always,pe with dagesh,⠏
+לּ,05DC+05BC,always,lamed with dagesh,⠐⠇
+צּ,05E6+05BC,always,letter tsadi with dagesh,⠐⠮
+קּ,05E7+05BC,always,letter qof with dagesh,⠐⠟
+כּ,05DB+05BC,always,kaf with dagesh,⠅
+יּ,05D9+05BC,always,Yod with dagesh,⠐⠚
+טּ,05D8+05BC,always,letter tet with dagesh,⠐⠞
+סּ,05E1+05BC,always,letter samekh with dagesh,⠐⠎
+בּ,05D1+05BC,always,bet with dagesh,⠃
+זּ,05D6+05BC,always,zayin with dagesh,⠐⠵
+אּ,05D0+05BC,always,alef with dagesh,⠐⠁
+שׁ,05E9+05C1,always,letter shin with dot,⠩
+הּ,05D4+05BC,always,letter hey with dagesh,⠐⠓
+דּ,05D3+05BC,always,dalet with dagesh,⠐⠙
+תּ,05EA+05BC,always,letter tav with dagesh,⠳
+שׂ,05E9+05C2,always,letter sin,⠱
+גּ,05D2+05BC,always,gimel with dagesh,⠐⠛
+ש,05E9,letter,Shin,⠩
+ף,05E3,noback letter,final pe,⠋
+פ,05E4,letter,Pe,⠋
+צ,05E6,letter,letter tsadi,⠮
+ת,05EA,letter,tav,⠹
+ץ,05E5,noback letter, final tsadi,⠮
+ע,05E2,letter,letter ayin,⠫
+ק,05E7,letter,letter qof,⠟
+ר,05E8,letter,letter resh,⠗
+ּ,05BC,letter,dagesh,⠐
+מ,05DE,letter,letter mem,⠍
+ס,05E1,letter,letter samekh ,⠎
+נ,05E0,letter,letter nun,⠝
+ב,05D1,letter,bet,⠧
+בּ,FB31,letter,Bet with dagesh,⠃
+ג,05D2,letter,gimel,⠛
+ד,05D3,letter,letter dalet,⠙
+ה,05D4,letter,letter hey,⠓
+ו,05D5,letter,vav,⠺
+ז,05D6,letter,zayin,⠵
+ח,05D7,letter,letter het,⠭
+ט,05D8,letter,letter tet,⠞
+י,05D9,letter,Yod ,⠚
+כּ,FB3B,letter,KAF with dagesh ,⠅
+ך,05DA,noback letter,final kaf,⠡
+כ,05DB,letter,kaf,⠡
+ל,05DC,letter,letter lamed,⠇
+ם,05DD,noback letter,final mem,⠍
+א,05D0,letter,letter alef,⠁
+ן,05DF,noback letter, final nun,⠝
+תּ,FB4A,letter,tav with daggesh,⠳

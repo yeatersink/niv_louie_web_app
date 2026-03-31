@@ -1,0 +1,46 @@
+[
+    {
+        "name": "ancientLanguages",
+        "summary": "Ancient Languages ",
+        "description": "A combination of ancient languages",
+        "author": "Me",
+        "version": "2",
+        "minimum_version": "2024.1",
+        "last_tested_version": "2024.1",
+        "locale": "en",
+        "included_projects": [
+            "Akkadian",
+            "Akkadian-Sumero",
+            "Hebrew",
+            "Syriac",
+            "Transliterated-Cuneiform",
+            "Ugaritic"
+        ]
+    },
+    {
+        "name": "pattest",
+        "summary": "patenttest",
+        "description": "this is a test",
+        "author": "me",
+        "version": "1",
+        "minimum_version": "2024.1",
+        "last_tested_version": "2024.1",
+        "locale": "en",
+        "included_projects": [
+            "patentillistration112"
+        ]
+    },
+    {
+        "name": "hebrew",
+        "summary": "hebrew speech",
+        "description": "This is a hebrew Speech",
+        "author": "me",
+        "version": "1.0",
+        "minimum_version": "24.5",
+        "last_tested_version": "24.5",
+        "locale": "hebrew",
+        "included_projects": [
+            "hebrew_characters"
+        ]
+    }
+]

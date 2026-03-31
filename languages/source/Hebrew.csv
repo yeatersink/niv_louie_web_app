@@ -1,0 +1,57 @@
+Character,Hex,Logic,Type,Name,Braille
+ֽ,05BD,185.0,letter,point meteg*,⠈
+־,05BE,8.0,punctuation,maqaf,⠤
+ֿ,05BF,8.0,letter,rafe*,⠘
+׀,05C0,8.0,punctuation,punctuation paseq*,⠸
+ׁ,05C1,8.0,letter,shin dot*,⠸⠈
+ׂ,05C2,8.0,letter,sin dot*,⠸⠘
+׃,05C3,8.0,punctuation,sof pasuq*,⠲
+ׄ,05C4,8.0,letter,mark upper dot*,⠸⠐
+ׅ,05C5,8.0,letter,mark lower dot*,⠸⠰
+׆,05C6,8.0,letter,punctuation nun hafukha,⠸⠝
+ׇ,05C7,8.0,letter,point qamats qatan*,⠣
+׳,05F3,8.0,letter,punctuation geresh*,⠄
+״,05F4,8.0,punctuation,punctuation gershayim*,⠴
+בֿ,05D1+05BF,9.0,always,bet with rafe,⠧
+פֿ,05E4+05BF,1.0,always,Pe with rafe,⠋
+
+ך׃,05DA+05C3,100,nofor always,final kaf with sof passuk,⠡⠲
+ם׃,05DD+05C3,100,nofor always,final Mem with sof passuk,⠍⠲
+ן׃,05DF+05C3,100,nofor always,final Nun with sof passuk,⠝⠲
+ף׃,05E3+05C3,100,nofor always,final Pe with sof passuk,⠋⠲
+ץ׃,05E5+05C3,100,nofor always,final tsadi with sof passuk,⠮⠲
+װ,05F0,8.0,letter,double vav*,⠺⠺
+ױ,05F1,8.0,letter,vav yod*,⠺⠚
+ײ,05F2,8.0,letter,double yod*,⠚⠚
+ײַ,FB1F,8.0,letter,Double Yod with patah,⠚⠚⠉
+֑,0591,8.0,punctuation,atnokta,⠆
+֒,0592,8.0,letter,accent segol* - isolated,⠨⠎
+֓,0593,8.0,letter,accent shalshelet,⠨⠩
+֔,0594,8.0,letter,accent zaqef qatan,⠂
+֕,0595,8.0,letter,accent zaqef gadol,⠨⠛
+֖,0596,8.0,letter,accent tipeha,⠨⠞
+֗,0597,8.0,letter,accent revia,⠨⠗
+֘,0598,8.0,letter,accent zarqa,⠨⠙
+֙,0599,8.0,letter,accent pashta,⠨⠌
+֚,059A,8.0,letter,accent yetiv,⠨⠚
+֛,059B,8.0,letter,accent tevir,⠨⠧
+֜,059C,8.0,letter,accent geresh,⠨⠁
+֝,059D,8.0,letter,accent geresh muqdam,⠨⠡
+֞,059E,8.0,letter,accent gershayim,⠨⠃
+֟,059F,8.0,letter,accent qarney para,⠨⠝
+֠,05A0,8.0,letter,accent telisha gedola,⠨⠶
+֡,05A1,8.0,letter,accent pazer,⠨⠦
+֢,05A2,8.0,letter,accent atnah hafukh,⠨⠆
+֣,05A3,8.0,letter,accent munah,⠨⠥
+֤,05A4,8.0,letter,accent mahapakh,⠨⠓
+֥,05A5,8.0,letter,accent merkha,⠨⠍
+֦,05A6,8.0,letter,accent merkha kefula,⠨⠅
+֧,05A7,8.0,letter,accent darga,⠨⠙
+֨,05A8,8.0,letter,accent qadma,⠨⠏
+֩,05A9,8.0,letter,accent telisha qetana,⠨⠟
+֪,05AA,8.0,letter,accent yerah ben yomo,⠨⠽
+֫,05AB,8.0,letter,accent ole,⠨⠕
+֬,05AC,8.0,letter,accent iluy,⠨⠊
+֭,05AD,8.0,letter,accent dehi,⠨⠊
+֮,05AE,8.0,letter,accent zinor,⠨⠵
+֯,05AF,8.0,letter,mark masora circle,⠸⠍

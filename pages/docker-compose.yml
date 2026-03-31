@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  nicegui-app:
+    build: .
+    container_name: niv-louie-app
+    restart: unless-stopped
+    # No ports published - Cloudflare Tunnel will handle public access later

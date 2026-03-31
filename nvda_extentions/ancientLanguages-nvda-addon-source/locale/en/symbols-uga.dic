@@ -1,0 +1,36 @@
+#Ugaritic symbols.dic
+#Copyright (c) 2024Matthew Yeater and Paul Geoghegan.
+#This file is covered by the GNU General Public License.
+
+symbols:
+𐎓	ain	none
+𐎀	alpa	none
+𐎁	beta	none
+𐎄	delta	none
+𐎏	dhal	none
+𐎂	gamla	none
+𐎙	ghain	none
+𐎅	ho	none
+𐎈	hota	none
+𐎛	i	none
+𐎋	kaf	none
+𐎃	kha	none
+𐎍	lamda	none
+𐎎	mem	none
+𐎐	nun	none
+𐎔	pu	none
+𐎖	qopa	none
+𐎗	rasha	none
+𐎕	sade	none
+𐎒	samka	none
+𐎌	shin	none
+𐎝	ssu	none
+𐎉	tet	none
+𐎘	thanna	none
+𐎚	to	none
+𐎜	u	none
+𐎆	wo	none
+𐎟	word divider	none
+𐎊	yod	none
+𐎇	zeta	none
+𐎑	zu	none

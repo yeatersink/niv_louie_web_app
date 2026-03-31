@@ -1,0 +1,57 @@
+Character,Hex,Logic,Type,Name,Braille
+ּ,05BC,186.0,letter,dagesh,⠐
+א,05D0,8.0,letter,letter alef,⠁
+אּ,05D0+05BC,8.0,always,alef with dagesh,⠐⠁
+ב,05D1,8.0,letter,bet,⠧
+בּ,05D1+05BC,8.0,always,bet with dagesh,⠃
+בּ,FB31,3.0,letter,Bet with dagesh,⠃
+ג,05D2,8.0,letter,gimel,⠛
+גּ,05D2+05BC,8.0,always,gimel with dagesh,⠐⠛
+ד,05D3,8.0,letter,letter dalet,⠙
+דּ,05D3+05BC,8.0,always,dalet with dagesh,⠐⠙
+ה,05D4,8.0,letter,letter hey,⠓
+הּ,05D4+05BC,8.0,always,letter hey with dagesh,⠐⠓
+ו,05D5,8.0,letter,vav,⠺
+ז,05D6,8.0,letter,zayin,⠵
+זּ,05D6+05BC,8.0,always,zayin with dagesh,⠐⠵
+ח,05D7,8.0,letter,letter het,⠭
+חּ,05D7+05BC,8.0,always,het with dagesh,⠐⠭
+ט,05D8,8.0,letter,letter tet,⠞
+טּ,05D8+05BC,8.0,always,letter tet with dagesh,⠐⠞
+י,05D9,186.0,letter,Yod ,⠚
+יּ,05D9+05BC,18r6.0,always,Yod with dagesh,⠐⠚
+כּ,05DB+05BC,8.0,always,kaf with dagesh,⠅
+כּ,FB3B,9.0,letter,KAF with dagesh ,⠅
+ך,05DA,214.0,noback letter,final kaf,⠡
+כ,05DB,8.0,letter,kaf,⠡
+ל,05DC,8.0,letter,letter lamed,⠇
+לּ,05DC+05BC,8.0,always,lamed with dagesh,⠐⠇
+ם,05DD,8.0,noback letter,final mem,⠍
+מ,05DE,8.0,letter,letter mem,⠍
+מּ,05DE+05BC,8.0,always,mem with dagesh,⠐⠍
+ן,05DF,8.0,noback letter, final nun,⠝
+נ,05E0,8.0,letter,letter nun,⠝
+נּ,05E0+05BC,186.0,always,letter nun with dagesh,⠐⠝
+ס,05E1,8.0,letter,letter samekh ,⠎
+סּ,05E1+05BC,8.0,always,letter samekh with dagesh,⠐⠎
+ע,05E2,8.0,letter,letter ayin,⠫
+עּ,05E2+05BC,8.0,always,letter ayin with dagesh,⠐⠫
+ף,05E3,8.0,noback letter,final pe,⠋
+פ,05E4,214.0,letter,Pe,⠋
+פּ,05E4+05BC,8.0,always,pe with dagesh,⠏
+ץ,05E5,8.0,noback letter, final tsadi,⠮
+צ,05E6,8.0,letter,letter tsadi,⠮
+צּ,05E6+05BC,8.0,always,letter tsadi with dagesh,⠐⠮
+ק,05E7,8.0,letter,letter qof,⠟
+קּ,05E7+05BC,186.0,always,letter qof with dagesh,⠐⠟
+ר,05E8,8.0,letter,letter resh,⠗
+רּ,05E8+05BC,186.0,always,letter Resh with dagesh,⠐⠗
+ש,05E9,9.0,letter,Shin,⠩
+שׁ,05E9+05C1,8.0,always,letter shin with dot,⠩
+שּׁ,05E9+05C1+05BC,8.0,always,letter shin with dot and dagesh,⠐⠩
+שּׁ,05E9+05BC+05C1,8.0,always,letter shin with dot and dagesh,⠐⠩
+שׂ,05E9+05C2,214.0,always,letter sin,⠱
+שּׂ,05E9+05BC+05C2,214.0,always,letter sin with dagesh,⠐⠱
+ת,05EA,8.0,letter,tav,⠹
+תּ,05EA+05BC,8.0,always,letter tav with dagesh,⠳
+תּ,FB4A,10.0,letter,tav with daggesh,⠳

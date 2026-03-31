@@ -1,0 +1,77 @@
+Character,Hex,Type,Name,Braille
+á,00E1,lowercase,A WITH ACUTE,⠘⠌⠁
+é,000E9,lowercase,E WITH ACUTE,⠘⠌⠑
+í,00ED,lowercase,I WITH ACUTE,⠘⠌⠊
+ú,00FA,lowercase,U WITH ACUTE,⠘⠌⠥
+Á,00C1,uppercase,CAPITAL A WITH ACUTE,⠠⠘⠌⠁
+É,00C9,uppercase,CAPITAL E WITH ACUTE,⠠⠘⠌⠑
+Í,00CD,uppercase,CAPITAL I WITH ACUTE,⠠⠘⠌⠊
+Ú,00DA,uppercase,CAPITAL U WITH ACUTE,⠠⠘⠌⠥
+ś,015B,lowercase,S WITH ACUTE,⠘⠌⠎
+Ś,015A,uppercase,CAPITAL S WITH ACUTE,⠠⠘⠌⠎
+à,00E0,lowercase,A WITH GRAVE,⠘⠡⠁
+è,00E8,lowercase,E WITH GRAVE,⠘⠡⠑
+ì,00EC,lowercase,I WITH GRAVE,⠘⠡⠊
+ù,00F9,lowercase,U WITH GRAVE,⠘⠡⠥
+À,00C0,uppercase,CAPITAL A WITH GRAVE,⠠⠘⠡⠁
+È,00C8,uppercase,CAPITAL E WITH GRAVE,⠠⠘⠡⠑
+Ì,00CC,uppercase,CAPITAL I WITH GRAVE,⠠⠘⠡⠊
+Ù,00D9,uppercase,CAPITAL U WITH GRAVE,⠠⠘⠡⠥
+ā,101,lowercase,A WITH MACRON,⠈⠤⠁
+ē,113,lowercase,E WITH MACRON,⠈⠤⠑
+ī,012B,lowercase,I WITH MACRON,⠈⠤⠊
+ū,016B,lowercase,U WITH MACRON,⠈⠤⠥
+Ā,100,uppercase,CAPITAL A WITH MACRON,⠠⠈⠤⠁
+Ē,112,uppercase,CAPITAL E WITH MACRON,⠠⠈⠤⠑
+Ī,012A,uppercase,CAPITAL I WITH MACRON,⠠⠈⠤⠊
+Ū,016A,uppercase,CAPITAL U WITH MACRON,⠠⠈⠤⠥
+â,00E2,lowercase,A WITH CIRCUMFLEX,⠘⠩⠁
+ê,00EA,lowercase,E WITH CIRCUMFLEX,⠘⠩⠑
+î,00EE,lowercase,I WITH CIRCUMFLEX,⠘⠩⠊
+û,00FB,lowercase,U WITH CIRCUMFLEX,⠘⠩⠥
+Â,00C2,uppercase,CAPITAL A WITH CIRCUMFLEX,⠠⠘⠩⠁
+Ê,00CA,uppercase,CAPITAL E WITH CIRCUMFLEX,⠠⠘⠩⠑
+Î,00CE,uppercase,CAPITAL I WITH CIRCUMFLEX,⠠⠘⠩⠊
+Û,00DB,uppercase,CAPITAL U WITH CIRCUMFLEX,⠠⠘⠩⠥
+š,0161,lowercase,S WITH CARON,⠩
+Š,160,uppercase,CAPITAL S WITH CARON,⠠⠩
+ṣ,1E63,lowercase,S WITH DOT BELOW,⠐⠎
+Ṣ,1E62,uppercase,CAPITAL S WITH DOT BELOW,⠠⠐⠎
+ṭ,1E6D,lowercase,T WITH DOT BELOW,⠐⠞
+Ṭ,1E6C,uppercase,CAPITAL T WITH DOT BELOW,⠠⠐⠞
+ḫ,1E2B,lowercase,H WITH BREVE BELOW,⠡
+Ḫ,1E2A,uppercase,CAPITAL H WITH BREVE BELOW,⠠⠡
+ŋ,014B,lowercase,ENG,⠐⠚
+Ŋ,014A,uppercase,CAPITAL ENG,⠠⠐⠚
+×,00D7,math,MULTIPLICATION SIGN,⠐⠦
+ʾ,02BE,letter,RIGHT HALF RING,⠫
+ʿ,02BF,letter,LEFT HALF RING,⠐⠫
+₁,2081,digit,SUBSCRIPT ONE,⠢⠼⠁
+₂,2082,digit,SUBSCRIPT TWO,⠢⠼⠃
+₃,2083,digit,SUBSCRIPT THREE,⠢⠼⠉
+₄,2084,digit,SUBSCRIPT FOUR,⠢⠼⠙
+₅,2085,digit,SUBSCRIPT FIVE,⠢⠼⠑
+₆,2086,digit,SUBSCRIPT SIX,⠢⠼⠋
+₇,2087,digit,SUBSCRIPT SEVEN,⠢⠼⠛
+₈,2088,digit,SUBSCRIPT EIGHT,⠢⠼⠓
+₉,2089,digit,SUBSCRIPT NINE,⠢⠼⠊
+ₓ,2093,letter,SUBSCRIPT SMALL X,⠢⠭
+⸢,2E22,punctuation,TOP LEFT HALF BRACKET,⠨⠣
+⸣,2E23,punctuation,TOP RIGHT HALF BRACKET,⠨⠜
+⸤,2E24,punctuation,BOTTOM LEFT HALF BRACKET,⠨⠣
+⸥,2E25,punctuation,BOTTOM RIGHT HALF BRACKET,⠨⠜
+ʳ,02B3,lowercase,SMALL R,⠗
+ḏ,1E0F,lowercase,D with line below,⠰⠙
+Ḏ,1E0E,uppercase,Capitol D with line below,⠠⠰⠙
+󑴰,1D30,uppercase,Subscript Capitol d,⠨
+ᵈ,1D48,lowercase,subscript D,⠨⠙
+ẓ,1E93,letter,Z with Dot Below,⠐⠵
+Ẓ,1E92,uppercase,Capital Z with Dot Below,⠠⠐⠵
+ǵ,01F5,lowercase,G with Acute,⠘⠌⠛
+Ǵ,01F4,uppercase,Capitol G with ACUTE,⠠⠘⠌⠛
+ṯ,1E6F,lowercase,T with Line Below,⠹
+Ṯ,1E6E,uppercase,Capital T with Line Below,⠠⠹
+ᴹ,1D39,uppercase,Subscript Capitol m,⠨⠠⠍
+ₘ,2098,lowercase,Subscript m,⠨⠍
+ꟳ,A7F3,uppercase,Subscript Capitol f,⠨⠠⠋
+ᶠ,1DA0,lowercase,Subscript f,⠨⠋
