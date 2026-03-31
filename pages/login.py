@@ -1,7 +1,7 @@
 # pages/02_login.py
 
 from nicegui import app, ui
-from utils.storage import ensure_user_directories
+from utils.storage import ensure_user_directories, get_current_web_user_id
 
 
 def init_user_storage():
@@ -20,7 +20,6 @@ def create_new_user_session(nickname: str):
     nickname = nickname.strip()
     
     try:
-        from utils.storage import get_current_web_user_id
         new_id = get_current_web_user_id()
         
         app.storage.user["user_id"] = new_id
@@ -41,7 +40,7 @@ def create_new_user_session(nickname: str):
                 ).props('color=primary')
                 ui.button('Close', on_click=dialog.close).props('flat color=primary')
         dialog.open()
-        ui.navigate.to('/')
+        ui.navigate.to('/dashboard')   # Changed: go to dashboard after successful login
     except Exception as e:
         ui.notify(f"Error creating new session: {e}", type='negative')
 
@@ -59,7 +58,7 @@ def login_with_existing_id(user_id: str, remember_device: bool):
         else:
             ui.notify("✅ Successfully logged in for this session", type='positive')
         init_user_storage()
-        ui.navigate.to('/')
+        ui.navigate.to('/dashboard')   # Changed: go to dashboard after successful login
     except Exception as e:
         ui.notify(f"Error logging in: {e}", type='negative')
 
@@ -68,7 +67,7 @@ def login_with_existing_id(user_id: str, remember_device: bool):
 def login():
     init_user_storage()
 
-    with ui.column().classes('w-full max-w-lg mx-auto p-8 gap-10 items-center'):
+    with ui.column().classes('w-full max-w-lg mx-auto p-8 gap-10'):
         
         # Header with back button
         with ui.row().classes('w-full items-center justify-between'):
@@ -89,7 +88,7 @@ def login():
             
             ui.button('Create New User Session', 
                      on_click=lambda: create_new_user_session(nickname_input.value)
-            ).props('color=accent size=lg').classes('w-full')   # Teal accent
+            ).props('color=accent size=lg').classes('w-full')   
 
         # Existing User Card
         with ui.card().classes('p-8 w-full'):
@@ -103,4 +102,4 @@ def login():
 
             ui.button('Log In with Existing User ID', 
                      on_click=lambda: login_with_existing_id(user_id_input.value, remember_checkbox.value)
-            ).props('color=accent size=lg').classes('w-full mt-6')   # Teal accent
+            ).props('color=accent size=lg').classes('w-full mt-6')   

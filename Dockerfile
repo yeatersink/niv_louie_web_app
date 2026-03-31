@@ -2,15 +2,14 @@ FROM zauberzeug/nicegui:latest
 
 WORKDIR /app
 
-# Copy requirements if it exists, otherwise skip
+# Copy requirements and install using uv (this is the recommended way for NiceGUI Docker images)
 COPY requirements.txt* ./
-RUN pip install --no-cache-dir -r requirements.txt || echo "No requirements.txt - skipping"
+RUN uv pip install -r requirements.txt
 
 # Copy all your project files
 COPY . .
 
-# Expose the port NiceGUI will run on
 EXPOSE 8080
 
-# Run your app
+# Run the app
 CMD ["python", "gui.py"]
