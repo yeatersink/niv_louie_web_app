@@ -1,18 +1,10 @@
-# pages/02_login.py
+# pages/login.py
 
 from nicegui import app, ui
-from utils.storage import ensure_user_directories, get_current_web_user_id
+from utils.storage import create_new_user_session
 
 
-def init_user_storage():
-    try:
-        ensure_user_directories()
-        print("LOG: User storage initialized from login page")
-    except Exception as e:
-        print(f"LOG: Could not init user storage: {e}")
-
-
-def create_new_user_session(nickname: str):
+def create_new_user_session_handler(nickname: str):
     if not nickname or not nickname.strip():
         ui.notify("Nickname is required", type='negative')
         return
@@ -20,52 +12,40 @@ def create_new_user_session(nickname: str):
     nickname = nickname.strip()
     
     try:
-        new_id = get_current_web_user_id()
+        # This safely creates the real user ID and private folders
+        user_id = create_new_user_session(nickname)
         
-        app.storage.user["user_id"] = new_id
-        app.storage.user["nickname"] = nickname
+        ui.notify(f"New private session created successfully for {nickname}", type='positive')
+        ui.navigate.to('/login_information')
         
-        init_user_storage()
-
-        with ui.dialog() as dialog, ui.card().classes('p-10 w-full max-w-lg'):
-            ui.icon('check_circle', color='positive', size='3xl').classes('mx-auto')
-            ui.html('<h2 class="text-3xl font-bold text-primary text-center mt-4">New Private Session Created</h2>')
-            ui.markdown(f'**Your User ID is:**\n\n`{new_id}`').classes('text-center my-8 font-mono text-lg bg-gray-100 p-6 rounded')
-            ui.label(f'**Nickname:** {nickname}').classes('text-center text-lg text-primary')
-            ui.label('Note: If there is no activity for 6 months, the account will be automatically deleted.').classes('text-sm text-gray-600 text-center mt-6')
-            
-            with ui.row().classes('gap-4 w-full justify-center mt-8'):
-                ui.button('Copy User ID', 
-                         on_click=lambda: ui.notify('User ID copied!', type='positive')
-                ).props('color=primary')
-                ui.button('Close', on_click=dialog.close).props('flat color=primary')
-        dialog.open()
-        ui.navigate.to('/dashboard')   # Changed: go to dashboard after successful login
     except Exception as e:
         ui.notify(f"Error creating new session: {e}", type='negative')
 
 
-def login_with_existing_id(user_id: str, remember_device: bool):
-    if not user_id or len(user_id.strip()) < 10:
+def login_with_existing_id(user_id_input: str, remember_device: bool):
+    if not user_id_input or len(user_id_input.strip()) < 10:
         ui.notify("Please enter a valid User ID", type='negative')
         return
     
-    cleaned_id = user_id.strip()
+    cleaned_id = user_id_input.strip()
     try:
-        app.storage.user["user_id"] = cleaned_id
+        if hasattr(app.storage, 'user') and app.storage.user is not None:
+            app.storage.user["user_id"] = cleaned_id
+            
         if remember_device:
             ui.notify("✅ Successfully logged in and device remembered", type='positive')
         else:
             ui.notify("✅ Successfully logged in for this session", type='positive')
-        init_user_storage()
-        ui.navigate.to('/dashboard')   # Changed: go to dashboard after successful login
+        
+        ui.navigate.to('/dashboard')
     except Exception as e:
         ui.notify(f"Error logging in: {e}", type='negative')
 
 
 @ui.page("/login")
 def login():
-    init_user_storage()
+    # Do NOT call ensure_user_directories() on the login page itself
+    # It will be called only after successful login or new session creation
 
     with ui.column().classes('w-full max-w-lg mx-auto p-8 gap-10'):
         
@@ -87,7 +67,7 @@ def login():
                                      placeholder="e.g. Matt, Teacher Sarah").classes('w-full mb-6')
             
             ui.button('Create New User Session', 
-                     on_click=lambda: create_new_user_session(nickname_input.value)
+                     on_click=lambda: create_new_user_session_handler(nickname_input.value)
             ).props('color=accent size=lg').classes('w-full')   
 
         # Existing User Card

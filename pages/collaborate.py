@@ -1,24 +1,29 @@
 # pages/13_collaborate.py
 
 from nicegui import ui, app
-from utils.storage import ensure_user_directories
-from utils.project import project
-
-
-def init_user_storage():
-    try:
-        ensure_user_directories()
-        print("LOG: User storage initialized from collaborate page")
-    except Exception as e:
-        print(f"LOG: Could not init user storage: {e}")
+from utils.storage import generate_sync_code, claim_sync_code
 
 
 @ui.page("/collaborate")
 def collaborate():
-    init_user_storage()
+    # Check if user is logged in
+    user_id = app.storage.user.get("user_id") if hasattr(app.storage, 'user') and app.storage.user is not None else None
 
-    with ui.column().classes('w-full max-w-4xl mx-auto p-8 gap-10'):
-        
+    if not user_id:
+        with ui.column().classes('w-full max-w-md mx-auto p-8 text-center'):
+            ui.icon('login', size='5xl', color='primary').classes('mx-auto mb-6')
+            ui.html('<h1 class="text-3xl font-bold text-primary mb-4">Please Log In First</h1>')
+            ui.label('You need to be logged in to use Sync Codes for collaboration.').classes('text-lg mb-8')
+            ui.button('Go to Login', 
+                     on_click=lambda: ui.navigate.to('/login')).props('size=lg color=accent')
+        return
+
+    # Global layout styling - consistent with other pages
+    ui.query('.nicegui-content').classes('w-full')
+    ui.query('.q-page').classes('flex flex-col min-h-screen')
+
+    with ui.column().classes('flex-1 w-full max-w-4xl mx-auto p-8 gap-10'):
+
         # Header with back button
         with ui.row().classes('w-full items-center justify-between'):
             ui.button("← Go Back", 
@@ -27,129 +32,96 @@ def collaborate():
             ui.html('<h1 class="text-3xl font-bold text-primary">Collaborate with Others</h1>')
 
         ui.markdown("""
-This page allows you to share your Niv Louie projects with others and access projects shared with you.
+This page allows you to share your Niv Louie projects with others using a **Sync Code** 
+and access projects shared with you from any device.
         """).classes('text-base leading-relaxed')
 
-        # ==================== SECTION 1: Share Project ====================
+        # ==================== SECTION 1: Generate Sync Code ====================
         with ui.card().classes('w-full p-8'):
-            ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">1. Share One of Your Projects</h2>')
+            ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">1. Generate Sync Code</h2>')
+            ui.markdown("""
+**Use this code on another device** (phone, tablet, laptop) to access all your projects and files.
+The code is temporary and easy to read.
+            """)
 
-            project_select = ui.select(
-                options=sorted(project.languages_list),
-                label="Select Project to Share",
-                with_input=True
-            ).classes('w-full mb-6')
+            sync_code_display = ui.label("Click the button below to generate your sync code").classes('text-lg font-medium text-center py-6')
 
-            ui.label("Permission Level").classes('font-medium mb-3 text-primary')
-            share_type = ui.radio(['Read Only', 'Read + Write'], value='Read Only').props('inline').classes('mb-6')
+            def generate_new_sync_code():
+                try:
+                    code = generate_sync_code()
+                    sync_code_display.text = f"Your Sync Code:\n\n{code}"
+                    sync_code_display.classes('font-mono text-3xl text-primary bg-gray-100 p-8 rounded-xl text-center')
+                    ui.notify("Sync code generated! Use it on your other device.", type='positive')
+                except Exception as e:
+                    ui.notify(f"Error generating sync code: {e}", type='negative')
 
-            def generate_share_link():
-                if not project_select.value:
-                    ui.notify("Please select a project first", type='warning')
-                    return
-                
-                user_id = app.storage.user.get("user_id", "unknown")
-                share_url = f"http://localhost:8080/view_shared?user={user_id}&project={project_select.value}&perm={share_type.value.lower().replace(' ', '_')}"
-
-                ui.notify("Share link generated successfully!", type='positive')
-                
-                with ui.dialog() as dlg, ui.card().classes('w-full max-w-lg'):
-                    ui.html('<h3 class="font-bold mb-3 text-primary">Your Share Link</h3>')
-                    ui.input(value=share_url).props('readonly').classes('w-full')
-                    ui.button("Copy Link", on_click=lambda: ui.notify("Link copied to clipboard")).props('color=accent')
-                    ui.button("Close", on_click=dlg.close).props('flat color=primary')
-                dlg.open()
-
-            ui.button("Generate Share Link", 
-                      on_click=generate_share_link, 
-                      icon='share'
+            ui.button("Generate Sync Code", 
+                      on_click=generate_new_sync_code, 
+                      icon='sync'
             ).props('size=lg color=accent').classes('w-full')
 
-        # ==================== SECTION 2: Access Shared Projects ====================
+        # ==================== SECTION 2: Enter Sync Code ====================
         with ui.card().classes('w-full p-8'):
-            ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">2. How to Access Shared Projects</h2>')
-
-            with ui.row().classes('gap-8'):
-                with ui.column().classes('flex-1'):
-                    ui.html('<h3 class="font-semibold mb-3 text-primary">Sign in on Another Device</h3>')
-                    ui.markdown("""
-1. Open Niv Louie on the new device  
-2. Go to **Collaborate** page  
-3. Enter your **User ID** below  
-4. Your projects will appear automatically
-                    """)
-
-                with ui.column().classes('flex-1'):
-                    ui.html('<h3 class="font-semibold mb-3 text-primary">Using a Shared Link</h3>')
-                    ui.markdown("""
-1. Click the shared link you received  
-2. The project will open directly (if you have permission)  
-3. You may be asked to sign in with your own User ID
-                    """)
-
-            ui.separator().classes('my-8')
-
-            ui.label("Your User ID (use this to sign in on other devices)").classes('font-medium mb-2')
-            ui.input(
-                value=app.storage.user.get("user_id", "Not available yet")
-            ).props('readonly').classes('w-full mb-6')
-
-            ui.label("Enter Sharer’s User ID to access their shared projects").classes('font-medium mb-2')
-            shared_user_id = ui.input(
-                label="Sharer’s User ID",
-                placeholder="Paste the User ID here..."
-            ).classes('w-full mb-4')
-
-            shared_project = ui.input(
-                label="Specific Project Name (optional)",
-                placeholder="Leave blank to see all shared projects"
-            ).classes('w-full mb-6')
-
-            def load_shared_projects():
-                if not shared_user_id.value.strip():
-                    ui.notify("Please enter the sharer’s User ID", type='warning')
-                    return
-                ui.notify(f"Searching for projects from User ID: {shared_user_id.value}", type='info')
-                ui.notify("Shared project loading will be implemented soon", type='positive')
-
-            ui.button("Load Shared Projects", 
-                      on_click=load_shared_projects, 
-                      icon='cloud_download'
-            ).props('size=lg color=accent').classes('w-full')
-
-        # ==================== SECTION 3: Your Shared Projects ====================
-        with ui.card().classes('w-full p-8'):
-            ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">3. Your Shared Projects</h2>')
+            ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">2. Enter Sync Code from Another Device</h2>')
             
-            shared_list = ui.column().classes('w-full gap-3')
+            ui.label("Enter the Sync Code you received from another device:").classes('font-medium mb-4')
 
-            with shared_list:
-                if not project.languages_list:
-                    ui.label("You haven't shared any projects yet.").classes('italic text-gray-500')
+            sync_input = ui.input(
+                label="Sync Code",
+                placeholder="e.g. BLUE-APPLE-42"
+            ).classes('w-full').props('uppercase')
+
+            def claim_sync():
+                if not sync_input.value.strip():
+                    ui.notify("Please enter a sync code", type='warning')
+                    return
+                
+                success = claim_sync_code(sync_input.value.strip())
+                if success:
+                    ui.notify("✅ Successfully linked to your account!", type='positive')
+                    ui.navigate.to('/dashboard')
                 else:
-                    for proj in sorted(project.languages_list)[:8]:
-                        with ui.row().classes('items-center justify-between w-full p-4 border rounded-lg'):
-                            ui.label(proj).classes('flex-grow font-medium')
-                            ui.button('Generate New Link', 
-                                      on_click=lambda p=proj: generate_share_link_for_project(p)
-                            ).props('flat color=accent')
+                    ui.notify("Invalid or expired sync code. Please check and try again.", type='negative')
+
+            ui.button("Link This Device", 
+                      on_click=claim_sync, 
+                      icon='link'
+            ).props('size=lg color=accent').classes('w-full mt-6')
+
+        # ==================== SECTION 3: Real-time Editing ====================
+        with ui.card().classes('w-full p-8 border border-warning'):
+            ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">Real-time Editing & Collaboration</h2>')
+            
+            ui.markdown("""
+Real-time editing and collaboration works best in an environment that has this functionality mastered already. 
+
+For this reason, **Niv Louie recommends**:
+
+- **VS Code Live Share** for real-time Python code and script collaboration  
+- **Microsoft 365** for real-time editing on Excel spreadsheets
+
+Excel will allow saving as `.csv`, and **Niv Louie also supports Excel spreadsheets**.
+            """).classes('text-base leading-relaxed')
+
+        # ==================== SECTION 4: Your User ID ====================
+        with ui.card().classes('w-full p-8'):
+            ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">Your User ID</h2>')
+            ui.label("Use this User ID to sign in directly on any device:").classes('font-medium mb-3')
+            
+            ui.input(
+                value=user_id,
+                label="Your User ID"
+            ).props('readonly').classes('w-full font-mono')
+
+            ui.label("Tip: Save this User ID somewhere safe. You can also use a Sync Code instead.").classes('text-sm text-gray-600 mt-4')
 
         # Home button
         ui.button("Return to Home", 
                  on_click=lambda: ui.navigate.to("/")
         ).props('flat color=primary size=lg').classes('w-full mt-8')
 
-        ui.label("More advanced collaboration features (real-time editing, permission management, notifications) are planned.").classes('text-sm text-gray-500 mt-12 text-center')
+        ui.label("More advanced collaboration features (fine-grained permissions, notifications) are planned for future updates.").classes('text-sm text-gray-500 mt-12 text-center')
 
-
-# Helper function
-def generate_share_link_for_project(project_name):
-    user_id = app.storage.user.get("user_id", "unknown")
-    share_url = f"http://localhost:8080/view_shared?user={user_id}&project={project_name}&perm=read_only"
-    
-    with ui.dialog() as dlg, ui.card().classes('w-full max-w-lg'):
-        ui.html(f'<h3 class="font-bold mb-3 text-primary">Share Link for {project_name}</h3>')
-        ui.input(value=share_url).props('readonly').classes('w-full')
-        ui.button("Copy Link", on_click=lambda: ui.notify("Link copied to clipboard")).props('color=accent')
-        ui.button("Close", on_click=dlg.close).props('flat color=primary')
-    dlg.open()
+    # Footer
+    with ui.column().classes('w-full bg-gray-100 py-12 border-t mt-auto'):
+        ui.label('© 2026 Niv Louie - Free and Open Source (GPL-3.0)').classes('text-xs text-gray-500 text-center mx-auto')

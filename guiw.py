@@ -109,15 +109,18 @@ app.on_startup(startup)
 
 
 # ====================== WEB SERVER SETUP ======================
-ui.run(
-    host="0.0.0.0",
-    port=8080,
-    title="Niv Louie - Making the World Accessible, One Braille Table at a Time",
-    reload=False,
-    show=False,
-    storage_secret="niv_louie_secret_key_2026",
-    favicon="🌐",
-    dark=False,
-    viewport="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-)
-
+if __name__ == "__main__":
+    # Detect if we're running in Docker
+    is_docker = os.getenv("DOCKER") or os.getenv("RUNNING_IN_DOCKER")
+    
+    ui.run(
+        host="0.0.0.0" if is_docker else "127.0.0.1",
+        port=8080,
+        title="Niv Louie - Making the World Accessible, One Braille Table at a Time",
+        reload=False,
+        show=not is_docker,           # Show window only on Windows, hide in Docker
+        storage_secret="niv_louie_secret_key_2026",
+        favicon="🌐",
+        dark=False,
+        viewport="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    )
