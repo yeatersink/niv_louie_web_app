@@ -1,4 +1,4 @@
-# gui.py - Main entry point for Niv Louie (Web Version - Docker/Fedora)
+# gui.py - Main entry point for Niv Louie (Web Version)
 
 from nicegui import ui, app
 import os
@@ -6,7 +6,7 @@ import os
 # Import all pages so NiceGUI registers the @ui.page decorators
 from pages.home import home
 from pages.login import login
-from pages.login_information import login_information
+from pages.login_information import login_information   # ← This line must be here
 from pages.dashboard import dashboard
 from pages.existing_project import existing_project
 from pages.create_project import create_project
@@ -20,6 +20,7 @@ from pages.liblouis_table_builder import liblouis_table_builder
 from pages.liblouis_test_builder import liblouis_test_builder
 from pages.collaborate import collaborate
 
+from utils.storage import ensure_user_directories
 
 # ====================== STARTUP INITIALIZATION ======================
 def startup():
