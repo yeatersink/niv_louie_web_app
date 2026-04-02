@@ -1,8 +1,18 @@
-version: '3.8'
-
 services:
   nicegui-app:
     build: .
-    container_name: niv-louie-app
+    container_name: niv_louie_web_app
     restart: unless-stopped
-    # No ports published - Cloudflare Tunnel will handle public access later
+    ports:
+      - "8080:8080"          # Expose the app internally
+    environment:
+      - DOCKER=1
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token eyJhIjoiNzM5MzlhZmVhOWFiMDY3YThmYzZiMmZiZjA5OTFiMDkiLCJ0IjoiYzIzMDM4NWUtNDgxZC00OTg0LTlkNTUtYWRjOTBkYzg4ZjA5IiwicyI6Ik1qRXhOV0V4WW1JdFpXUTBOeTAwTXpoakxUa3paalV0TlRsaE9XSTRZV013TldSbSJ9
+    depends_on:
+      - nicegui-app
+    network_mode: "service:nicegui-app"   # This is the key line - share network with the app
