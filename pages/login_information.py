@@ -2,6 +2,7 @@
 
 from nicegui import ui, app
 from utils.storage import get_current_web_user_id, ensure_user_directories
+from utils.email import send_login_email   # ← New import
 from datetime import datetime
 
 
@@ -52,11 +53,18 @@ Save this information safely. You will need the User ID to log in from any devic
 
 
 def send_email_login_info(email: str, user_id: str, nickname: str):
-    """Placeholder for email functionality"""
+    """Send login information via email using real SMTP"""
     if not email or '@' not in email:
         ui.notify("Please enter a valid email address", type='negative')
         return
-    ui.notify(f"✅ Login information would be sent to {email} (email feature coming soon)", type='positive')
+    
+    # Call the real email function from utils/email.py
+    success = send_login_email(to_email=email, user_id=user_id, nickname=nickname)
+    
+    if success:
+        ui.notify(f"✅ Login information sent successfully to {email}", type='positive')
+    else:
+        ui.notify("❌ Failed to send email. Please try Download or Copy instead.", type='negative')
 
 
 @ui.page("/login_information")
@@ -90,15 +98,15 @@ def login_information():
             ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">Your Login Details</h2>')
             
             with ui.column().classes('gap-4 text-left w-full'):
-                ui.label(f"**User ID:**").classes('text-lg font-medium')
+                ui.label(f"User ID:").classes('text-lg font-medium')
                 ui.label(user_id).classes('font-mono bg-gray-100 p-4 rounded text-base break-all')
                 
-                ui.label(f"**Nickname:**").classes('text-lg font-medium mt-4')
+                ui.label(f"Nickname:").classes('text-lg font-medium mt-4')
                 ui.label(nickname).classes('text-xl text-primary')
 
         ui.html('<h2 class="text-2xl font-semibold text-center text-primary mt-6">How would you like to save your login info?</h2>')
 
-        # Option 1: Download - Now uses header + button (consistent with Email)
+        # Option 1: Download
         with ui.card().classes('p-8 w-full'):
             ui.html('<h3 class="text-xl font-semibold mb-4">1. Download login information</h3>')
             ui.label('Saves a .txt file to your Downloads folder with your User ID and nickname').classes('text-gray-600 mb-6')
@@ -107,7 +115,7 @@ def login_information():
                      on_click=lambda: download_login_info(user_id, nickname)
             ).props('color=accent size=lg').classes('w-full')
 
-        # Option 2: Email
+        # Option 2: Email - Now using real sending
         with ui.card().classes('p-8 w-full'):
             ui.html('<h3 class="text-xl font-semibold mb-4">2. Email it to myself</h3>')
             
@@ -120,7 +128,7 @@ def login_information():
                      on_click=lambda: send_email_login_info(email_input.value, user_id, nickname)
             ).props('color=accent size=lg').classes('w-full mt-4')
 
-        # Option 3: Copy to clipboard - kept as card for quick action
+        # Option 3: Copy to clipboard
         with ui.card().classes('p-8 w-full cursor-pointer hover:bg-gray-50') as copy_card:
             with ui.row().classes('items-center gap-6 w-full'):
                 ui.icon('content_copy', size='3xl', color='primary')

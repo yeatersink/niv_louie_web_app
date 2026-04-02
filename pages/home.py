@@ -147,6 +147,6 @@ developed as part of a research scholarship for a blind PhD candidate.
 
             ui.html('<h3 class="text-xl font-semibold mb-4 text-primary">Contact Us</h3>')
             ui.label('Have questions or want to collaborate?').classes('text-gray-600 mb-2')
-            ui.link('matt@yourdomain.com', 'mailto:info@nivlouie.com').classes('text-accent hover:underline text-lg')
+            ui.link('info@nivlouie.com', 'mailto:info@nivlouie.com').classes('text-accent hover:underline text-lg')
             
             ui.label('© 2026 Niv Louie - Free and Open Source (GPL-3.0)').classes('text-xs text-gray-500 mt-8')
