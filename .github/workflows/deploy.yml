@@ -6,23 +6,19 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted   # ← This tells GitHub to use your runner on the Fedora machine
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy to Server
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: 5.29.20.104
-          username: yeatersink
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          port: 22
-          script: |
-            cd ~/niv-louie-app
-            git pull origin main
-            docker compose down
-            docker compose build --no-cache
-            docker compose up -d
-            echo "Deployment completed at $(date)"
+      - name: Deploy Niv Louie App
+        run: |
+          echo "Starting deployment on self-hosted runner..."
+          cd ~/niv-louie-app
+          git pull origin main
+          docker compose down
+          docker compose build --no-cache
+          docker compose up -d
+          echo "Deployment completed at $(date)"
+          docker compose ps
