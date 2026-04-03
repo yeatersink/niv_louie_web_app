@@ -6,19 +6,27 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted   # ← This tells GitHub to use your runner on the Fedora machine
+    runs-on: self-hosted
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}        # ← This is the important line
 
       - name: Deploy Niv Louie App
         run: |
           echo "Starting deployment on self-hosted runner..."
           cd ~/niv-louie-app
+
+          # Pull with the token (in case checkout didn't cover everything)
           git pull origin main
+
+          echo "Building and restarting containers..."
           docker compose down
           docker compose build --no-cache
           docker compose up -d
+
           echo "Deployment completed at $(date)"
           docker compose ps
+          docker compose logs --tail=10
