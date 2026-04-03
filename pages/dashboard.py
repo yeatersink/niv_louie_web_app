@@ -6,10 +6,14 @@ from utils.storage import ensure_user_directories, get_current_web_user_id
 
 def init_user_storage():
     try:
-        ensure_user_directories()
+        # Only try to ensure directories if we have a real user_id
         user_id = get_current_web_user_id()
-        nickname = app.storage.user.get("nickname", "User")
-        print(f"LOG: Dashboard loaded - Logged in as: {nickname} (ID: {user_id})")
+        if user_id and not user_id.startswith("temp_"):
+            ensure_user_directories()
+            nickname = app.storage.user.get("nickname", "User")
+            print(f"LOG: Dashboard loaded - Logged in as: {nickname} (ID: {user_id})")
+        else:
+            print(f"LOG: Dashboard accessed without full login (ID: {user_id})")
     except Exception as e:
         print(f"LOG: Could not init user storage on dashboard: {e}")
 
@@ -52,15 +56,6 @@ def dashboard():
 
     # Main content - flex-1 pushes footer down
     with ui.column().classes('flex-1 w-full max-w-4xl mx-auto p-8 gap-12 items-center'):
-
-        # Larger project image / visual representation area (linked to documentation) - consistent with home page
-        with ui.row().classes('w-full justify-center mb-8'):
-            with ui.link(target='/documentation').classes('block'):
-                ui.image('/images/nivlouie.jpg').classes('max-w-3xl w-full rounded-2xl shadow-xl')
-
-        # Description for the image
-        with ui.row().classes('w-full justify-center mb-12'):
-            ui.label('Image of braille representing various images, suggesting accessibility to all things through braille').classes('text-center text-gray-600 max-w-2xl text-lg')
 
         ui.html(f'<h1 class="text-4xl font-bold text-center text-primary">Welcome back, {nickname}</h1>')
 
