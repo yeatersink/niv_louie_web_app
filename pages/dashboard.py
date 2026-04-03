@@ -41,12 +41,26 @@ def dashboard():
         with ui.row().classes('items-center gap-6 w-full max-w-6xl mx-auto'):
             ui.label('Niv Louie').classes('text-3xl font-bold tracking-tight')
             ui.space()
+            
+            # New Home button - matching the style and position of the Dashboard button on home page
+            ui.button('Home', 
+                     on_click=lambda: ui.navigate.to('/')).props('flat color=accent')
+            
             ui.button('Log Out', on_click=logout).props('flat color=white')
             ui.button('Collaborate', 
                      on_click=lambda: ui.navigate.to('/collaborate')).props('flat color=white')
 
     # Main content - flex-1 pushes footer down
     with ui.column().classes('flex-1 w-full max-w-4xl mx-auto p-8 gap-12 items-center'):
+
+        # Larger project image / visual representation area (linked to documentation) - consistent with home page
+        with ui.row().classes('w-full justify-center mb-8'):
+            with ui.link(target='/documentation').classes('block'):
+                ui.image('/images/nivlouie.jpg').classes('max-w-3xl w-full rounded-2xl shadow-xl')
+
+        # Description for the image
+        with ui.row().classes('w-full justify-center mb-12'):
+            ui.label('Image of braille representing various images, suggesting accessibility to all things through braille').classes('text-center text-gray-600 max-w-2xl text-lg')
 
         ui.html(f'<h1 class="text-4xl font-bold text-center text-primary">Welcome back, {nickname}</h1>')
 
@@ -91,11 +105,11 @@ def dashboard():
             ui.button('Go to Lib Louis Test Builder', 
                       on_click=lambda: ui.navigate.to('/liblouis_test_builder')).props('size=lg color=accent').classes('w-full')
 
-    # ====================== FOOTER - Same styling and layout as home page ======================
+
+    # Footer
     with ui.column().classes('w-full bg-gray-100 py-36 mt-24 border-t'):
         with ui.column().classes('w-full max-w-4xl mx-auto gap-10 items-center text-center'):
 
-            # Acknowledgements
             ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">Acknowledgements</h2>')
             ui.markdown('''
 Niv Louie has come together in a monumental way thanks to the generous assistance, 
@@ -103,12 +117,8 @@ valuable feedback, and tremendous support from multiple leading institutions and
 
 Niv Louie is Ariel University and the Digital Pasts Lab’s contribution to education and accessibility, 
 developed as part of a research scholarship for a blind PhD candidate.
-
-Special thanks go to the entire team who offered their insight, expertise, and unwavering help 
-throughout the development of this project.
             ''').classes('text-base leading-relaxed text-primary text-center mb-10')
 
-            # Partners & Supporters
             ui.html('<h3 class="text-xl font-semibold mb-6 text-primary">Our Partners & Supporters</h3>')
             with ui.grid(columns=2).classes('w-full gap-6 text-center'):
                 ui.link('Ariel University', 'https://www.ariel.ac.il/wp/en/').props('target=_blank').classes('text-accent hover:underline font-medium')
@@ -120,21 +130,19 @@ throughout the development of this project.
                 ui.link('Liblouis', 'https://liblouis.io/').props('target=_blank').classes('text-accent hover:underline font-medium')
                 ui.link('NVDA – NV Access', 'https://www.nvaccess.org/').props('target=_blank').classes('text-accent hover:underline font-medium')
 
-            # Documentation and Video Instructions
             with ui.row().classes('gap-16 mt-8'):
                 with ui.column().classes('items-center'):
                     ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">Documentation</h3>')
-                    ui.label('User Guide & Technical Documentation coming soon').classes('text-gray-600')
+                    ui.link('User Guide & Technical Documentation', '/documentation').classes('text-accent hover:underline font-medium')
 
                 with ui.column().classes('items-center'):
                     ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">Video Instructions</h3>')
-                    ui.label('Tutorial videos and how-to guides coming soon').classes('text-gray-600')
+                    ui.link('Tutorial videos and how-to guides', 'https://www.youtube.com/channel/UCGSfwD06fubtGXRkR7kn_Jg').props('target=_blank').classes('text-accent hover:underline font-medium')
 
             ui.separator().classes('my-10 w-full')
 
-            # Contact Section
             ui.html('<h3 class="text-xl font-semibold mb-4 text-primary">Contact Us</h3>')
             ui.label('Have questions or want to collaborate?').classes('text-gray-600 mb-2')
-            ui.link('matt@yourdomain.com', 'mailto:matt@yourdomain.com').classes('text-accent hover:underline text-lg')
+            ui.link('info@nivlouie.com', 'mailto:info@nivlouie.com').classes('text-accent hover:underline text-lg')
             
             ui.label('© 2026 Niv Louie - Free and Open Source (GPL-3.0)').classes('text-xs text-gray-500 mt-8')
