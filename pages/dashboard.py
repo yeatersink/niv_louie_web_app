@@ -57,6 +57,15 @@ def dashboard():
     # Main content - flex-1 pushes footer down
     with ui.column().classes('flex-1 w-full max-w-4xl mx-auto p-8 gap-12 items-center'):
 
+        # Larger project image / visual representation area (linked to documentation) - consistent with home page
+        with ui.row().classes('w-full justify-center mb-8'):
+            with ui.link(target='/documentation').classes('block'):
+                ui.image('/static/images/nivlouie.jpg').classes('max-w-3xl w-full rounded-2xl shadow-xl')
+
+        # Description for the image
+        with ui.row().classes('w-full justify-center mb-12'):
+            ui.label('Image of braille representing various images, indicating accessibility to all things through braille').classes('text-center text-gray-600 max-w-2xl text-lg')
+
         ui.html(f'<h1 class="text-4xl font-bold text-center text-primary">Welcome back, {nickname}</h1>')
 
         # Logged-in status
