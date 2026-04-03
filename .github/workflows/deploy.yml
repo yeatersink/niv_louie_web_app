@@ -12,14 +12,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_PAT }}        # ← This is the important line
+          token: ${{ secrets.GH_PAT }}
+          fetch-depth: 0   # Get full history if needed
 
       - name: Deploy Niv Louie App
         run: |
           echo "Starting deployment on self-hosted runner..."
           cd ~/niv-louie-app
 
-          # Pull with the token (in case checkout didn't cover everything)
+          # Force pull using the token to be safe
           git pull origin main
 
           echo "Building and restarting containers..."
