@@ -60,7 +60,7 @@ def dashboard():
         # Larger project image / visual representation area (linked to documentation) - consistent with home page
         with ui.row().classes('w-full justify-center mb-8'):
             with ui.link(target='/documentation').classes('block'):
-                ui.image('/static/images/nivlouie.jpg').classes('max-w-3xl w-full rounded-2xl shadow-xl')
+                ui.image('/static/images/nivlouie.jpeg').classes('max-w-3xl w-full rounded-2xl shadow-xl')
 
         # Description for the image
         with ui.row().classes('w-full justify-center mb-12'):
