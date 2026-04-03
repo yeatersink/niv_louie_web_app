@@ -71,7 +71,7 @@ def liblouis_test_builder():
             on_click=lambda: create_braille_tests(selected_projects)
         ).props('size=lg color=accent').classes('w-full mt-6')
 
-        # Home button
-        ui.button("Return to Home", 
-                 on_click=lambda: ui.navigate.to("/")
+        # Updated button - changed only text and destination as requested
+        ui.button("Return to Dashboard", 
+                 on_click=lambda: ui.navigate.to("/dashboard")
         ).props('flat color=primary size=lg').classes('w-full mt-8')

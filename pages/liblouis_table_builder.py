@@ -47,7 +47,7 @@ def liblouis_table_builder():
                  on_click=create_braille_table
         ).props('size=lg color=accent').classes('w-full')
 
-        # Home button
-        ui.button("Return to Home", 
-                 on_click=lambda: ui.navigate.to("/")
+        # Updated button - changed only text and destination as requested
+        ui.button("Return to Dashboard", 
+                 on_click=lambda: ui.navigate.to("/dashboard")
         ).props('flat color=primary size=lg').classes('w-full mt-8')
