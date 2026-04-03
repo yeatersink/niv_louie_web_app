@@ -19,6 +19,7 @@ from pages.edit_extention import edit_extention
 from pages.liblouis_table_builder import liblouis_table_builder
 from pages.liblouis_test_builder import liblouis_test_builder
 from pages.collaborate import collaborate
+from pages.documentation import documentation
 
 from utils.storage import ensure_user_directories
 
