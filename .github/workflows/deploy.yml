@@ -1,26 +1,9 @@
-name: Deploy to Fedora Server
-
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  deploy:
-    runs-on: self-hosted
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GH_PAT }}
-
       - name: Deploy Niv Louie App
         run: |
           echo "Starting deployment on self-hosted runner..."
-
           cd ~/niv-louie-app
 
-          # Use the token for git operations
+          # Use token correctly for git operations
           git -c http.extraheader="AUTHORIZATION: basic ${{ secrets.GH_PAT }}" pull origin main
 
           echo "Building and restarting containers..."
