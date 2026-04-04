@@ -13,15 +13,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_PAT }}
-          fetch-depth: 0   # Get full history if needed
 
       - name: Deploy Niv Louie App
         run: |
           echo "Starting deployment on self-hosted runner..."
+
           cd ~/niv-louie-app
 
-          # Force pull using the token to be safe
-          git pull origin main
+          # Use the token for git operations
+          git -c http.extraheader="AUTHORIZATION: basic ${{ secrets.GH_PAT }}" pull origin main
 
           echo "Building and restarting containers..."
           docker compose down
