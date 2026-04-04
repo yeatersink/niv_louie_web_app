@@ -2,14 +2,16 @@ FROM zauberzeug/nicegui:latest
 
 WORKDIR /app
 
-# Copy requirements and install using uv (this is the recommended way for NiceGUI Docker images)
+# Install dependencies
 COPY requirements.txt* ./
 RUN uv pip install -r requirements.txt
 
-# Copy all your project files
+# Explicitly copy static files first (this is the most reliable way)
+COPY static/ /app/static/
+
+# Copy the rest of the application code
 COPY . .
 
 EXPOSE 8080
 
-# Run the app
 CMD ["python", "gui.py"]
