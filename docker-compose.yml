@@ -8,7 +8,7 @@ services:
     environment:
       - DOCKER=1
     volumes:
-      - ./static:/app/static     # ← This is the key line
+      - /home/yeatersink/niv-louie-app/static:/app/static   # Absolute path - most reliable
 
   cloudflared:
     image: cloudflare/cloudflared:latest
