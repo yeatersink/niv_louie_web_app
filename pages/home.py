@@ -68,10 +68,10 @@ def home():
     with ui.column().classes('flex-1 w-full max-w-4xl mx-auto p-8 gap-16 items-center'):
         # Larger project image / visual representation area (linked to documentation)
         with ui.row().classes('w-full justify-center mb-8'):
-            with ui.link(target='/documentation').classes('block'):
-                ui.image('/static/images/nivlouie.jpeg').classes('max-w-3xl w-full rounded-2xl shadow-xl')
+            with ui.link(target='/documentation').classes('block w-full max-w-lg md:max-w-2xl'):
+                ui.image('/static/images/nivlouie.jpeg').classes('w-full h-auto rounded-2xl shadow-xl object-contain')
         
-                # Description for the image
+        # Description for the image
         with ui.row().classes('w-full justify-center mb-12'):
             ui.label('Image of braille representing various images, indicating accessibility to all things through braille and technology').classes('text-center text-gray-600 max-w-2xl text-lg')    
 
