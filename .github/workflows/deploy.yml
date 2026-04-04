@@ -1,24 +1,37 @@
-- name: Deploy Niv Louie App
-  run: |
-    set -e  # Exit immediately if any command fails
+name: Deploy to Fedora Server
 
-    echo "Starting deployment on self-hosted runner..."
-    cd ~/niv-louie-app
+on:
+  push:
+    branches: [ main ]
 
-    git pull origin main
+jobs:
+  deploy:
+    runs-on: self-hosted
 
-    echo "Stopping old containers..."
-    docker compose down
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    echo "Building fresh images..."
-    docker compose build --no-cache
+      - name: Deploy Niv Louie App
+        run: |
+          set -e
 
-    echo "Starting new containers..."
-    docker compose up -d
+          echo "Starting deployment on self-hosted runner..."
+          cd ~/niv-louie-app
 
-    echo "Deployment completed successfully at $(date)"
-    echo "Container status:"
-    docker compose ps
-    echo "Recent logs:"
-    docker compose logs --tail=20
-    
+          git pull origin main
+
+          echo "Stopping old containers..."
+          docker compose down
+
+          echo "Building fresh images..."
+          docker compose build --no-cache
+
+          echo "Starting new containers..."
+          docker compose up -d
+
+          echo "Deployment completed successfully at $(date)"
+          echo "Container status:"
+          docker compose ps
+          echo "Recent logs:"
+          docker compose logs --tail=20
