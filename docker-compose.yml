@@ -4,9 +4,11 @@ services:
     container_name: niv_louie_web_app
     restart: unless-stopped
     ports:
-      - "8080:8080"          # Expose the app internally
+      - "8080:8080"
     environment:
       - DOCKER=1
+    volumes:
+      - ./static:/app/static     # ← This is the key line
 
   cloudflared:
     image: cloudflare/cloudflared:latest
@@ -15,4 +17,4 @@ services:
     command: tunnel --no-autoupdate run --token eyJhIjoiNzM5MzlhZmVhOWFiMDY3YThmYzZiMmZiZjA5OTFiMDkiLCJ0IjoiYzIzMDM4NWUtNDgxZC00OTg0LTlkNTUtYWRjOTBkYzg4ZjA5IiwicyI6Ik1qRXhOV0V4WW1JdFpXUTBOeTAwTXpoakxUa3paalV0TlRsaE9XSTRZV013TldSbSJ9
     depends_on:
       - nicegui-app
-    network_mode: "service:nicegui-app"   # This is the key line - share network with the app
+    network_mode: "service:nicegui-app"
