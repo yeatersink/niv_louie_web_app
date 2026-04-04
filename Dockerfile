@@ -6,10 +6,10 @@ WORKDIR /app
 COPY requirements.txt* ./
 RUN uv pip install -r requirements.txt
 
-# Explicitly copy static files first (this is the most reliable way)
-COPY static/ /app/static/
+# Force copy the static folder (most reliable method)
+COPY static /app/static
 
-# Copy the rest of the application code
+# Copy everything else
 COPY . .
 
 EXPOSE 8080
