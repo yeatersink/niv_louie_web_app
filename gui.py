@@ -6,7 +6,7 @@ import os
 # Import all pages so NiceGUI registers the @ui.page decorators
 from pages.home import home
 from pages.login import login
-from pages.login_information import login_information   # ← This line must be here
+from pages.login_information import login_information
 from pages.dashboard import dashboard
 from pages.existing_project import existing_project
 from pages.create_project import create_project
@@ -28,8 +28,10 @@ def startup():
     """Run once when the server starts"""
     try:
         # DO NOT call ensure_user_directories() here
-        # We only create user directories after the user explicitly logs in or creates a session
         print("LOG: Niv Louie Web - Server started (no user directories created yet)")
+
+        # === IMPORTANT: Register static files folder ===
+        app.add_static_files('/static', '/app/static')
 
         # Color scheme
         ui.colors(
@@ -80,7 +82,7 @@ def startup():
         ''', shared=True)
         
     except Exception as e:
-        print(f"WARNING: Could not set styles: {e}")
+        print(f"WARNING: Could not set styles or static files: {e}")
 
 
 # Register startup function
@@ -88,15 +90,20 @@ app.on_startup(startup)
 
 
 # ====================== WEB SERVER SETUP ======================
-ui.run(
-    host="0.0.0.0",
-    port=8080,
-    title="Niv Louie - Making the World Accessible, One Braille Table at a Time",
-    reload=False,
-    show=False,
-    storage_secret="niv_louie_secret_key_2026",
-    favicon="🌐",
-    dark=False,
-    viewport="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-)
+if __name__ == "__main__":
+    # Detect if we're running in Docker
+    is_docker = os.getenv("DOCKER") or os.getenv("RUNNING_IN_DOCKER")
+    
+    ui.run(
+        host="0.0.0.0" if is_docker else "127.0.0.1",
+        port=8080,
+        title="Niv Louie - Making the World Accessible, One Braille Table at a Time",
+        reload=False,
+        show=not is_docker,
+        storage_secret="niv_louie_secret_key_2026",
+        favicon="🌐",
+        dark=False,
+        viewport="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    )
 
+    

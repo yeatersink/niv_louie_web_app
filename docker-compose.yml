@@ -8,7 +8,8 @@ services:
     environment:
       - DOCKER=1
     volumes:
-      - /home/yeatersink/niv-louie-app/static:/app/static   # Absolute path - most reliable
+      # Mount the static folder from host to container (absolute path - most reliable)
+      - /home/yeatersink/niv-louie-app/static:/app/static:ro
 
   cloudflared:
     image: cloudflare/cloudflared:latest
