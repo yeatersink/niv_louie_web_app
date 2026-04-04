@@ -9,17 +9,15 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout code using SSH
+      - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}   # We'll add this secret next
-          ssh-strategy: ssh
 
       - name: Deploy Niv Louie App
         run: |
           echo "Starting deployment on self-hosted runner..."
           cd ~/niv-louie-app
 
+          # Pull using SSH (thanks to the global config we just set)
           git pull origin main
 
           echo "Building and restarting containers..."
