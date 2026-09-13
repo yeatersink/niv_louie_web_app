@@ -22,7 +22,7 @@ def liblouis_table_builder():
     with ui.column().classes('w-full max-w-2xl mx-auto p-8 gap-8 items-center'):
         
         # Centered header - no Go Back button
-        ui.html('<h1 class="text-3xl font-bold text-primary text-center">Lib Louis Table Builder</h1>')
+        ui.html('<h1 class="text-3xl font-bold text-primary text-center">Liblouis Table Builder</h1>')
 
         # Descriptive text as requested
         ui.html('''
@@ -43,7 +43,7 @@ def liblouis_table_builder():
             ).classes('w-full')
 
         # Main action button
-        ui.button("Generate and Download table for Lib Louis", 
+        ui.button("Generate and Download table for Liblouis", 
                  on_click=create_braille_table
         ).props('size=lg color=accent').classes('w-full')
 

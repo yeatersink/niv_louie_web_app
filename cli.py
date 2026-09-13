@@ -1,6 +1,6 @@
 from utils.project import languages,project
-#the create_braille_table function is used to create the braille table for lib louis
-#the create_braille_tests function is used to create the braille tests for lib louis
+#the create_braille_table function is used to create the braille table for Liblouis
+#the create_braille_tests function is used to create the braille tests for Liblouis
 #the get_braille_from_text_in_source function is used to convert the text characters to braille characters in the source language file
 from utils.braille import create_braille_table, create_braille_tests, get_braille_from_text_in_source
 #The create_filtered_csv function is used to create the filtered csv file
@@ -23,7 +23,7 @@ print("""
 1: generate filtered spreadsheet,
 2: generate Locale File for nvda,
 3: generate Character Set for NVDA,
-4: Generate braille table for LibLouis,
+4: Generate braille table for Liblouis,
 5: regenerate characters,
 6: convert text characters to braille characters,
 7: produce a braille test,
@@ -39,7 +39,7 @@ elif option==2:
 #option 3 generates the character set for nvda
 elif option==3:
     generate_character_set(language_option)
-#option 4 creates the braille table for lib louis
+#option 4 creates the braille table for Liblouis
 elif option==4:
     create_braille_table(language_option)
 #option 5 regenerates the characters in the language file
@@ -48,7 +48,7 @@ elif option==5:
     #option 6 converts the text characters to braille characters in the source language file    
 elif option == 6:
     get_braille_from_text_in_source(language_option)
-#option 7 creates the braille tests for Lib Louis
+#option 7 creates the braille tests for Liblouis
 elif option==7:
     create_braille_tests(language_option)
 #option 8 adds the symbols to the nvda symbols file

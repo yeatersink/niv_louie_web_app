@@ -4,7 +4,7 @@ import pandas as pd
 import warnings
 from utils.project import project
 from utils.storage import get_user_projects_dir
-from nicegui import ui
+from utils.project_errors import ProjectCsvError, format_header_list
 
 
 def get_source_path():
@@ -13,6 +13,11 @@ def get_source_path():
     source_dir = projects_dir / "source"
     source_dir.mkdir(parents=True, exist_ok=True)
     return source_dir / f"{project.project_name}.csv"
+
+
+def _strip_columns(df):
+    df.columns = [str(c).replace("\ufeff", "").strip() for c in df.columns]
+    return df
 
 
 def create_filtered_csv():
@@ -25,31 +30,91 @@ def create_filtered_csv():
     projects_dir = get_user_projects_dir()
     filtered_path = projects_dir / f"filtered_{project.project_name}.csv"
 
-    # The language file is read in to pandas
-    language_file = pd.read_csv(source_path)
+    language_file = pd.read_csv(source_path, encoding="utf-8-sig")
+    _strip_columns(language_file)
+    headers = list(language_file.columns)
 
-    # selects the columns that are needed for the filtered csv file
-    filtered_language = language_file[[project.project_character_column, "Hex", "Type", project.project_name_column, project.project_braille_column]].copy()
+    if not headers:
+        raise ProjectCsvError(
+            "No header row found",
+            "The spreadsheet has no column names, so it cannot be filtered.",
+            "Open the file, put headers in the first row, save as CSV, then upload it again.",
+        )
 
-    # Gets the name column and clean it
+    mappings = [
+        ("Character column", project.project_character_column),
+        ("Character name column", project.project_name_column),
+        ("Unicode / Hex column", project.project_unicode_column),
+        ("Type column", project.project_type_column),
+        ("Braille column", project.project_braille_column),
+    ]
+
+    missing_required = [label for label, value in mappings if value is None]
+    if missing_required:
+        raise ProjectCsvError(
+            "Column matching incomplete",
+            (
+                "A required mapping is empty: "
+                + ", ".join(missing_required)
+                + f". Headers in the file: {format_header_list(headers)}."
+            ),
+            "Match each list to a column in your file, including Braille. Then save again.",
+        )
+
+    missing_in_file = [
+        f'{label} ("{value}")' for label, value in mappings if value not in language_file.columns
+    ]
+    if missing_in_file:
+        raise ProjectCsvError(
+            "A mapped column is not in the file",
+            (
+                "These mapped columns were not found: "
+                + ", ".join(missing_in_file)
+                + f". Headers in the file: {format_header_list(headers)}."
+            ),
+            "Your first row is the headers. One header has a space before Character. "
+            "Re-save the CSV without leading spaces, or pick the header that JAWS reads with the space.",
+        )
+
+    hex_col = project.project_unicode_column
+    type_col = project.project_type_column
+    needed = [
+        project.project_character_column,
+        hex_col,
+        type_col,
+        project.project_name_column,
+        project.project_braille_column,
+    ]
+
+    try:
+        filtered_language = language_file[needed].copy()
+    except KeyError as ex:
+        raise ProjectCsvError(
+            "A mapped column is missing",
+            (
+                f"Could not find one of the mapped columns ({ex}). "
+                f"Headers in the file: {format_header_list(headers)}."
+            ),
+            "Your first row is the headers. One header has a space before Character. "
+            "Re-save the CSV without leading spaces, or pick the header that JAWS reads with the space.",
+        ) from ex
+
     name_column = filtered_language[[project.project_name_column]].copy()
     name_column[project.project_name_column] = name_column[project.project_name_column].astype(str)
     new_name_column = name_column[project.project_name_column].apply(format_names)
     filtered_language[project.project_name_column] = new_name_column
 
-    # Checks if there are rows where there is a plus in the Hex column and the Type is not set to always
-    if filtered_language[(filtered_language["Hex"].str.contains(r"\+")) & (filtered_language["Type"] != "always")].shape[0] > 0:
+    hex_as_str = filtered_language[hex_col].astype(str)
+    if filtered_language[(hex_as_str.str.contains(r"\+", na=False)) & (filtered_language[type_col] != "always")].shape[0] > 0:
         warnings.warn("There are characters with multiple hex values that are not set to always")
-        print(filtered_language[(filtered_language["Hex"].str.contains(r"\+")) & (filtered_language["Type"] != "always")])
+        print(filtered_language[(hex_as_str.str.contains(r"\+", na=False)) & (filtered_language[type_col] != "always")])
 
-    # Checks if there are duplicates in the language file
-    if filtered_language.duplicated(keep=False, subset=["Hex"]).sum() > 0:
+    if filtered_language.duplicated(keep=False, subset=[hex_col]).sum() > 0:
         warnings.warn("There are duplicates in the language file")
-        print(filtered_language[filtered_language.duplicated(keep=False, subset=["Hex"])])
+        print(filtered_language[filtered_language.duplicated(keep=False, subset=[hex_col])])
 
-    filtered_language = filtered_language.sort_values(by=["Hex"], key=lambda x: x.str.len(), ascending=False)
+    filtered_language = filtered_language.sort_values(by=[hex_col], key=lambda x: x.astype(str).str.len(), ascending=False)
 
-    # Save filtered file
     filtered_path.parent.mkdir(parents=True, exist_ok=True)
     filtered_language.to_csv(filtered_path, index=False)
     print("Spreadsheet Generated")
@@ -77,10 +142,11 @@ def regenerate_characters_using_hex():
 
     source_path = get_source_path()
 
-    language_file = pd.read_csv(source_path)
+    language_file = pd.read_csv(source_path, encoding="utf-8-sig")
+    _strip_columns(language_file)
 
-    # Regenerate character column from Hex
-    language_file[project.project_character_column] = language_file["Hex"].apply(generate_characters)
+    hex_col = project.project_unicode_column or "Hex"
+    language_file[project.project_character_column] = language_file[hex_col].apply(generate_characters)
 
     language_file.to_csv(source_path, index=False)
     print("Characters regenerated")
@@ -116,10 +182,11 @@ def regenerate_hex_using_characters():
 
     source_path = get_source_path()
 
-    language_file = pd.read_csv(source_path)
+    language_file = pd.read_csv(source_path, encoding="utf-8-sig")
+    _strip_columns(language_file)
 
-    # Regenerate Hex column from character column
-    language_file["Hex"] = language_file[project.project_character_column].apply(generate_hex_from_character)
+    hex_col = project.project_unicode_column or "Hex"
+    language_file[hex_col] = language_file[project.project_character_column].apply(generate_hex_from_character)
 
     language_file.to_csv(source_path, index=False)
     print("Hex regenerated from characters")

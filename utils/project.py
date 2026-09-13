@@ -9,6 +9,7 @@ from docx import Document
 import warnings
 
 from utils.storage import get_user_projects_dir, get_user_documents_dir, get_user_tests_dir, ensure_user_directories
+from utils.project_errors import show_project_error, format_header_list, ProjectCsvError
 
 
 # Load braille conversion files (app resources)
@@ -105,7 +106,8 @@ class Project:
         source_dir = self.projects_dir / "source"
         source_dir.mkdir(parents=True, exist_ok=True)
         file_path = source_dir / f"{self.project_name}.csv"
-        self.project_text = pd.read_csv(file_path)
+        self.project_text = pd.read_csv(file_path, encoding="utf-8-sig")
+        self.project_text.columns = [str(c).replace("\ufeff", "").strip() for c in self.project_text.columns]
 
     def set_project_name(self, project_name):
         self.project_name = project_name
@@ -159,20 +161,85 @@ class Project:
     def update_project_replace(self, e: events.ValueChangeEventArguments):
         self.project_replace = e.value
 
+    def _reset_column_mappings(self):
+        self.project_name_column = None
+        self.project_character_column = None
+        self.project_unicode_column = None
+        self.project_type_column = None
+        self.project_braille_column = None
+
     async def handle_file_upload(self, e: events.UploadEventArguments):
         try:
             if not e.file or not e.file.name:
-                ui.notify("Upload failed - no file received", type="negative")
+                show_project_error(
+                    "No file received",
+                    "The upload did not include a file, so nothing was loaded.",
+                    "Use Choose file and pick a .csv from this computer.",
+                )
                 return
 
-            self.project_name = e.file.name.split(".")[0]
+            filename = e.file.name
+            if not filename.lower().endswith(".csv"):
+                self.project_text = None
+                self._reset_column_mappings()
+                show_project_error(
+                    "This file is not a CSV",
+                    f'"{filename}" is not a .csv spreadsheet, so it cannot start a project.',
+                    "In Excel or Google Sheets, use Save as or Download and pick CSV. Then upload that file.",
+                )
+                return
+
+            self.project_name = filename.rsplit(".", 1)[0]
             content_bytes = await e.file.read()
-            content_as_file = io.StringIO(content_bytes.decode("utf-8"))
-            self.project_text = pd.read_csv(content_as_file)
-            
-            ui.notify(f"✅ File '{e.file.name}' uploaded successfully. Continue to project information.", type="positive")
+            try:
+                content_str = content_bytes.decode("utf-8-sig")
+            except UnicodeDecodeError as ex:
+                self.project_text = None
+                self._reset_column_mappings()
+                raise ProjectCsvError(
+                    "The spreadsheet could not be read",
+                    f"This file is not valid UTF-8 text, so it cannot be opened as a CSV. {ex}",
+                    "Save the spreadsheet as CSV UTF-8 (Comma delimited), then upload it again.",
+                ) from ex
+
+            try:
+                df = pd.read_csv(io.StringIO(content_str))
+            except (pd.errors.EmptyDataError, pd.errors.ParserError, ValueError) as ex:
+                self.project_text = None
+                self._reset_column_mappings()
+                raise ProjectCsvError(
+                    "The spreadsheet could not be read",
+                    f"This file could not be parsed as a CSV. {ex}",
+                    "Use a .csv whose first row is headers. If the file is open in Excel, close it and try again.",
+                ) from ex
+
+            df.columns = [str(c).replace("\ufeff", "").strip() for c in df.columns]
+            if len(df.columns) == 0 or all(c == "" for c in df.columns):
+                self.project_text = None
+                self._reset_column_mappings()
+                raise ProjectCsvError(
+                    "No header row found",
+                    "The file has no column names. The first row must be headers such as Character, Hex, Type, Name, and Braille.",
+                    "Open the spreadsheet, put column names in the first row, save as CSV, and upload again.",
+                )
+
+            self.project_text = df
+            self._reset_column_mappings()
+
+            ui.notify(f"✅ File '{filename}' uploaded successfully. Continue to project information.", type="positive")
+        except ProjectCsvError as ex:
+            self.project_text = None
+            self._reset_column_mappings()
+            show_project_error(ex.title, ex.message, ex.how_to_fix)
+            print(f"DEBUG upload error: {ex}")
         except Exception as ex:
-            ui.notify(f"Upload error: {str(ex)}", type="negative")
+            self.project_text = None
+            self._reset_column_mappings()
+            show_project_error(
+                "The spreadsheet could not be read",
+                f"The file could not be opened as a CSV. {ex}",
+                "Use a .csv file whose first row is headers. If the file is open in Excel, close it and try again.",
+            )
             print(f"DEBUG upload error: {ex}")
 
     # Fixed - now saves to the exact folder that create_braille_tests expects
@@ -270,34 +337,58 @@ class Project:
         except Exception as ex:
             ui.notify(f"Document upload error: {str(ex)}", type="negative")
 
-    def save_project(self):
-        error = False
+    def save_project(self, replace_existing=False):
+        if self.project_text is None:
+            show_project_error(
+                "No spreadsheet in memory",
+                "There is no CSV loaded, so the project cannot be saved.",
+                "Upload a CSV on the Create a project page, then match each list to a column and save.",
+            )
+            return False
+
         if self.project_name is None:
             ui.notify("Please enter a name for your project.", type="negative")
-            error = True
-        if self.project_name_column is None:
-            ui.notify("Please select a name column for your project.", type="negative")
-            error = True
-        if self.project_character_column is None:
-            ui.notify("Please select a character column for your project.", type="negative")
-            error = True
-        if self.project_unicode_column is None:
-            ui.notify("Please select a Unicode column for your project.", type="negative")
-            error = True
-        if self.project_type_column is None:
-            ui.notify("Please select a type column for your project.", type="negative")
-            error = True
-        if self.project_braille_column is None:
-            ui.notify("Please select a braille column for your project.", type="negative")
-            error = True
+            return False
 
-        for language in self.languages:
-            if self.project_name.lower() == language.get("name", "").lower():
-                ui.notify("A project with that name already exists.", type="negative")
-                error = True
+        self.project_text.columns = [str(c).replace("\ufeff", "").strip() for c in self.project_text.columns]
+        cols = list(self.project_text.columns)
 
-        if error:
-            return
+        mappings = [
+            ("Character column", self.project_character_column),
+            ("Character name column", self.project_name_column),
+            ("Unicode / Hex column", self.project_unicode_column),
+            ("Type column", self.project_type_column),
+            ("Braille column", self.project_braille_column),
+        ]
+
+        missing = [label for label, value in mappings if value is None]
+        if missing:
+            show_project_error(
+                "Column matching incomplete",
+                "These lists still need a column: "
+                + ", ".join(missing)
+                + f". Headers in the file: {format_header_list(cols)}.",
+                "Match each list to a column in your file, including Braille. Names must match the file, including spelling.",
+            )
+            return False
+
+        not_in_file = [f'{label} ("{value}")' for label, value in mappings if value not in cols]
+        if not_in_file:
+            show_project_error(
+                "A mapped column is not in the file",
+                "These mappings do not match a header: "
+                + ", ".join(not_in_file)
+                + f". Headers in the file: {format_header_list(cols)}.",
+                "Your first row is the headers. One header has a space before Character. "
+                "Re-save the CSV without leading spaces, or pick the header that JAWS reads with the space.",
+            )
+            return False
+
+        if not replace_existing:
+            for language in self.languages:
+                if self.project_name.lower() == language.get("name", "").lower():
+                    ui.notify("A project with that name already exists.", type="negative")
+                    return False
 
         project_object = {
             "name": self.project_name,
@@ -318,7 +409,18 @@ class Project:
             "replace": self.project_replace
         }
 
-        self.languages.append(project_object)
+        if replace_existing:
+            replaced = False
+            for i, language in enumerate(self.languages):
+                if language.get("name", "").lower() == self.project_name.lower():
+                    self.languages[i] = project_object
+                    replaced = True
+                    break
+            if not replaced:
+                self.languages.append(project_object)
+        else:
+            self.languages.append(project_object)
+
         self.update_languages_list()
 
         projects_dir = self.projects_dir or get_user_projects_dir()
@@ -331,9 +433,7 @@ class Project:
         source_dir = projects_dir / "source"
         source_dir.mkdir(parents=True, exist_ok=True)
         self.project_text.to_csv(source_dir / f"{self.project_name}.csv", index=False)
-
-        ui.navigate.to("/existing_project")
-        ui.notify("Project Saved", close_button="Ok")
+        return True
 
     def remove_project(self):
         projects_dir = self.projects_dir or get_user_projects_dir()

@@ -133,7 +133,7 @@ class Extention:
                 error = True
 
         if error:
-            return
+            return False
 
         extention_object = {
             "name": self.extention_name,
@@ -157,8 +157,8 @@ class Extention:
 
         self.reload_extentions()   # Refresh the list immediately
 
-        ui.navigate.to("/nvda_extention_builder")
-        ui.notify("Extention Saved.", close_button="Ok.")
+        ui.notify("Add-on saved.", close_button="Ok.")
+        return True
 
     def set_fields(self):
         for addon in self.extentions:
