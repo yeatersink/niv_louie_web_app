@@ -1,0 +1,4 @@
+﻿Character,Hex,Type,Name,Braille
+ d, 0064, letter,d,⠙
+Day,0064+0061+0079,always,day, ⠐⠙
+𒂍,1208D ,letter,e2, ⠑⠆

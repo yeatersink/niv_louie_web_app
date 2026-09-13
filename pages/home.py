@@ -1,5 +1,6 @@
 # pages/home.py - Public Home Page
 
+from pathlib import Path
 from nicegui import ui, app
 
 
@@ -26,23 +27,25 @@ def go_to_dashboard_or_login():
         ui.navigate.to('/login')
 
 
-def go_to_protected_page(page_path: str):
-    """Smart navigation for protected pages: Go to page if logged in, otherwise go to login with notification"""
-    try:
-        user_id = app.storage.user.get("user_id") if hasattr(app.storage, 'user') and app.storage.user is not None else None
-        if user_id:
-            ui.navigate.to(page_path)
-        else:
-            ui.notify("Please log in first to access this feature", type="warning")
-            ui.navigate.to('/login')
-    except Exception:
-        ui.notify("Please log in first to access this feature", type="warning")
-        ui.navigate.to('/login')
+def _log_if_example_missing(filename):
+    root = Path(__file__).resolve().parent.parent
+    search_paths = [
+        root / "static" / filename,
+        root / "static" / "files" / filename,
+        root / filename,
+    ]
+    for path in search_paths:
+        if path.is_file():
+            return
+    print(f"LOG: Example file missing: {filename}")
 
 
 @ui.page("/")
 def home():
     # NO ensure_user_directories() here - this is a public page
+
+    _log_if_example_missing("example of Csv.csv")
+    _log_if_example_missing("example of test.csv")
 
     # Strong layout setup to push footer to the bottom
     ui.query('.nicegui-content').classes('w-full')
@@ -82,7 +85,7 @@ def home():
             ui.markdown('''
 Niv Louie allows anyone to upload simple CSV files containing Unicode symbols, character names, and desired Braille representations, then instantly generates:
 
-1. Lib Louis Braille tables for high-quality Braille translation  
+1. Liblouis Braille tables for high-quality Braille translation  
 2. Custom Braille for development of new Braille scripts and systems for any language or writing system, even those without existing Braille support  
 3. Braille documents that can be printed or embossed from the custom tables built with Niv Louie  
 4. NVDA extensions that give screen readers immediate spoken and Braille access to any Unicode character or symbol in digital content, including math, music, scientific symbols, emojis, and more.
@@ -105,32 +108,26 @@ Users are strongly encouraged to consult with their respective Braille authority
             with ui.card().classes('p-6 mb-6'):
                 ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">1. Project Manager</h3>')
                 ui.markdown('This is where you create and manage your projects. Upload a CSV file, map the columns, and save your project for use across the app.')
-                ui.button('Go to Project Manager', 
-                          on_click=lambda: go_to_protected_page('/existing_project')).props('size=lg color=accent').classes('w-full')
+                ui.markdown('Download an example CSV you can open in Microsoft Excel, then use that layout when you create a project.')
+                ui.link("Download example CSV", "/static/example of Csv.csv").props('download="example of Csv.csv"').classes('text-accent hover:underline font-medium')
 
             with ui.card().classes('p-6 mb-6'):
-                ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">2. Lib Louis Table Builder</h3>')
+                ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">2. Liblouis Table Builder</h3>')
                 ui.markdown('Choose a project and Niv Louie will automatically generate a Braille table for Liblouis.')
-                ui.button('Go to Lib Louis Table Builder', 
-                          on_click=lambda: go_to_protected_page('/liblouis_table_builder')).props('size=lg color=accent').classes('w-full')
 
             with ui.card().classes('p-6 mb-6'):
-                ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">3. Lib Louis Test Builder</h3>')
+                ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">3. Liblouis Test Builder</h3>')
                 ui.markdown('This tool helps you create test files to verify your project produces correct Braille output.')
-                ui.button('Go to Lib Louis Test Builder', 
-                          on_click=lambda: go_to_protected_page('/liblouis_test_builder')).props('size=lg color=accent').classes('w-full')
+                ui.markdown('Download an example test document you can upload when you try the test builder.')
+                ui.link("Download example test document", "/static/example of test.csv").props('download="example of test.csv"').classes('text-accent hover:underline font-medium')
 
             with ui.card().classes('p-6 mb-6'):
                 ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">4. NVDA Add-on Builder</h3>')
                 ui.markdown('Use your projects to automatically generate an NVDA extension.')
-                ui.button('Go to NVDA Extension Builder', 
-                          on_click=lambda: go_to_protected_page('/nvda_extention_builder')).props('size=lg color=accent').classes('w-full')
 
             with ui.card().classes('p-6'):
                 ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">5. Custom Braille Document Builder</h3>')
                 ui.markdown('This tool lets you convert printed documents into Braille using the projects you created.')
-                ui.button('Go to Braille Document Builder', 
-                          on_click=lambda: go_to_protected_page('/braille_document_builder')).props('size=lg color=accent').classes('w-full')
 
         # New Get Started section - consistent styling
         with ui.card().classes('p-8 w-full max-w-3xl'):

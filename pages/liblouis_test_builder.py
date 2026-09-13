@@ -23,7 +23,7 @@ def liblouis_test_builder():
     with ui.column().classes('w-full max-w-3xl mx-auto p-8 gap-8 items-center'):
         
         # Centered header - no Go Back button
-        ui.html('<h1 class="text-3xl font-bold text-primary text-center">Lib Louis Test Builder</h1>')
+        ui.html('<h1 class="text-3xl font-bold text-primary text-center">Liblouis Test Builder</h1>')
 
         # Descriptive text as requested
         ui.html('''
@@ -67,7 +67,7 @@ def liblouis_test_builder():
 
         # Main action button
         ui.button(
-            "Generate and download YAML Test for Lib Louis", 
+            "Generate and download YAML Test for Liblouis", 
             on_click=lambda: create_braille_tests(selected_projects)
         ).props('size=lg color=accent').classes('w-full mt-6')
 

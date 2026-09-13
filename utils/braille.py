@@ -26,7 +26,7 @@ except Exception as ex:
 
 
 def create_braille_table():
-    print("creating table for lib louis")
+    print("creating table for Liblouis")
 
     projects_dir = get_user_projects_dir()
     filtered_path = projects_dir / f"filtered_{project.project_name}.csv"

@@ -1,6 +1,7 @@
 # utils/nvda.py
 
 import pathlib
+import traceback
 import pandas as pd
 from nicegui import ui
 from utils.project import project
@@ -71,9 +72,21 @@ def generate_locale_file():
 
 
 def create_nvda_extention():
-    """Creates a new extension for NVDA"""
+    """Builds a .nvda-addon in the user NVDA directory. Does not download or navigate."""
     print("Creating Extension for NVDA")
+    if not extention.extention_name:
+        ui.notify("Select an add-on first", type="negative")
+        return False
+
     extention.set_fields()
+
+    included = extention.extention_included_projects or []
+    projects_dir = get_user_projects_dir()
+    for language in included:
+        csv_path = projects_dir / f"filtered_{language}.csv"
+        if not csv_path.exists():
+            ui.notify(f"Missing filtered project CSV: {csv_path}", type="negative")
+            return False
 
     nvda_dir = get_user_nvda_dir()
     source_folder = nvda_dir / (extention.extention_name + "-nvda-addon-source")
@@ -82,9 +95,9 @@ def create_nvda_extention():
     locale_folder = source_folder / "locale" / extention.extention_locale
     locale_folder.mkdir(parents=True, exist_ok=True)
 
-    # Create manifest.ini
-    with open(source_folder / "manifest.ini", "w", encoding="utf-8") as f:
-        f.write(f"""name = {extention.extention_name}
+    try:
+        with open(source_folder / "manifest.ini", "w", encoding="utf-8") as f:
+            f.write(f"""name = {extention.extention_name}
 summary = "{extention.extention_summary}"
 description = "{extention.extention_description}"
 author = "{extention.extention_author}"
@@ -94,64 +107,77 @@ lastTestedNVDAVersion = {extention.extention_last_tested_version}
 
 [symbolDictionaries]
 """)
-        for language in extention.extention_included_projects:
-            project.set_project_name(language)
-            project.set_all_fields()
-            f.write(f"[[{project.project_language_code}]]\n")
-            f.write(f"displayName = {project.project_display_name}\n")
-            f.write("mandatory = false\n")
-            add_characters_to_nvda_extention(source_folder)
+            for language in included:
+                project.set_project_name(language)
+                project.set_all_fields()
+                f.write(f"[[{project.project_language_code}]]\n")
+                f.write(f"displayName = {project.project_display_name}\n")
+                f.write("mandatory = false\n")
+                if add_characters_to_nvda_extention(source_folder) is False:
+                    return False
 
-    # === FIXED: Reliable .nvda-addon creation on Windows ===
-    final_name = f"{extention.extention_name}.nvda-addon"
-    final_path = nvda_dir / final_name
-    zip_path = nvda_dir / f"{extention.extention_name}.zip"
+        final_name = f"{extention.extention_name}.nvda-addon"
+        final_path = nvda_dir / final_name
+        zip_path = nvda_dir / f"{extention.extention_name}.zip"
 
-    # Clean old files
-    for p in [final_path, zip_path]:
-        if p.exists():
+        for p in [final_path, zip_path]:
+            if p.exists():
+                try:
+                    p.unlink()
+                except Exception as e:
+                    traceback.print_exc()
+                    ui.notify(str(e))
+
+        shutil.make_archive(str(nvda_dir / extention.extention_name), 'zip', root_dir=source_folder)
+
+        if zip_path.exists():
             try:
-                p.unlink()
+                zip_path.rename(final_path)
+                print(f"DEBUG: Renamed successfully to {final_path}")
             except Exception as e:
-                print(f"DEBUG: Failed to delete old {p}: {e}")
-
-    # Create zip (make_archive adds .zip)
-    shutil.make_archive(str(nvda_dir / extention.extention_name), 'zip', root_dir=source_folder)
-
-    # Rename .zip to .nvda-addon
-    if zip_path.exists():
-        try:
-            zip_path.rename(final_path)
-            print(f"DEBUG: Renamed successfully to {final_path}")
-        except Exception as e:
-            print(f"DEBUG: Rename failed ({e}), using copy fallback")
-            shutil.copy2(zip_path, final_path)
-    else:
-        print("DEBUG: Zip file was not created!")
-
-    ui.notify("Extension Generated!")
-    print(f"DEBUG: Final .nvda-addon created at {final_path}")
-
-    # === Download with content (reliable for web/IP access) ===
-    try:
-        if final_path.exists():
-            with open(final_path, "rb") as f:
-                content = f.read()
-            ui.notify(f"Downloading {final_name}", type="positive")
-            ui.download.content(content, filename=final_name, media_type="application/zip")
-            print(f"DEBUG: Download triggered for {final_path}")
+                traceback.print_exc()
+                ui.notify(str(e))
+                shutil.copy2(zip_path, final_path)
         else:
-            ui.notify("Extension created, but download file missing", type="warning")
+            ui.notify("Add-on zip was not created.", type="negative")
+            print("DEBUG: Zip file was not created!")
+            return False
+
+        if not final_path.exists():
+            ui.notify(f"Add-on file was not created: {final_path}", type="negative")
+            return False
+
+        ui.notify("Add-on built successfully.", type="positive")
+        print(f"DEBUG: Final .nvda-addon created at {final_path}")
+        return True
+    except FileNotFoundError as e:
+        traceback.print_exc()
+        ui.notify(str(e))
+        return False
     except Exception as e:
-        print(f"DEBUG: Download error: {e}")
-        ui.notify("Extension created - check folder manually", type="warning")
+        traceback.print_exc()
+        ui.notify(str(e))
+        return False
 
 
 def add_characters_to_nvda_extention(source_folder):
     """Adds characters to the NVDA extension"""
     print("generating nvda Character Set for", project.project_name)
     projects_dir = get_user_projects_dir()
-    language_file = pd.read_csv(projects_dir / f"filtered_{project.project_name}.csv")
+    csv_path = projects_dir / f"filtered_{project.project_name}.csv"
+    if not csv_path.exists():
+        ui.notify(f"Missing filtered project CSV: {csv_path}", type="negative")
+        return False
+
+    try:
+        language_file = pd.read_csv(csv_path)
+    except FileNotFoundError:
+        ui.notify(f"Missing filtered project CSV: {csv_path}", type="negative")
+        return False
+    except Exception as e:
+        traceback.print_exc()
+        ui.notify(str(e))
+        return False
 
     ui.notify("Adding Characters to NVDA Extension for " + project.project_name)
 
@@ -171,6 +197,7 @@ symbols:\n""")
             f.write(new_line)
 
     print("Generated Character Set file for NVDA extension for", project.project_name)
+    return True
 
 
 def generate_character_set():

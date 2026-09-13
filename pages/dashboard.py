@@ -1,7 +1,9 @@
 # pages/dashboard.py - Logged-in Dashboard
 
+from html import escape
 from nicegui import ui, app
 from utils.storage import ensure_user_directories, get_current_web_user_id
+from utils.project import project
 
 
 def init_user_storage():
@@ -30,12 +32,35 @@ def logout():
         ui.navigate.to('/')
 
 
+def load_user_project_names():
+    ensure_user_directories()
+    project.set_user_storage()
+    project.reload_languages()
+    return [name for name in project.languages_list if name]
+
+
 @ui.page("/dashboard")
 def dashboard():
     init_user_storage()
     
     user_id = get_current_web_user_id()
     nickname = app.storage.user.get("nickname", "User")
+    project_list_container = None
+
+    def show_my_projects():
+        names = load_user_project_names()
+        project_list_container.clear()
+        with project_list_container:
+            ui.html('<h2 class="text-2xl font-semibold mb-3 text-primary">Your projects</h2>')
+            if not names:
+                ui.label(
+                    "You have no saved projects yet. Use Project Manager to create one."
+                ).classes('text-gray-700')
+            else:
+                items = "".join(f"<li>{escape(str(name))}</li>" for name in names)
+                ui.html(
+                    f'<ul style="list-style: disc; padding-left: 1.5rem;">{items}</ul>'
+                )
 
     # Layout fixes - same as home page
     ui.query('.nicegui-content').classes('w-full')
@@ -66,17 +91,21 @@ def dashboard():
         with ui.row().classes('w-full justify-center mb-12'):
             ui.label('Image of braille representing various images, indicating accessibility to all things through braille and technology').classes('text-center text-gray-600 max-w-2xl text-lg')
 
-        ui.html(f'<h1 class="text-4xl font-bold text-center text-primary">Welcome back, {nickname}</h1>')
+        ui.html(f'<h1 class="text-4xl font-bold text-center text-primary">Welcome back, {escape(str(nickname))}</h1>')
 
         # Logged-in status
         with ui.card().classes('p-6 w-full max-w-3xl'):
             with ui.row().classes('items-center justify-between w-full'):
-                ui.html(f'<h2 class="text-2xl font-semibold text-primary">Logged in as: {nickname}</h2>')
+                ui.html(f'<h2 class="text-2xl font-semibold text-primary">Logged in as: {escape(str(nickname))}</h2>')
                 ui.button('Log Out', on_click=logout).props('flat color=negative')
 
-            ui.button('📁 Show My Files', 
-                      on_click=lambda: ui.notify('Show My Files - coming soon', type='info'), 
-                      icon='folder_special').props('size=lg color=accent').classes('w-full mt-6')
+            ui.button('Show my projects',
+                      on_click=show_my_projects
+            ).props('size=lg color=accent').classes('w-full mt-6')
+
+        with ui.column().classes('w-full max-w-3xl') as project_list_container:
+            pass
+        show_my_projects()
 
         # Tool cards
         with ui.card().classes('p-6 w-full max-w-3xl text-center'):
@@ -98,15 +127,15 @@ def dashboard():
                       on_click=lambda: ui.navigate.to('/nvda_extention_builder')).props('size=lg color=accent').classes('w-full')
 
         with ui.card().classes('p-6 w-full max-w-3xl text-center'):
-            ui.html('<h2 class="text-2xl font-semibold mb-3 text-primary">Lib Louis Table Builder</h2>')
+            ui.html('<h2 class="text-2xl font-semibold mb-3 text-primary">Liblouis Table Builder</h2>')
             ui.markdown('Choose a project and Niv Louie will automatically generate a Braille table for Liblouis. This table can be submitted to the Liblouis team for inclusion in future releases. Please consult your local Braille authority before publishing tables for standardized scripts.')
-            ui.button('Go to Lib Louis Table Builder', 
+            ui.button('Go to Liblouis Table Builder', 
                       on_click=lambda: ui.navigate.to('/liblouis_table_builder')).props('size=lg color=accent').classes('w-full')
 
         with ui.card().classes('p-6 w-full max-w-3xl text-center'):
-            ui.html('<h2 class="text-2xl font-semibold mb-3 text-primary">Lib Louis Test Builder</h2>')
+            ui.html('<h2 class="text-2xl font-semibold mb-3 text-primary">Liblouis Test Builder</h2>')
             ui.markdown('This tool helps you create test files to verify your project produces correct Braille output. Upload a test document, select your project, and Niv Louie will generate a `.yaml` test file and automatically download it.')
-            ui.button('Go to Lib Louis Test Builder', 
+            ui.button('Go to Liblouis Test Builder', 
                       on_click=lambda: ui.navigate.to('/liblouis_test_builder')).props('size=lg color=accent').classes('w-full')
 
 
