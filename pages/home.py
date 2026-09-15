@@ -80,6 +80,19 @@ def home():
 
         ui.html('<h1 class="text-4xl font-bold text-center text-primary">Welcome to Niv Louie</h1>')
 
+        ui.markdown(
+            'New to Niv Louie? Read the [User Guide](/documentation) for step-by-step instructions, '
+            'or watch the tutorial videos on our '
+            '<a href="https://www.youtube.com/channel/UCGSfwD06fubtGXRkR7kn_Jg" target="_blank" rel="noopener noreferrer">YouTube channel</a>. '
+            'You can also download an '
+            '<a href="/static/example of Csv.csv" download="example of Csv.csv">example CSV</a> '
+            'to open in Microsoft Excel when you create a project, and an '
+            '<a href="/static/example of test.csv" download="example of test.csv">example test file</a> '
+            'for the Liblouis Test Builder. '
+            'Continue reading to see whether Niv Louie is the right tool for you.',
+            sanitize=False,
+        ).classes('text-base leading-relaxed text-center max-w-3xl text-primary')
+
         with ui.card().classes('p-8 w-full max-w-3xl'):
             ui.html('<h2 class="text-2xl font-semibold mb-4 text-center text-primary">What Niv Louie Can Do</h2>')
             ui.markdown('''
