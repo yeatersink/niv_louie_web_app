@@ -42,12 +42,20 @@ def liblouis_table_builder():
                 on_change=project.update_project_name
             ).classes('w-full')
 
-        # Main action button
-        ui.button("Generate and Download table for Liblouis", 
-                 on_click=create_braille_table
+        ui.button("Generate and download table",
+                 on_click=lambda: create_braille_table(include_metadata=True)
         ).props('size=lg color=accent').classes('w-full')
 
-        # Updated button - changed only text and destination as requested
-        ui.button("Return to Dashboard", 
+        ui.button("Generate table without metadata",
+                 on_click=lambda: create_braille_table(include_metadata=False)
+        ).props('size=lg color=accent').classes('w-full')
+
+        ui.html('''
+            <p class="text-center text-gray-700">
+                The first file includes Liblouis catalog metadata. The second file is only the translation rules.
+            </p>
+        ''')
+
+        ui.button("Return to Dashboard",
                  on_click=lambda: ui.navigate.to("/dashboard")
         ).props('flat color=primary size=lg').classes('w-full mt-8')

@@ -65,13 +65,22 @@ def liblouis_test_builder():
                 auto_upload=True
             ).props('color=accent').classes('w-full')
 
-        # Main action button
         ui.button(
-            "Generate and download YAML Test for Liblouis", 
-            on_click=lambda: create_braille_tests(selected_projects)
+            "Generate and download YAML test",
+            on_click=lambda: create_braille_tests(selected_projects, include_metadata=True)
         ).props('size=lg color=accent').classes('w-full mt-6')
 
-        # Updated button - changed only text and destination as requested
-        ui.button("Return to Dashboard", 
+        ui.button(
+            "Generate test without metadata",
+            on_click=lambda: create_braille_tests(selected_projects, include_metadata=False)
+        ).props('size=lg color=accent').classes('w-full')
+
+        ui.html('''
+            <p class="text-center text-gray-700">
+                The first file includes display, table, and flags so Liblouis can run it. The second file is only the test pairs.
+            </p>
+        ''')
+
+        ui.button("Return to Dashboard",
                  on_click=lambda: ui.navigate.to("/dashboard")
         ).props('flat color=primary size=lg').classes('w-full mt-8')

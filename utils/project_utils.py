@@ -40,10 +40,11 @@ def _headers_for_error():
 
 def _save_project_and_filter(replace_existing=False):
     ensure_user_directories()
+    report_result = None
     try:
         if not project.save_project(replace_existing=replace_existing):
             return
-        create_filtered_csv()
+        report_result = create_filtered_csv()
     except ProjectCsvError as e:
         show_project_error(e.title, e.message, e.how_to_fix)
         return
@@ -65,6 +66,14 @@ def _save_project_and_filter(replace_existing=False):
             "Check that every list has a column from your file, then try Save project again.",
         )
         return
+
+    if report_result:
+        report_bytes, report_filename = report_result
+        try:
+            ui.download.content(report_bytes, filename=report_filename)
+        except Exception as ex:
+            print(f"LOG: Could not download CSV report: {ex}")
+
     ui.notify("Your project is saved successfully.", type="positive")
     ui.navigate.to("/dashboard")
 

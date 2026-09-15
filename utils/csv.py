@@ -1,10 +1,17 @@
 # utils/csv.py
 
+import json
 import pandas as pd
-import warnings
 from utils.project import project
 from utils.storage import get_user_projects_dir
 from utils.project_errors import ProjectCsvError, format_header_list
+
+try:
+    with open("utils/braille_to_numbers.json", encoding="utf8") as f:
+        braille_numbers_object = json.load(f)
+except Exception as ex:
+    print(f"ERROR loading braille_to_numbers.json: {ex}")
+    braille_numbers_object = {}
 
 
 def get_source_path():
@@ -18,6 +25,137 @@ def get_source_path():
 def _strip_columns(df):
     df.columns = [str(c).replace("\ufeff", "").strip() for c in df.columns]
     return df
+
+
+def _cell_str(value):
+    if value is None:
+        return ""
+    try:
+        if pd.isna(value):
+            return ""
+    except (TypeError, ValueError):
+        pass
+    return str(value)
+
+
+def _is_blank(value):
+    text = _cell_str(value).strip()
+    return text == "" or text.lower() == "nan"
+
+
+def _issue_line(row_number, column, problem, value):
+    return f'row {row_number}, column {column}: {problem} in "{_cell_str(value)}"'
+
+
+def _space_problems(value):
+    if _is_blank(value):
+        return []
+    text = _cell_str(value)
+    problems = []
+    if text[:1].isspace():
+        problems.append("leading space")
+    if text[-1:].isspace():
+        problems.append("trailing space")
+    if "  " in text.strip():
+        problems.append("extra space")
+    return problems
+
+
+def _build_csv_quality_report(filtered_language, char_col, hex_col, type_col, name_col, braille_col):
+    extra_spaces = []
+    missing_hex = []
+    missing_braille = []
+    non_braille = []
+    missing_always = []
+    extra_plus = []
+    hex_wrong_length = []
+    missing_columns = []
+
+    required_cols = [char_col, hex_col, type_col, name_col, braille_col]
+    space_cols = [char_col, hex_col, type_col, braille_col]
+    missing_covered = {hex_col, braille_col}
+
+    for index, row in filtered_language.iterrows():
+        for col in space_cols:
+            for problem in _space_problems(row[col]):
+                extra_spaces.append(_issue_line(index, col, problem, row[col]))
+
+        for col in required_cols:
+            if col in missing_covered:
+                continue
+            if _is_blank(row[col]):
+                missing_columns.append(_issue_line(index, col, "missing value", row[col]))
+
+        if _is_blank(row[hex_col]):
+            missing_hex.append(_issue_line(index, hex_col, "missing value", row[hex_col]))
+        else:
+            hex_text = _cell_str(row[hex_col])
+            hex_stripped = hex_text.strip()
+            if "++" in hex_stripped:
+                extra_plus.append(_issue_line(index, hex_col, "extra plus", hex_text))
+            parts = [part.strip() for part in hex_stripped.split("+")]
+            for part in parts:
+                if len(part) != 4:
+                    hex_wrong_length.append(
+                        f'row {index}, column {hex_col}: part "{part}" is {len(part)} characters, expected 4'
+                    )
+            if "+" in hex_stripped and _cell_str(row[type_col]).strip().lower() != "always":
+                missing_always.append(
+                    _issue_line(
+                        index,
+                        type_col,
+                        "Hex contains + but Type is not always",
+                        row[type_col],
+                    )
+                )
+
+        if _is_blank(row[braille_col]):
+            missing_braille.append(_issue_line(index, braille_col, "missing value", row[braille_col]))
+        else:
+            braille_text = _cell_str(row[braille_col])
+            if any((not char.isspace()) and char not in braille_numbers_object for char in braille_text):
+                non_braille.append(
+                    _issue_line(index, braille_col, "non-braille character", braille_text)
+                )
+
+    stripped_hex = filtered_language[hex_col].map(
+        lambda value: "" if _is_blank(value) else _cell_str(value).strip()
+    )
+    duplicate_mask = stripped_hex.ne("") & stripped_hex.duplicated(keep=False)
+    duplicate_hex = [
+        _issue_line(index, hex_col, "duplicate value", row[hex_col])
+        for index, row in filtered_language.loc[duplicate_mask].iterrows()
+    ]
+
+    sections = [
+        ("Extra spaces or leading/trailing spaces", extra_spaces),
+        ("Missing Hex", missing_hex),
+        ("Missing Braille", missing_braille),
+        ("Non-braille characters in Braille", non_braille),
+        ("Hex contains + but Type is not always", missing_always),
+        ("Duplicate Hex values", duplicate_hex),
+        ("Hex contains ++", extra_plus),
+        ("Hex part is not 4 characters", hex_wrong_length),
+        ("Missing required column value", missing_columns),
+    ]
+
+    lines = [
+        f"Report for {project.project_name}",
+        f"Generated on {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}",
+    ]
+    issue_count = 0
+    for title, rows in sections:
+        if not rows:
+            continue
+        issue_count += len(rows)
+        lines.append("")
+        lines.append(f"**{title}**")
+        lines.extend(rows)
+
+    if issue_count == 0:
+        lines.append("No errors found.")
+
+    return "\n".join(lines) + "\n", issue_count
 
 
 def create_filtered_csv():
@@ -76,15 +214,12 @@ def create_filtered_csv():
             "Re-save the CSV without leading spaces, or pick the header that JAWS reads with the space.",
         )
 
+    char_col = project.project_character_column
     hex_col = project.project_unicode_column
     type_col = project.project_type_column
-    needed = [
-        project.project_character_column,
-        hex_col,
-        type_col,
-        project.project_name_column,
-        project.project_braille_column,
-    ]
+    name_col = project.project_name_column
+    braille_col = project.project_braille_column
+    needed = [char_col, hex_col, type_col, name_col, braille_col]
 
     try:
         filtered_language = language_file[needed].copy()
@@ -99,25 +234,40 @@ def create_filtered_csv():
             "Re-save the CSV without leading spaces, or pick the header that JAWS reads with the space.",
         ) from ex
 
-    name_column = filtered_language[[project.project_name_column]].copy()
-    name_column[project.project_name_column] = name_column[project.project_name_column].astype(str)
-    new_name_column = name_column[project.project_name_column].apply(format_names)
-    filtered_language[project.project_name_column] = new_name_column
+    name_column = filtered_language[[name_col]].copy()
+    name_column[name_col] = name_column[name_col].astype(str)
+    new_name_column = name_column[name_col].apply(format_names)
+    filtered_language[name_col] = new_name_column
+    filtered_language.index = range(2, 2 + len(filtered_language))
 
-    hex_as_str = filtered_language[hex_col].astype(str)
-    if filtered_language[(hex_as_str.str.contains(r"\+", na=False)) & (filtered_language[type_col] != "always")].shape[0] > 0:
-        warnings.warn("There are characters with multiple hex values that are not set to always")
-        print(filtered_language[(hex_as_str.str.contains(r"\+", na=False)) & (filtered_language[type_col] != "always")])
-
-    if filtered_language.duplicated(keep=False, subset=[hex_col]).sum() > 0:
-        warnings.warn("There are duplicates in the language file")
-        print(filtered_language[filtered_language.duplicated(keep=False, subset=[hex_col])])
+    report_text, issue_count = _build_csv_quality_report(
+        filtered_language, char_col, hex_col, type_col, name_col, braille_col
+    )
 
     filtered_language = filtered_language.sort_values(by=[hex_col], key=lambda x: x.astype(str).str.len(), ascending=False)
 
     filtered_path.parent.mkdir(parents=True, exist_ok=True)
-    filtered_language.to_csv(filtered_path, index=False)
+    try:
+        filtered_language.to_csv(filtered_path, index=False)
+    except Exception as ex:
+        raise ProjectCsvError(
+            "The filtered spreadsheet could not be saved",
+            str(ex),
+            "Check that the project folder is writable, then try Save project again.",
+        ) from ex
     print("Spreadsheet Generated")
+
+    project_name = str(project.project_name)
+    report_filename = f"{project_name}_csv_report.txt"
+    report_path = projects_dir / report_filename
+    report_bytes = report_text.encode("utf-8")
+    try:
+        report_path.write_bytes(report_bytes)
+        print(f"LOG: CSV report written {report_path} issues={issue_count}")
+    except Exception as ex:
+        print(f"LOG: Could not write CSV report file {report_path}: {ex}")
+
+    return report_bytes, report_filename
 
 
 def format_names(name):
