@@ -25,44 +25,57 @@ except Exception as ex:
     braille_numbers_object = {}
 
 
-def create_braille_table():
+def create_braille_table(include_metadata=True):
     print("creating table for Liblouis")
+
+    if not project.project_name:
+        ui.notify("Please select a project.", type="negative")
+        return
 
     projects_dir = get_user_projects_dir()
     filtered_path = projects_dir / f"filtered_{project.project_name}.csv"
+
+    if not filtered_path.exists():
+        ui.notify(f"Filtered CSV not found: {filtered_path}", type="negative")
+        return
 
     braille = pd.read_csv(filtered_path)
 
     braille_folder = get_user_braille_dir()
     braille_folder.mkdir(parents=True, exist_ok=True)
 
-    output_path = braille_folder / f"{project.project_language_code}.utb"
+    if include_metadata:
+        output_filename = f"{project.project_language_code}.utb"
+    else:
+        output_filename = f"{project.project_language_code}_nometa.utb"
+    output_path = braille_folder / output_filename
 
     braille[project.project_braille_column] = braille[project.project_braille_column].apply(braille_to_numbers)
 
     with open(output_path, "w", encoding="utf-8") as braille_table:
-        braille_table.write(f"""
+        if include_metadata:
+            braille_table.write(f"""
 # liblouis: {project.project_name}
 #
 """)
 
-        if project.project_display_name:
-            braille_table.write(f"#-display-name: {project.project_display_name}\n")
-        else:
-            braille_table.write(f"#-display-name: {project.project_name} uncontracted\n")
+            if project.project_display_name:
+                braille_table.write(f"#-display-name: {project.project_display_name}\n")
+            else:
+                braille_table.write(f"#-display-name: {project.project_name} uncontracted\n")
 
-        if project.project_index_name:
-            braille_table.write(f"#-index-name: {project.project_index_name}\n")
-        else:
-            braille_table.write(f"#-index-name: {project.project_name} uncontracted\n")
+            if project.project_index_name:
+                braille_table.write(f"#-index-name: {project.project_index_name}\n")
+            else:
+                braille_table.write(f"#-index-name: {project.project_name} uncontracted\n")
 
-        if project.project_supported_braille_languages:
-            for language in project.project_supported_braille_languages:
-                braille_table.write(f"#+language: {language}\n")
-        else:
-            braille_table.write(f"#+language: {project.project_language_code}\n")
+            if project.project_supported_braille_languages:
+                for language in project.project_supported_braille_languages:
+                    braille_table.write(f"#+language: {language}\n")
+            else:
+                braille_table.write(f"#+language: {project.project_language_code}\n")
 
-        braille_table.write(f"""#+type:literary
+            braille_table.write(f"""#+type:literary
 #+contraction:no
 #+system:{project.project_language_system_code}
 #+dots:6
@@ -85,8 +98,8 @@ def create_braille_table():
 
 """)
 
-        if project.project_language_information or project.project_contributors:
-            braille_table.write(str(project.project_language_information or "") + str(project.project_contributors or ""))
+            if project.project_language_information or project.project_contributors:
+                braille_table.write(str(project.project_language_information or "") + str(project.project_contributors or ""))
 
         braille = braille.sort_values(["Type", project.project_character_column])
         previous_char = ""
@@ -112,7 +125,7 @@ def create_braille_table():
 
     ui.notify(f"Braille Table for {project.project_name} has been Generated.")
     print("Braille table created successfully")
-    ui.download(output_path, f"{project.project_language_code}.utb")
+    ui.download(output_path, output_filename)
 
 
 def get_braille_from_text(text):
@@ -157,7 +170,46 @@ def braille_to_numbers(text):
     return braille
 
 
-def create_braille_tests(selected_projects=None):
+def load_filtered_project_csv(projects_dir, project_name):
+    """Load filtered_{name}.csv. Notify and return None if missing."""
+    filtered_path = Path(projects_dir) / f"filtered_{project_name}.csv"
+    if not filtered_path.exists():
+        ui.notify(f"Filtered CSV not found: {filtered_path}", type="negative")
+        print(f"DEBUG: Missing filtered CSV: {filtered_path}")
+        return None
+    return pd.read_csv(filtered_path, encoding="utf-8")
+
+
+def sort_replacements_longest_first(df, char_col):
+    """Sort so longer matches win. Prefer Hex length; fall back to Character length."""
+    if df is None or df.empty:
+        return df
+    if "Hex" in df.columns:
+        return df.sort_values(by=["Hex"], key=lambda s: s.astype(str).str.len(), ascending=False)
+    return df.sort_values(by=[char_col], key=lambda s: s.astype(str).str.len(), ascending=False)
+
+
+def apply_replacements_in_order(text, df, char_col, braille_col):
+    """Replace print with braille by walking the already-sorted DataFrame. Never use dict order."""
+    if df is None or df.empty:
+        return text
+    for _, row in df.iterrows():
+        needle = str(row[char_col])
+        repl = str(row[braille_col])
+        if needle and needle != "nan" and repl != "nan" and needle in text:
+            text = text.replace(needle, repl)
+    return text
+
+
+def _included_braille_table_names(included_tables):
+    if not included_tables:
+        return []
+    if isinstance(included_tables, str):
+        return [part.strip() for part in included_tables.replace(";", ",").split(",") if part.strip()]
+    return list(included_tables)
+
+
+def create_braille_tests(selected_projects=None, include_metadata=True):
     """Create YAML test file for Liblouis"""
     if not selected_projects:
         ui.notify("No projects selected for test generation", type="negative")
@@ -169,23 +221,57 @@ def create_braille_tests(selected_projects=None):
     tests_dir = get_user_tests_dir()
     tests_dir.mkdir(parents=True, exist_ok=True)
 
-    for proj_name in selected_projects:
-        # Load the correct project context
-        project.set_project_name(proj_name)
-        project.set_all_fields()
+    first_project = selected_projects[0]
+    project.set_project_name(first_project)
+    project.set_all_fields()
 
-        test_csv_path = tests_dir / f"{project.project_language_code}.csv"
-        yaml_path = tests_dir / f"{project.project_language_code}.yaml"
+    test_csv_path = tests_dir / f"{project.project_language_code}.csv"
+    if include_metadata:
+        yaml_filename = f"{project.project_language_code}.yaml"
+    else:
+        yaml_filename = f"{project.project_language_code}_nometa.yaml"
+    yaml_path = tests_dir / yaml_filename
 
-        if not test_csv_path.exists():
-            ui.notify(f"Test CSV not found for {proj_name} (expected {test_csv_path.name})", type="negative")
-            print(f"DEBUG: Missing test CSV: {test_csv_path}")
-            continue
+    if not test_csv_path.exists():
+        ui.notify(f"Test CSV not found: {test_csv_path}", type="negative")
+        print(f"DEBUG: Missing test CSV: {test_csv_path}")
+        return
 
-        language_file = pd.read_csv(projects_dir / f"filtered_{proj_name}.csv", encoding="utf-8")
-        test_csv = pd.read_csv(test_csv_path, encoding="utf-8")
+    language_file = load_filtered_project_csv(projects_dir, first_project)
+    if language_file is None:
+        return
 
-        with open(yaml_path, "w", encoding="utf-8") as test_yaml:
+    if len(selected_projects) > 1:
+        for project_name in selected_projects[1:]:
+            print(project_name)
+            extra = load_filtered_project_csv(projects_dir, project_name)
+            if extra is None:
+                continue
+            language_file = pd.concat([language_file, extra])
+
+    if project.project_included_braille_tables:
+        for table in _included_braille_table_names(project.project_included_braille_tables):
+            table_code = str(table).split(".")[0]
+            for language in project.languages:
+                if table_code == language.get("language_code"):
+                    print("found language " + str(language.get("language_code")))
+                    extra = load_filtered_project_csv(projects_dir, language.get("name"))
+                    if extra is None:
+                        continue
+                    language_file = pd.concat([language_file, extra])
+
+    char_col = project.project_character_column
+    braille_col = project.project_braille_column
+    language_file = sort_replacements_longest_first(language_file, char_col)
+
+    test_csv = pd.read_csv(test_csv_path, encoding="utf-8")
+    report = {
+        "non_braille_characters_in_braille_section": [],
+        "extra_spaces": [],
+    }
+
+    with open(yaml_path, "w", encoding="utf-8") as test_yaml:
+        if include_metadata:
             test_yaml.write(f"""
 # Yaml Test For {project.project_name}
 
@@ -207,38 +293,74 @@ def create_braille_tests(selected_projects=None):
 flags: {{ testmode: forward }}
 tests:
 """)
+        else:
+            test_yaml.write("tests:\n")
 
-            for _, row in test_csv.iterrows():
-                braille_test = str(row["Text"])
+        for _, row in test_csv.iterrows():
+            braille_test = str(row["Text"])
 
-                if any(char.isdigit() for char in braille_test):
-                    new_text = ""
-                    previous_was_number = False
-                    for char in braille_test:
-                        if char.isdigit() and not previous_was_number:
-                            new_text += "⠼" + char
-                            previous_was_number = True
-                        else:
-                            new_text += char
-                            previous_was_number = False
-                    braille_test = new_text
+            if any(char.isdigit() for char in braille_test):
+                new_text = ""
+                previous_was_number = False
+                for char in braille_test:
+                    if char.isdigit() and not previous_was_number:
+                        new_text += "⠼" + char
+                        previous_was_number = True
+                    else:
+                        new_text += char
+                        previous_was_number = False
+                braille_test = new_text
 
-                for _, lang_row in language_file.iterrows():
-                    char = str(lang_row[project.project_character_column])
-                    braille_char = str(lang_row[project.project_braille_column])
-                    if char in braille_test and braille_char != "nan":
-                        braille_test = braille_test.replace(char, braille_char)
+            braille_test = apply_replacements_in_order(
+                braille_test, language_file, char_col, braille_col
+            )
 
-                for char in list(braille_test):
-                    if char in braille_test_object:
-                        braille_test = braille_test.replace(char, braille_test_object[char])
+            for char in list(braille_test):
+                if char in braille_test_object:
+                    braille_test = braille_test.replace(char, braille_test_object[char])
 
-                test_yaml.write(f'  - ["{row["Text"]}", "{braille_test}"]\n')
+            if any(char not in braille_numbers_object for char in braille_test):
+                warning_msg = (
+                    "This test contains a character that is not in the braille object. "
+                    "This may be a mistake in your test."
+                )
+                warnings.warn(warning_msg)
+                print(warning_msg + f' "{row["Text"]}": "{braille_test}"')
+                report["non_braille_characters_in_braille_section"].append(
+                    f'"{row["Text"]}": "{braille_test}"'
+                )
 
-        ui.notify(f"Braille Test for {proj_name} has been Generated.")
-        print(f"Done creating braille tests for {proj_name}")
-        
-        ui.download(yaml_path, f"{project.project_language_code}.yaml")
+            if " " in braille_test:
+                report["extra_spaces"].append(f'"{row["Text"]}": "{braille_test}"')
+
+            test_yaml.write(f'  - ["{row["Text"]}", "{braille_test}"]\n')
+
+    ui.notify(f"Braille Test for {first_project} has been Generated.")
+    print(f"Done creating braille tests for {first_project}")
+    ui.download(yaml_path, yaml_filename)
+
+    if report["non_braille_characters_in_braille_section"]:
+        ui.notify(
+            "Some tests contain characters not in braille_to_numbers.json. See test report.txt.",
+            type="warning",
+        )
+
+    try:
+        report_path = tests_dir / "test report.txt"
+        with open(report_path, "w", encoding="utf-8") as report_file:
+            report_file.write(f"Report for {project.project_name}\n")
+            report_file.write(f"Generated on {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            if report["non_braille_characters_in_braille_section"]:
+                report_file.write("\n**Non Braille Characters in Braille Section**\n")
+                for item in report["non_braille_characters_in_braille_section"]:
+                    report_file.write(item + "\n")
+            if report["extra_spaces"]:
+                report_file.write("\n**Extra Spaces**\n")
+                for item in report["extra_spaces"]:
+                    report_file.write(item + "\n")
+        ui.download(report_path, "test report.txt")
+    except Exception as ex:
+        print(f"Could not write or download test report.txt: {ex}")
 
 
 def get_braille_from_text_in_source():

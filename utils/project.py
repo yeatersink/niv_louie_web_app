@@ -436,23 +436,43 @@ class Project:
         return True
 
     def remove_project(self):
-        projects_dir = self.projects_dir or get_user_projects_dir()
+        selected = self.project_name
+        if not selected:
+            ui.notify("No project selected.", type="negative")
+            return False
+
+        name = next((lang.get("name") for lang in self.languages if lang.get("name") == selected), None)
+        if not name:
+            ui.notify("Project not found.", type="negative")
+            return False
+
+        projects_dir = get_user_projects_dir()
         languages_file = projects_dir / "languages_file.json"
-        
-        removed = False
-        if self.project_name is not None:
-            new_languages = [lang for lang in self.languages if lang.get("name") != self.project_name]
-            if len(new_languages) < len(self.languages):
-                removed = True
-            self.languages = new_languages
-            self.update_languages_list()
-            
+        new_languages = [lang for lang in self.languages if lang.get("name") != name]
+        try:
             with open(languages_file, "w", encoding="utf-8") as file:
-                json.dump(self.languages, file, ensure_ascii=False, indent=4)
-        if removed:
-            ui.notify("Project Removed", close_button="Ok")
-        else:
-            ui.notify("Project not found", close_button="Ok")
+                json.dump(new_languages, file, ensure_ascii=False, indent=4)
+        except OSError as ex:
+            ui.notify(f"Could not update the project list: {ex}", type="negative")
+            return False
+
+        leftover_paths = [
+            projects_dir / f"filtered_{name}.csv",
+            projects_dir / f"filtered_{name}_updated.csv",
+            projects_dir / f"{name}_csv_report.txt",
+            projects_dir / "source" / f"{name}.csv",
+        ]
+        for path in leftover_paths:
+            try:
+                if path.exists():
+                    path.unlink()
+                    print(f"LOG: removed filtered CSV for {name}")
+            except FileNotFoundError:
+                pass
+
+        self.project_name = None
+        self.reload_languages()
+        return True
 
     def check_language_names(self, language):
         if language.get("name") == self.project_name:

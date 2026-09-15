@@ -10,7 +10,12 @@ import sys
 import pandas as pd
 
 from utils.storage import get_user_documents_dir, ensure_user_directories, get_user_projects_dir
-from utils.braille import get_braille_from_text
+from utils.braille import (
+    get_braille_from_text,
+    load_filtered_project_csv,
+    sort_replacements_longest_first,
+    apply_replacements_in_order,
+)
 from utils.project import project
 
 # Load braille conversion files
@@ -197,30 +202,29 @@ class DocumentManager:
 
     def convert_text_to_braille(self, text: str) -> str:
         """Apply selected projects in order, then optional general English rules"""
+        if not self.selected_projects:
+            ui.notify("No projects selected", type="negative")
+            return ""
+
+        projects_dir = get_user_projects_dir()
+        project_frames = []
+        for proj_name in self.selected_projects:
+            project.set_project_name(proj_name)
+            project.set_all_fields()
+            df = load_filtered_project_csv(projects_dir, proj_name)
+            if df is None:
+                continue
+            char_col = project.project_character_column
+            braille_col = project.project_braille_column
+            df = sort_replacements_longest_first(df, char_col)
+            project_frames.append((char_col, braille_col, df))
+
         braille_content = ""
         for original_line in text.split("\n"):
             current = original_line.strip()
 
-            # Apply each selected project in order
-            for proj_name in self.selected_projects:
-                try:
-                    project.set_project_name(proj_name)
-                    project.set_all_fields()
-
-                    projects_dir = get_user_projects_dir()
-                    filtered_path = projects_dir / f"filtered_{proj_name}.csv"
-
-                    if filtered_path.exists():
-                        df = pd.read_csv(filtered_path)
-                        char_col = project.project_character_column
-                        braille_col = project.project_braille_column
-
-                        char_map = dict(zip(df[char_col], df[braille_col]))
-                        for char, braille in char_map.items():
-                            if str(char) in current and str(braille) != "nan":
-                                current = current.replace(str(char), str(braille))
-                except Exception as e:
-                    print(f"  → ERROR applying project {proj_name}: {e}")
+            for char_col, braille_col, df in project_frames:
+                current = apply_replacements_in_order(current, df, char_col, braille_col)
 
             # Apply general English rules ONLY if toggle is on
             if self.apply_general_english:

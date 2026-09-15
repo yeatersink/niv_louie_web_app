@@ -70,11 +70,11 @@ def existing_project():
                 with ui.row().classes('gap-4 w-full justify-center'):
                     ui.button("Cancel", on_click=dialog.close).props('flat color=primary size=lg')
                     def confirm_delete():
-                        project.remove_project()
-                        # Refresh list immediately after delete
-                        language_select.options = sorted(project.languages_list)
                         dialog.close()
-                        ui.notify("Project has been permanently deleted", type='negative')
+                        if project.remove_project():
+                            ui.notify("Project removed successfully.", type="positive")
+                            language_select.options = sorted(project.languages_list)
+                            ui.navigate.to("/existing_project")
                     ui.button("Yes, Delete Project", on_click=confirm_delete).props('color=negative size=lg')
 
             ui.button("Remove Project", 
