@@ -83,7 +83,7 @@ def home():
         ui.markdown(
             'New to Niv Louie? Read the [User Guide](/documentation) for step-by-step instructions, '
             'or watch the tutorial videos on our '
-            '<a href="https://www.youtube.com/channel/UCGSfwD06fubtGXRkR7kn_Jg" target="_blank" rel="noopener noreferrer">YouTube channel</a>. '
+            '<a href="https://www.youtube.com/@NivLouieInfo" target="_blank" rel="noopener noreferrer">YouTube channel</a>. '
             'You can also download an '
             '<a href="/static/example of Csv.csv" download="example of Csv.csv">example CSV</a> '
             'to open in Microsoft Excel when you create a project, and an '
@@ -189,7 +189,7 @@ developed as part of a research scholarship for a blind PhD candidate.
 
                 with ui.column().classes('items-center'):
                     ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">Video Instructions</h3>')
-                    ui.link('Tutorial videos and how-to guides', 'https://www.youtube.com/channel/UCGSfwD06fubtGXRkR7kn_Jg').props('target=_blank').classes('text-accent hover:underline font-medium')
+                    ui.link('Tutorial videos and how-to guides', 'https://www.youtube.com/@NivLouieInfo').props('target=_blank').classes('text-accent hover:underline font-medium')
 
             ui.separator().classes('my-10 w-full')
 
