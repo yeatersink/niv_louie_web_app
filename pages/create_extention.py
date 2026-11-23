@@ -1,6 +1,7 @@
 # pages/09_create_extention.py
 
 from nicegui import ui
+from utils.i18n import back_button, dashboard_button, heading, language_switcher, prepare_page, t
 from utils.storage import ensure_user_directories, get_user_nvda_dir, get_user_projects_dir
 from utils.project_extention import extention
 from utils.project import project
@@ -29,68 +30,67 @@ def missing_filtered_csvs(project_names):
 
 @ui.page("/create_extention")
 def create_extention():
+    prepare_page("addon.create_title")
     init_user_storage()
 
     with ui.column().classes('w-full max-w-3xl mx-auto p-8 gap-8'):
 
         with ui.row().classes('w-full items-center justify-between'):
-            ui.button("← Go Back",
-                     on_click=ui.navigate.back).props('flat color=primary size=lg')
+            back_button()
+            language_switcher()
+            dashboard_button()
 
-            ui.button("Go to Dashboard",
-                     on_click=lambda: ui.navigate.to("/dashboard")).props('flat color=primary size=lg')
-
-        ui.html('<h1 class="text-3xl font-bold text-primary">Create NVDA Add-on</h1>')
+        heading("h1", "text-3xl font-bold text-primary", "addon.create_title")
 
         with ui.card().classes('w-full p-8'):
-            ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">Add-on Details</h2>')
+            heading("h2", "text-2xl font-semibold mb-6 text-primary", "addon.details")
 
             ui.input(
-                label="What is the name of your add-on?",
+                label=t("addon.name"),
                 on_change=extention.update_extention_name
             ).classes('w-full mb-4')
 
             ui.input(
-                label="Please briefly describe your add-on?",
+                label=t("addon.summary"),
                 on_change=extention.update_extention_summary
             ).classes('w-full mb-4')
 
             ui.input(
-                label="Please provide a more detailed description of your add-on?",
+                label=t("addon.description"),
                 on_change=extention.update_extention_description
             ).classes('w-full mb-4')
 
             ui.input(
-                label="Who are the Authors of your add-on?",
+                label=t("addon.authors"),
                 on_change=extention.update_extention_author
             ).classes('w-full mb-4')
 
             ui.input(
-                label="Version number",
+                label=t("addon.version"),
                 on_change=extention.update_extention_version
             ).classes('w-full mb-4')
 
             ui.input(
-                label="Minimum NVDA version supported",
+                label=t("addon.minimum"),
                 on_change=extention.update_extention_minimum_version
             ).classes('w-full mb-4')
 
             ui.input(
-                label="Most recent NVDA version tested",
+                label=t("addon.tested"),
                 on_change=extention.update_extention_last_tested_version
             ).classes('w-full mb-4')
 
             ui.input(
-                label="Language / Locale this add-on supports",
+                label=t("addon.locale"),
                 on_change=extention.update_extention_locale
             ).classes('w-full mb-6')
 
         with ui.card().classes('w-full p-8'):
-            ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">Project Selection</h2>')
+            heading("h2", "text-2xl font-semibold mb-6 text-primary", "common.project_selection")
 
             ui.select(
                 options=sorted(project.languages_list),
-                label="What Projects do you want to include in this add-on?",
+                label=t("addon.include_projects"),
                 multiple=True,
                 on_change=extention.update_extention_included_projects
             ).classes('w-full')
@@ -103,7 +103,7 @@ def create_extention():
             missing = missing_filtered_csvs(extention.extention_included_projects)
             if missing:
                 for path in missing:
-                    ui.notify(f"Missing filtered project CSV: {path}", type="negative")
+                    ui.notify(t("notify.missing_filtered_csv", path=path), type="negative")
                 return
 
             built = create_nvda_extention()
@@ -112,10 +112,10 @@ def create_extention():
 
             ui.navigate.to("/nvda_extention_builder")
 
-        ui.button("Save add-on",
+        ui.button(t("addon.save"),
                   on_click=save_addon
         ).props('size=lg color=accent').classes('w-full mt-8')
 
-        ui.button("Cancel",
+        ui.button(t("common.cancel"),
                   on_click=lambda: ui.navigate.to('/nvda_extention_builder')
         ).props('flat color=primary').classes('mt-4')

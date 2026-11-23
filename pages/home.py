@@ -2,16 +2,17 @@
 
 from pathlib import Path
 from nicegui import ui, app
+from utils.i18n import heading, language_switcher, prepare_page, site_footer, t
 
 
 def logout():
     try:
         if hasattr(app.storage, 'user') and app.storage.user is not None:
             app.storage.user.clear()
-        ui.notify("You have been logged out successfully", type="positive")
+        ui.notify(t("home.logout_success"), type="positive")
         ui.navigate.to('/')
     except Exception as e:
-        ui.notify("Logged out successfully", type="positive")
+        ui.notify(t("home.logout_done"), type="positive")
         ui.navigate.to('/')
 
 
@@ -43,6 +44,7 @@ def _log_if_example_missing(filename):
 @ui.page("/")
 def home():
     # NO ensure_user_directories() here - this is a public page
+    prepare_page("home.title")
 
     _log_if_example_missing("example of Csv.csv")
     _log_if_example_missing("example of test.csv")
@@ -53,18 +55,19 @@ def home():
 
     with ui.header().classes('items-center justify-between bg-primary text-white p-4 shadow'):
         with ui.row().classes('items-center gap-6 w-full max-w-6xl mx-auto'):
-            ui.label('Niv Louie').classes('text-3xl font-bold tracking-tight')
+            ui.label(t("common.brand")).classes('text-3xl font-bold tracking-tight')
             ui.space()
+            language_switcher()
             
             # Smart Dashboard button
-            ui.button('Dashboard', 
+            ui.button(t("common.dashboard"), 
                      on_click=go_to_dashboard_or_login).props('flat color=accent')
             
             # Original Log In button
-            ui.button('Log In', 
+            ui.button(t("common.log_in"), 
                      on_click=lambda: ui.navigate.to('/login')).props('flat color=accent')
             
-            ui.button('Collaborate', 
+            ui.button(t("common.collaborate"), 
                      on_click=lambda: ui.navigate.to('/collaborate')).props('flat color=white')
 
     # Main content area
@@ -76,125 +79,53 @@ def home():
         
         # Description for the image
         with ui.row().classes('w-full justify-center mb-12'):
-            ui.label('Image of braille representing various images, indicating accessibility to all things through braille and technology').classes('text-center text-gray-600 max-w-2xl text-lg')    
+            ui.label(t("common.image_caption")).classes('text-center text-gray-600 max-w-2xl text-lg')    
 
-        ui.html('<h1 class="text-4xl font-bold text-center text-primary">Welcome to Niv Louie</h1>')
+        heading("h1", "text-4xl font-bold text-center text-primary", "home.welcome")
 
-        ui.markdown(
-            'New to Niv Louie? Read the [User Guide](/documentation) for step-by-step instructions, '
-            'or watch the tutorial videos on our '
-            '<a href="https://www.youtube.com/@NivLouieInfo" target="_blank" rel="noopener noreferrer">YouTube channel</a>. '
-            'You can also download an '
-            '<a href="/static/example of Csv.csv" download="example of Csv.csv">example CSV</a> '
-            'to open in Microsoft Excel when you create a project, and an '
-            '<a href="/static/example of test.csv" download="example of test.csv">example test file</a> '
-            'for the Liblouis Test Builder. '
-            'Continue reading to see whether Niv Louie is the right tool for you.',
-            sanitize=False,
-        ).classes('text-base leading-relaxed text-center max-w-3xl text-primary')
+        ui.markdown(t("home.intro"), sanitize=False).classes('text-base leading-relaxed text-center max-w-3xl text-primary')
 
         with ui.card().classes('p-8 w-full max-w-3xl'):
-            ui.html('<h2 class="text-2xl font-semibold mb-4 text-center text-primary">What Niv Louie Can Do</h2>')
-            ui.markdown('''
-Niv Louie allows anyone to upload simple CSV files containing Unicode symbols, character names, and desired Braille representations, then instantly generates:
-
-1. Liblouis Braille tables for high-quality Braille translation  
-2. Custom Braille for development of new Braille scripts and systems for any language or writing system, even those without existing Braille support  
-3. Braille documents that can be printed or embossed from the custom tables built with Niv Louie  
-4. NVDA extensions that give screen readers immediate spoken and Braille access to any Unicode character or symbol in digital content, including math, music, scientific symbols, emojis, and more.
-            ''').classes('text-base leading-relaxed')
+            heading("h2", "text-2xl font-semibold mb-4 text-center text-primary", "home.what_title")
+            ui.markdown(t("home.what_body")).classes('text-base leading-relaxed')
 
         with ui.card().classes('p-8 w-full max-w-3xl border border-negative'):
-            ui.html('<h2 class="text-2xl font-semibold mb-6 text-negative text-center">DISCLAIMER</h2>')
-            ui.markdown('''
-Niv Louie is not intended to serve as a replacement for established Braille translation software systems. 
-
-This tool is designed to facilitate access to specialized Unicode characters for blind students and users. 
-Its primary purpose is to support educational accessibility.
-
-Users are strongly encouraged to consult with their respective Braille authority prior to developing or disseminating any new Braille system.
-            ''').classes('text-base leading-relaxed text-center')
+            heading("h2", "text-2xl font-semibold mb-6 text-negative text-center", "home.disclaimer_title")
+            ui.markdown(t("home.disclaimer_body")).classes('text-base leading-relaxed text-center')
 
         with ui.card().classes('p-8 w-full max-w-3xl'):
-            ui.html('<h2 class="text-2xl font-semibold mb-8 text-center text-primary">How Niv Louie Works</h2>')
+            heading("h2", "text-2xl font-semibold mb-8 text-center text-primary", "home.how_title")
 
             with ui.card().classes('p-6 mb-6'):
-                ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">1. Project Manager</h3>')
-                ui.markdown('This is where you create and manage your projects. Upload a CSV file, map the columns, and save your project for use across the app.')
-                ui.markdown('Download an example CSV you can open in Microsoft Excel, then use that layout when you create a project.')
-                ui.link("Download example CSV", "/static/example of Csv.csv").props('download="example of Csv.csv"').classes('text-accent hover:underline font-medium')
+                heading("h3", "text-xl font-semibold mb-3 text-primary", "home.step1_title")
+                ui.markdown(t("home.step1_body"))
+                ui.markdown(t("home.step1_download_note"))
+                ui.link(t("home.step1_download"), "/static/example of Csv.csv").props('download="example of Csv.csv"').classes('text-accent hover:underline font-medium')
 
             with ui.card().classes('p-6 mb-6'):
-                ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">2. Liblouis Table Builder</h3>')
-                ui.markdown('Choose a project and Niv Louie will automatically generate a Braille table for Liblouis.')
+                heading("h3", "text-xl font-semibold mb-3 text-primary", "home.step2_title")
+                ui.markdown(t("home.step2_body"))
 
             with ui.card().classes('p-6 mb-6'):
-                ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">3. Liblouis Test Builder</h3>')
-                ui.markdown('This tool helps you create test files to verify your project produces correct Braille output.')
-                ui.markdown('Download an example test document you can upload when you try the test builder.')
-                ui.link("Download example test document", "/static/example of test.csv").props('download="example of test.csv"').classes('text-accent hover:underline font-medium')
+                heading("h3", "text-xl font-semibold mb-3 text-primary", "home.step3_title")
+                ui.markdown(t("home.step3_body"))
+                ui.markdown(t("home.step3_download_note"))
+                ui.link(t("home.step3_download"), "/static/example of test.csv").props('download="example of test.csv"').classes('text-accent hover:underline font-medium')
 
             with ui.card().classes('p-6 mb-6'):
-                ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">4. NVDA Add-on Builder</h3>')
-                ui.markdown('Use your projects to automatically generate an NVDA extension.')
+                heading("h3", "text-xl font-semibold mb-3 text-primary", "home.step4_title")
+                ui.markdown(t("home.step4_body"))
 
             with ui.card().classes('p-6'):
-                ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">5. Custom Braille Document Builder</h3>')
-                ui.markdown('This tool lets you convert printed documents into Braille using the projects you created.')
+                heading("h3", "text-xl font-semibold mb-3 text-primary", "home.step5_title")
+                ui.markdown(t("home.step5_body"))
 
         # New Get Started section - consistent styling
         with ui.card().classes('p-8 w-full max-w-3xl'):
-            ui.html('<h2 class="text-2xl font-semibold mb-6 text-center text-primary">Get Started</h2>')
-            ui.markdown('''
-Many screen reader and Braille translation software companies take a long time to develop Braille tables, and much of it requires skilled developers. 
-
-Niv Louie attempts to bridge this gap by creating an easy way for anyone to make their Unicode documents accessible by both speech and Braille, utilizing free and open source tools which are available to everyone. 
-
-If you can build a spreadsheet, you can make your Unicode accessible by both speech and Braille in just a few clicks after the initial spreadsheet is created. This allows users, teachers, and students to develop in an easy and manageable way — everything from custom Braille symbols for home or school projects, to a complete Braille system for languages, writing systems, and Unicode symbols which were previously believed to be inaccessible. 
-
-Now, if you can put that Unicode symbol in a spreadsheet, you can make accessibility possible — for yourself, and even share it with the world.
-            ''').classes('text-base leading-relaxed')
+            heading("h2", "text-2xl font-semibold mb-6 text-center text-primary", "home.get_started_title")
+            ui.markdown(t("home.get_started_body")).classes('text-base leading-relaxed')
             
-            ui.button('Log In to Get Started', 
+            ui.button(t("home.get_started_button"), 
                      on_click=lambda: ui.navigate.to('/login')).props('size=lg color=accent').classes('w-full mt-6')
 
-    # Footer
-    with ui.column().classes('w-full bg-gray-100 py-36 mt-24 border-t'):
-        with ui.column().classes('w-full max-w-4xl mx-auto gap-10 items-center text-center'):
-
-            ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">Acknowledgements</h2>')
-            ui.markdown('''
-Niv Louie has come together in a monumental way thanks to the generous assistance, 
-valuable feedback, and tremendous support from multiple leading institutions and organizations.
-
-Niv Louie is Ariel University and the Digital Pasts Lab’s contribution to education and accessibility, 
-developed as part of a research scholarship for a blind PhD candidate.
-            ''').classes('text-base leading-relaxed text-primary text-center mb-10')
-
-            ui.html('<h3 class="text-xl font-semibold mb-6 text-primary">Our Partners & Supporters</h3>')
-            with ui.grid(columns=2).classes('w-full gap-6 text-center'):
-                ui.link('Ariel University', 'https://www.ariel.ac.il/wp/en/').props('target=_blank').classes('text-accent hover:underline font-medium')
-                ui.link('Digital Pasts Lab – Ariel University', 'https://digitalpasts.github.io/').props('target=_blank').classes('text-accent hover:underline font-medium')
-                ui.link('Heidelberg University', 'https://www.uni-heidelberg.de/en').props('target=_blank').classes('text-accent hover:underline font-medium')
-                ui.link('National Federation of the Blind', 'https://nfb.org/').props('target=_blank').classes('text-accent hover:underline font-medium')
-                ui.link('Royal National Institute of Blind People (RNIB)', 'https://www.rnib.org.uk/').props('target=_blank').classes('text-accent hover:underline font-medium')
-                ui.link('Envisionly Tech', 'https://envisionly.tech/').props('target=_blank').classes('text-accent hover:underline font-medium')
-                ui.link('Liblouis', 'https://liblouis.io/').props('target=_blank').classes('text-accent hover:underline font-medium')
-                ui.link('NVDA – NV Access', 'https://www.nvaccess.org/').props('target=_blank').classes('text-accent hover:underline font-medium')
-
-            with ui.row().classes('gap-16 mt-8'):
-                with ui.column().classes('items-center'):
-                    ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">Documentation</h3>')
-                    ui.link('User Guide & Technical Documentation', '/documentation').classes('text-accent hover:underline font-medium')
-
-                with ui.column().classes('items-center'):
-                    ui.html('<h3 class="text-xl font-semibold mb-3 text-primary">Video Instructions</h3>')
-                    ui.link('Tutorial videos and how-to guides', 'https://www.youtube.com/@NivLouieInfo').props('target=_blank').classes('text-accent hover:underline font-medium')
-
-            ui.separator().classes('my-10 w-full')
-
-            ui.html('<h3 class="text-xl font-semibold mb-4 text-primary">Contact Us</h3>')
-            ui.label('Have questions or want to collaborate?').classes('text-gray-600 mb-2')
-            ui.link('info@nivlouie.com', 'mailto:info@nivlouie.com').classes('text-accent hover:underline text-lg')
-            
-            ui.label('© 2026 Niv Louie - Free and Open Source (GPL-3.0)').classes('text-xs text-gray-500 mt-8')
+    site_footer("https://www.youtube.com/@NivLouieInfo")

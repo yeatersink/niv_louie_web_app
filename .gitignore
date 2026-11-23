@@ -3,6 +3,10 @@
 # Environment variables - NEVER commit this!
 .env
 
+# Local user data and Docker secrets - NEVER commit these!
+niv_louie_data/
+secrets/
+
 # Python cache and compiled files
 __pycache__/
 *.pyc

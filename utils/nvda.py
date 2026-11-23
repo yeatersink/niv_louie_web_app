@@ -1,5 +1,6 @@
 # utils/nvda.py
 
+from utils.i18n import t
 import pathlib
 import traceback
 import pandas as pd
@@ -75,7 +76,7 @@ def create_nvda_extention():
     """Builds a .nvda-addon in the user NVDA directory. Does not download or navigate."""
     print("Creating Extension for NVDA")
     if not extention.extention_name:
-        ui.notify("Select an add-on first", type="negative")
+        ui.notify(t("notify.select_addon"), type="negative")
         return False
 
     extention.set_fields()
@@ -85,7 +86,7 @@ def create_nvda_extention():
     for language in included:
         csv_path = projects_dir / f"filtered_{language}.csv"
         if not csv_path.exists():
-            ui.notify(f"Missing filtered project CSV: {csv_path}", type="negative")
+            ui.notify(t("notify.missing_filtered_csv", path=csv_path), type="negative")
             return False
 
     nvda_dir = get_user_nvda_dir()
@@ -139,15 +140,15 @@ lastTestedNVDAVersion = {extention.extention_last_tested_version}
                 ui.notify(str(e))
                 shutil.copy2(zip_path, final_path)
         else:
-            ui.notify("Add-on zip was not created.", type="negative")
+            ui.notify(t("notify.addon_zip_missing"), type="negative")
             print("DEBUG: Zip file was not created!")
             return False
 
         if not final_path.exists():
-            ui.notify(f"Add-on file was not created: {final_path}", type="negative")
+            ui.notify(t("notify.addon_file_missing", path=final_path), type="negative")
             return False
 
-        ui.notify("Add-on built successfully.", type="positive")
+        ui.notify(t("notify.addon_built"), type="positive")
         print(f"DEBUG: Final .nvda-addon created at {final_path}")
         return True
     except FileNotFoundError as e:
@@ -166,20 +167,20 @@ def add_characters_to_nvda_extention(source_folder):
     projects_dir = get_user_projects_dir()
     csv_path = projects_dir / f"filtered_{project.project_name}.csv"
     if not csv_path.exists():
-        ui.notify(f"Missing filtered project CSV: {csv_path}", type="negative")
+        ui.notify(t("notify.missing_filtered_csv", path=csv_path), type="negative")
         return False
 
     try:
         language_file = pd.read_csv(csv_path)
     except FileNotFoundError:
-        ui.notify(f"Missing filtered project CSV: {csv_path}", type="negative")
+        ui.notify(t("notify.missing_filtered_csv", path=csv_path), type="negative")
         return False
     except Exception as e:
         traceback.print_exc()
         ui.notify(str(e))
         return False
 
-    ui.notify("Adding Characters to NVDA Extension for " + project.project_name)
+    ui.notify(t("notify.adding_characters", name=project.project_name))
 
     character_set_path = source_folder / "locale" / extention.extention_locale / f"symbols-{project.project_language_code}.dic"
 

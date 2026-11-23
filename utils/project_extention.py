@@ -1,5 +1,6 @@
 # utils/project_extention.py
 
+from utils.i18n import t
 from nicegui import app, events, ui
 import json
 import os
@@ -100,36 +101,36 @@ class Extention:
     def save_extention(self):
         error = False
         if self.extention_name is None:
-            ui.notify("Name is required", type="negative")
+            ui.notify(t("notify.name_required"), type="negative")
             error = True
         if self.extention_summary is None:
-            ui.notify("Summary is required", type="negative")
+            ui.notify(t("notify.summary_required"), type="negative")
             error = True
         if self.extention_description is None:
-            ui.notify("Description is required", type="negative")
+            ui.notify(t("notify.description_required"), type="negative")
             error = True
         if self.extention_author is None:
-            ui.notify("Author is required", type="negative")
+            ui.notify(t("notify.author_required"), type="negative")
             error = True
         if self.extention_version is None:
-            ui.notify("Version is required", type="negative")
+            ui.notify(t("notify.version_required"), type="negative")
             error = True
         if self.extention_minimum_version is None:
-            ui.notify("Minimum version is required", type="negative")
+            ui.notify(t("notify.minimum_required"), type="negative")
             error = True
         if self.extention_last_tested_version is None:
-            ui.notify("Last tested version is required", type="negative")
+            ui.notify(t("notify.tested_required"), type="negative")
             error = True
         if self.extention_locale is None:
-            ui.notify("Locale is required", type="negative")
+            ui.notify(t("notify.locale_required"), type="negative")
             error = True
         if self.extention_included_projects is None:
-            ui.notify("Included projects is required", type="negative")
+            ui.notify(t("notify.projects_required"), type="negative")
             error = True
 
         for addon in self.extentions:
             if self.extention_name.lower() == addon["name"].lower():
-                ui.notify("An extention with that name already exists.", type="negative")
+                ui.notify(t("notify.extention_exists"), type="negative")
                 error = True
 
         if error:
@@ -157,7 +158,7 @@ class Extention:
 
         self.reload_extentions()   # Refresh the list immediately
 
-        ui.notify("Add-on saved.", close_button="Ok.")
+        ui.notify(t("notify.addon_saved"), close_button=t("common.ok"))
         return True
 
     def set_fields(self):
@@ -176,7 +177,7 @@ class Extention:
     def save_changes(self, old_extention_name):
         updated = False
         if self.extention_name != old_extention_name and self.extention_name in self.extentions_list:
-            ui.notify("You have an Extention with that Name Already!")
+            ui.notify(t("notify.extention_name_taken"))
             return
 
         for addon in self.extentions:
@@ -214,9 +215,9 @@ class Extention:
         self.reload_extentions()   # Refresh list after save
 
         if updated:
-            ui.notify("Addon has been Updated!")
+            ui.notify(t("notify.addon_updated"))
         else:
-            ui.notify("Failed to Update!")
+            ui.notify(t("notify.update_failed"))
 
     def remove_extention(self):
         nvda_dir = self.nvda_dir or get_user_nvda_dir()
@@ -239,7 +240,7 @@ class Extention:
                     addon_file.unlink()
 
                 self.reload_extentions()
-                ui.notify("Extention has been Removed!")
+                ui.notify(t("notify.extention_removed"))
                 return
 
 

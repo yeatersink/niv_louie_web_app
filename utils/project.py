@@ -1,5 +1,6 @@
 # utils/project.py
 
+from utils.i18n import t
 from nicegui import app, events, ui
 import io
 from pathlib import Path
@@ -226,7 +227,7 @@ class Project:
             self.project_text = df
             self._reset_column_mappings()
 
-            ui.notify(f"✅ File '{filename}' uploaded successfully. Continue to project information.", type="positive")
+            ui.notify(t("notify.file_uploaded", filename=filename), type="positive")
         except ProjectCsvError as ex:
             self.project_text = None
             self._reset_column_mappings()
@@ -246,11 +247,11 @@ class Project:
     async def handle_test_upload(self, e: events.UploadEventArguments):
         try:
             if not e.file or not e.file.name:
-                ui.notify("Upload failed - no file received", type="negative")
+                ui.notify(t("notify.upload_failed"), type="negative")
                 return
 
             if not self.project_language_code:
-                ui.notify("Please select a project from the dropdown FIRST, then upload the test file.", type="negative")
+                ui.notify(t("notify.select_then_upload"), type="negative")
                 return
 
             test_dir = get_user_tests_dir()   # ← Same folder used by create_braille_tests
@@ -286,11 +287,11 @@ class Project:
                     text_lines = []
                 print(f"DEBUG: Extracted {len(text_lines)} lines from .csv")
             else:
-                ui.notify("Only .csv, .txt, and .docx files are supported for tests", type="negative")
+                ui.notify(t("notify.only_test_types"), type="negative")
                 return
 
             if not text_lines:
-                ui.notify("No text content found in the uploaded file", type="negative")
+                ui.notify(t("notify.no_text"), type="negative")
                 return
 
             # Create clean DataFrame with "Text" column
@@ -300,11 +301,11 @@ class Project:
             output_path = test_dir / f"{self.project_language_code}.csv"
             test_df.to_csv(output_path, index=False)
             
-            ui.notify(f"✅ Test file saved with {len(text_lines)} sentences for language code '{self.project_language_code}'.")
+            ui.notify(t("notify.test_saved", count=len(text_lines), code=self.project_language_code))
             print(f"DEBUG test upload successful: saved to {output_path.name}")
 
         except Exception as ex:
-            ui.notify(f"Test upload error: {str(ex)}", type="negative")
+            ui.notify(t("notify.test_upload_error", error=ex), type="negative")
             print(f"DEBUG test upload error: {ex}")
 
     async def handle_document_upload(self, e: events.UploadEventArguments):
@@ -313,7 +314,7 @@ class Project:
 
         try:
             if not e.file or not e.file.name:
-                ui.notify("Upload failed - no file received", type="negative")
+                ui.notify(t("notify.upload_failed"), type="negative")
                 return
 
             content_bytes = await e.file.read()
@@ -324,18 +325,18 @@ class Project:
                 document.save(save_path)
                 self.document_name = e.file.name
                 self.document_contents = document
-                ui.notify(f"✅ Docx document uploaded: {e.file.name}")
+                ui.notify(t("notify.docx_uploaded", name=e.file.name))
             elif e.file.name.lower().endswith(".txt"):
                 content_str = content_bytes.decode("utf-8", errors="replace")
                 save_path = document_folder / e.file.name
                 with open(save_path, "w", encoding="utf-8") as file:
                     file.write(content_str)
                 self.document_name = e.file.name
-                ui.notify(f"✅ Text document uploaded: {e.file.name}")
+                ui.notify(t("notify.text_uploaded", name=e.file.name))
             else:
-                ui.notify("Only .docx and .txt files are supported", type="negative")
+                ui.notify(t("notify.only_docx_txt"), type="negative")
         except Exception as ex:
-            ui.notify(f"Document upload error: {str(ex)}", type="negative")
+            ui.notify(t("notify.document_upload_error", error=ex), type="negative")
 
     def save_project(self, replace_existing=False):
         if self.project_text is None:
@@ -347,7 +348,7 @@ class Project:
             return False
 
         if self.project_name is None:
-            ui.notify("Please enter a name for your project.", type="negative")
+            ui.notify(t("notify.enter_name"), type="negative")
             return False
 
         self.project_text.columns = [str(c).replace("\ufeff", "").strip() for c in self.project_text.columns]
@@ -387,7 +388,7 @@ class Project:
         if not replace_existing:
             for language in self.languages:
                 if self.project_name.lower() == language.get("name", "").lower():
-                    ui.notify("A project with that name already exists.", type="negative")
+                    ui.notify(t("notify.name_exists"), type="negative")
                     return False
 
         project_object = {
@@ -438,12 +439,12 @@ class Project:
     def remove_project(self):
         selected = self.project_name
         if not selected:
-            ui.notify("No project selected.", type="negative")
+            ui.notify(t("notify.no_project"), type="negative")
             return False
 
         name = next((lang.get("name") for lang in self.languages if lang.get("name") == selected), None)
         if not name:
-            ui.notify("Project not found.", type="negative")
+            ui.notify(t("notify.project_not_found"), type="negative")
             return False
 
         projects_dir = get_user_projects_dir()
@@ -453,7 +454,7 @@ class Project:
             with open(languages_file, "w", encoding="utf-8") as file:
                 json.dump(new_languages, file, ensure_ascii=False, indent=4)
         except OSError as ex:
-            ui.notify(f"Could not update the project list: {ex}", type="negative")
+            ui.notify(t("notify.list_update_error", error=ex), type="negative")
             return False
 
         leftover_paths = [
@@ -482,14 +483,14 @@ class Project:
 
     def set_all_fields(self):
         if self.project_name is None:
-            ui.notify("No Project Selected!", type="negative")
+            ui.notify(t("notify.no_project_selected"), type="negative")
             return
         current_language = None
         for language in self.languages:
             if language.get("name") == self.project_name:
                 current_language = language
         if current_language is None:
-            ui.notify("Couldn't Find that Project!", type="negative")
+            ui.notify(t("notify.project_missing"), type="negative")
             return
         self.project_name_column = current_language.get("name_column")
         self.project_character_column = current_language.get("char_column")

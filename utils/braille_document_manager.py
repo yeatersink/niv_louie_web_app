@@ -1,5 +1,6 @@
 # utils/braille_document_manager.py
 
+from utils.i18n import t
 from nicegui import events, ui
 import io
 import os
@@ -45,19 +46,18 @@ class DocumentManager:
 
     def update_document_name(self, e: events.ValueChangeEventArguments):
         self.document_name = e.value
-        ui.notify(f"Selected document: {e.value}")
+        ui.notify(t("notify.selected_document", name=e.value))
 
     def update_selected_projects(self, e: events.ValueChangeEventArguments):
         self.selected_projects = e.value if e.value else []
         if self.selected_projects:
-            ui.notify(f"Selected projects: {', '.join(self.selected_projects)}")
+            ui.notify(t("notify.selected_projects", names=", ".join(self.selected_projects)))
         else:
-            ui.notify("No projects selected", type="warning")
+            ui.notify(t("notify.no_projects"), type="warning")
 
     def toggle_general_english(self, e: events.ValueChangeEventArguments):
         self.apply_general_english = e.value
-        status = "enabled" if self.apply_general_english else "disabled"
-        ui.notify(f"General English rules {status}")
+        ui.notify(t("notify.english_rules", status=t("notify.enabled") if self.apply_general_english else t("notify.disabled")))
 
     async def handle_document_upload(self, e: events.UploadEventArguments):
         document_folder = get_user_documents_dir()
@@ -65,7 +65,7 @@ class DocumentManager:
 
         try:
             if not e.file or not e.file.name:
-                ui.notify("Upload failed - no file received", type="negative")
+                ui.notify(t("notify.upload_failed"), type="negative")
                 return
 
             content_bytes = await e.content.read() if hasattr(e, 'content') and e.content else await e.file.read()
@@ -78,7 +78,7 @@ class DocumentManager:
                 document.save(save_path)
                 self.document_name = e.file.name
                 self.document_contents = document
-                ui.notify(f"✅ Docx document uploaded: {e.file.name}")
+                ui.notify(t("notify.docx_uploaded", name=e.file.name))
 
             elif filename.endswith(".txt"):
                 content_str = content_bytes.decode("utf-8", errors="replace")
@@ -86,7 +86,7 @@ class DocumentManager:
                 with open(save_path, "w", encoding="utf-8") as file:
                     file.write(content_str)
                 self.document_name = e.file.name
-                ui.notify(f"✅ Text document uploaded: {e.file.name}")
+                ui.notify(t("notify.text_uploaded", name=e.file.name))
 
             elif filename.endswith(".pdf"):
                 import fitz
@@ -100,19 +100,19 @@ class DocumentManager:
                 with open(save_path, "w", encoding="utf-8") as file:
                     file.write(text)
                 self.document_name = e.file.name
-                ui.notify(f"✅ PDF document uploaded and text extracted: {e.file.name}")
+                ui.notify(t("notify.pdf_uploaded", name=e.file.name))
 
             else:
-                ui.notify("Only .docx, .txt, and .pdf files are supported", type="negative")
+                ui.notify(t("notify.only_doc_types"), type="negative")
                 return
 
         except Exception as ex:
-            ui.notify(f"Document upload error: {str(ex)}", type="negative")
+            ui.notify(t("notify.document_upload_error", error=ex), type="negative")
             print(f"DEBUG document upload error: {ex}")
 
     def convert_document(self):
         if not self.document_name:
-            ui.notify("No document selected", type="negative")
+            ui.notify(t("notify.no_document"), type="negative")
             return
 
         document_folder = get_user_documents_dir()
@@ -170,7 +170,7 @@ class DocumentManager:
                         ui.download.content(content, filename=output_filename, media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
 
                     dialog.close()
-                    ui.notify(f"Downloaded as .{fmt}")
+                    ui.notify(t("notify.downloaded_as", fmt=fmt))
 
                 with ui.column().classes('w-full gap-4'):
                     ui.button("Download as .txt (Plain Text)", on_click=lambda: download_as("txt")).classes('w-full')
@@ -180,11 +180,11 @@ class DocumentManager:
             dialog.open()
 
         except Exception as ex:
-            ui.notify(f"Error converting document: {str(ex)}", type="negative")
+            ui.notify(t("notify.convert_error", error=ex), type="negative")
 
     def remove_document(self):
         if not self.document_name:
-            ui.notify("No document selected", type="negative")
+            ui.notify(t("notify.no_document"), type="negative")
             return
 
         document_folder = get_user_documents_dir()
@@ -193,17 +193,17 @@ class DocumentManager:
         try:
             if document_path.exists():
                 document_path.unlink()
-                ui.notify(f"Document {self.document_name} removed")
+                ui.notify(t("notify.document_removed", name=self.document_name))
                 self.document_name = None
             else:
-                ui.notify("Document not found", type="negative")
+                ui.notify(t("notify.document_not_found"), type="negative")
         except Exception as ex:
-            ui.notify(f"Error removing document: {str(ex)}", type="negative")
+            ui.notify(t("notify.remove_error", error=ex), type="negative")
 
     def convert_text_to_braille(self, text: str) -> str:
         """Apply selected projects in order, then optional general English rules"""
         if not self.selected_projects:
-            ui.notify("No projects selected", type="negative")
+            ui.notify(t("notify.no_projects"), type="negative")
             return ""
 
         projects_dir = get_user_projects_dir()

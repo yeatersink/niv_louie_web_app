@@ -1,0 +1,40 @@
+services:
+  nicegui-app:
+    build: .
+    container_name: niv_louie_web_app
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      - DOCKER=1
+      - STORAGE_SECRET=${STORAGE_SECRET}
+      - SMTP_EMAIL=${SMTP_EMAIL}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+      - SMTP_SERVER=${SMTP_SERVER:-smtp.gmail.com}
+      - SMTP_PORT=${SMTP_PORT:-587}
+    volumes:
+      # Mount the static folder from host to container (absolute path - most reliable)
+      - /home/yeatersink/niv-louie-app/static:/app/static:ro
+      - nicegui-storage:/app/.nicegui
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN_FILE=/run/secrets/tunnel_token
+    secrets:
+      - tunnel_token
+    depends_on:
+      - nicegui-app
+    network_mode: "service:nicegui-app"
+
+volumes:
+  nicegui-storage:
+
+secrets:
+  tunnel_token:
+    file: ./secrets/tunnel_token.txt

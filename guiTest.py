@@ -1,6 +1,7 @@
 # gui.py - Main entry point for Niv Louie (Web Version)
 
 from nicegui import ui, app
+import os
 
 # Import all pages so NiceGUI registers the @ui.page decorators
 from pages.home import home
@@ -104,6 +105,23 @@ def startup():
 app.on_startup(startup)
 
 
+def _storage_secret() -> str:
+    """NiceGUI storage secret from STORAGE_SECRET.
+
+    Docker/production must set the variable. Local runs that are not in
+    Docker may use a development-only value so the app can still start.
+    """
+    secret = os.getenv("STORAGE_SECRET", "").strip()
+    if secret:
+        return secret
+    if os.getenv("DOCKER") or os.getenv("RUNNING_IN_DOCKER"):
+        raise RuntimeError(
+            "STORAGE_SECRET is not set. Set STORAGE_SECRET in the environment "
+            "or .env before starting in Docker/production."
+        )
+    print("WARNING: STORAGE_SECRET is not set; using a development-only storage secret.")
+    return "dev-only-storage-secret"
+
 
 # ====================== WEB SERVER SETUP ======================
 ui.run(
@@ -112,7 +130,7 @@ ui.run(
     title="Niv Louie - Making the World Accessible, One Braille Table at a Time",
     reload=False,
     show=True,
-    storage_secret="niv_louie_secret_key_2026",
+    storage_secret=_storage_secret(),
     favicon="🌐",
     dark=False,
     viewport="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"

@@ -5,6 +5,7 @@ from pathlib import Path
 import re
 
 from nicegui import ui
+from utils.i18n import copyright_footer, current_language, heading, language_switcher, prepare_page, t
 
 GUIDE_FILENAME = "niv_louie_web_documentation.md"
 
@@ -157,7 +158,7 @@ def _parse_guide(markdown):
 
 def _render_missing_guide():
     print(f"LOG: User guide file not found: {GUIDE_FILENAME}")
-    ui.label("The user guide file was not found.").classes("text-lg text-gray-700")
+    ui.label(t("docs.missing")).classes("text-lg text-gray-700")
 
 
 def _render_guide(intro, sections):
@@ -165,12 +166,12 @@ def _render_guide(intro, sections):
         ui.markdown(intro).classes("text-lg leading-relaxed")
 
     toc_items = "\n".join(
-        f'<li><a href="#{escape(section_id, quote=True)}">{escape(label)}</a></li>'
+        f'<li><a href="#{escape(section_id, quote=True)}">{escape(t("docs.section." + section_id))}</a></li>'
         for section_id, label in MAIN_SECTIONS
     )
     ui.html(
         f'''<nav aria-labelledby="on-this-page">
-            <h2 id="on-this-page" class="text-2xl font-semibold mb-4 text-primary">On this page</h2>
+            <h2 id="on-this-page" class="text-2xl font-semibold mb-4 text-primary">{escape(t("docs.on_this_page"))}</h2>
             <ul class="list-disc pl-6 space-y-2">
                 {toc_items}
             </ul>
@@ -197,6 +198,7 @@ def _render_guide(intro, sections):
 
 @ui.page("/documentation")
 def documentation():
+    prepare_page("docs.title")
     ui.query(".nicegui-content").classes("w-full")
     ui.query(".q-page").classes("flex flex-col min-h-screen")
     ui.add_css("""
@@ -213,7 +215,7 @@ def documentation():
         .documentation-guide-body td {
             border: 1px solid #d1d5db;
             padding: 0.5rem 0.75rem;
-            text-align: left;
+            text-align: start;
         }
         .documentation-guide-body pre {
             overflow-x: auto;
@@ -226,19 +228,19 @@ def documentation():
 
     with ui.header().classes("items-center justify-between bg-primary text-white p-4 shadow"):
         with ui.row().classes("items-center gap-6 w-full max-w-6xl mx-auto"):
-            ui.label("Niv Louie").classes("text-3xl font-bold tracking-tight")
+            ui.label(t("common.brand")).classes("text-3xl font-bold tracking-tight")
             ui.space()
-            ui.button("Home", on_click=lambda: ui.navigate.to("/")).props("flat color=accent")
+            language_switcher()
+            ui.button(t("common.home"), on_click=lambda: ui.navigate.to("/")).props("flat color=accent")
             ui.button(
-                "Go to Dashboard",
+                t("common.go_dashboard"),
                 on_click=lambda: ui.navigate.to("/dashboard"),
             ).props("flat color=accent")
 
     with ui.column().classes("documentation-guide flex-1 w-full max-w-4xl mx-auto p-8 gap-4"):
-        ui.html(
-            '<h1 class="text-4xl font-bold text-primary">Niv Louie user guide</h1>',
-            sanitize=False,
-        )
+        heading("h1", "text-4xl font-bold text-primary", "docs.title")
+        if current_language() != "en":
+            ui.label(t("docs.english_only")).classes("text-gray-700")
 
         guide_path = _find_guide_path()
         if guide_path is None:
@@ -249,7 +251,4 @@ def documentation():
             intro, sections = _parse_guide(markdown)
             _render_guide(intro, sections)
 
-    with ui.column().classes("w-full bg-gray-100 py-12 border-t mt-auto"):
-        ui.label("© 2026 Niv Louie - Free and Open Source (GPL-3.0)").classes(
-            "text-xs text-gray-500 text-center mx-auto"
-        )
+    copyright_footer()

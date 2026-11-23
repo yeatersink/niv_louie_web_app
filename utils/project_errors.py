@@ -1,6 +1,7 @@
 # utils/project_errors.py
 
 from nicegui import ui
+from utils.i18n import t
 
 
 class ProjectCsvError(Exception):
@@ -33,7 +34,7 @@ def show_project_error(title, message, how_to_fix):
             ui.navigate.to("/create_project")
 
         ui.button(
-            "Refresh project manager",
+            t("errors.refresh"),
             on_click=refresh_project_manager,
         ).props("color=accent size=lg").classes("w-full")
     dialog.open()

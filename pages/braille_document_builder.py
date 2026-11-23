@@ -2,6 +2,7 @@
 
 from nicegui import events, ui
 import os
+from utils.i18n import heading, language_switcher, prepare_page, t
 from utils.storage import ensure_user_directories
 from utils.braille_document_manager import document
 from utils.project import project
@@ -18,6 +19,7 @@ def init_user_storage():
 
 @ui.page("/braille_document_builder")
 def braille_document_builder():
+    prepare_page("braille.title")
     init_user_storage()
     
     # DEBUG: Show exactly what projects are available in the list
@@ -26,31 +28,25 @@ def braille_document_builder():
     with ui.column().classes('w-full max-w-3xl mx-auto p-8 gap-8 items-center'):
         
         # Centered header - no Go Back button as requested
-        ui.html('<h1 class="text-3xl font-bold text-primary text-center">Braille Document Builder</h1>')
-
-        # New descriptive text as requested
-        ui.html('''
-            <p class="text-center text-gray-700 max-w-2xl">
-                Here you can choose one or several different projects to create a braille document.<br>
-                This app currently supports <strong>.docx</strong>, <strong>.txt</strong>, and <strong>.pdf</strong> files for upload.<br>
-                You will be able to download the resulting braille document in <strong>.docx</strong>, <strong>.txt</strong>, or <strong>.brf</strong> format.
-            </p>
-        ''').classes('mb-8')
+        with ui.row().classes('w-full justify-end'):
+            language_switcher()
+        heading("h1", "text-3xl font-bold text-primary text-center", "braille.title")
+        ui.markdown(t("braille.intro")).classes('text-center text-gray-700 max-w-2xl mb-8')
 
         with ui.card().classes('w-full p-8'):
-            ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">Upload Document</h2>')
+            heading("h2", "text-2xl font-semibold mb-6 text-primary", "braille.upload")
             
             ui.upload(
                 on_upload=document.handle_document_upload, 
                 auto_upload=True,
-                label='Select Document to Convert'
+                label=t("braille.select_document")
             ).props('color=accent').classes('w-full')
 
         with ui.card().classes('w-full p-8'):
-            ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">Project Selection</h2>')
+            heading("h2", "text-2xl font-semibold mb-6 text-primary", "common.project_selection")
             
             ui.select(
-                label="What projects do you want to use?", 
+                label=t("braille.which_projects"), 
                 options=sorted(project.languages_list), 
                 multiple=True, 
                 on_change=document.update_selected_projects
@@ -58,13 +54,13 @@ def braille_document_builder():
 
             # Checkbox for English/general rules
             ui.checkbox(
-                text="Apply general English / default braille rules", 
+                text=t("braille.english_rules"), 
                 value=document.apply_general_english,
                 on_change=document.toggle_general_english
             ).classes('mt-4')
 
         # Main action button
-        ui.button("Generate and Download Braille Document", 
+        ui.button(t("braille.generate"), 
                  on_click=document.convert_document
         ).props('size=lg color=accent').classes('w-full mt-6')
 
@@ -74,36 +70,36 @@ def braille_document_builder():
             file_list = os.listdir(document_path)
             
             with ui.card().classes('w-full p-8'):
-                ui.html('<h2 class="text-2xl font-semibold mb-6 text-primary">Existing Documents</h2>')
+                heading("h2", "text-2xl font-semibold mb-6 text-primary", "braille.existing")
                 
                 ui.select(
-                    label="What Document would you like to Select?", 
+                    label=t("braille.which_document"), 
                     options=file_list, 
                     on_change=document.update_document_name
                 ).classes('w-full')
                 
                 with ui.row().classes('gap-4 w-full'):
-                    ui.button("Download Selected Document", 
+                    ui.button(t("braille.download_selected"), 
                              on_click=lambda: ui.download(os.path.join(document_path, document.document_name)) 
                                               if document.document_name else None
                     ).props('color=accent').classes('flex-1')
                     
                     with ui.dialog() as dialog, ui.card().classes('p-8 w-full max-w-md'):
-                        ui.html('<h3 class="text-2xl font-bold text-negative mb-6 text-center">Are you sure?</h3>')
-                        ui.label('You are about to permanently delete this document.').classes('text-center mb-8')
+                        heading("h3", "text-2xl font-bold text-negative mb-6 text-center", "projects.confirm_title")
+                        ui.label(t("braille.delete_body")).classes('text-center mb-8')
                         
                         with ui.row().classes('gap-4 w-full justify-center'):
-                            ui.button("Cancel", on_click=dialog.close).props('flat color=primary size=lg')
+                            ui.button(t("common.cancel"), on_click=dialog.close).props('flat color=primary size=lg')
                             def confirm_delete():
                                 document.remove_document()
                                 dialog.close()
-                            ui.button("Yes, Delete", on_click=confirm_delete).props('color=negative size=lg')
+                            ui.button(t("common.yes_delete"), on_click=confirm_delete).props('color=negative size=lg')
                     
-                    ui.button("Remove Document", 
+                    ui.button(t("braille.remove"), 
                              on_click=dialog.open
                     ).props('color=negative').classes('flex-1')
 
         # Home button
-        ui.button("Return to Home", 
+        ui.button(t("common.return_home"), 
                  on_click=lambda: ui.navigate.to("/")
         ).props('flat color=primary size=lg').classes('w-full mt-8')

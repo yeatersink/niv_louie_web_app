@@ -1,5 +1,6 @@
 # utils/project_utils.py
 
+from utils.i18n import t
 from nicegui import app, events, ui
 from utils.braille import create_braille_table, create_braille_tests, get_braille_from_text_in_source
 from utils.csv import create_filtered_csv, regenerate_characters_using_hex, regenerate_hex_using_characters
@@ -12,10 +13,10 @@ from utils.project_errors import ProjectCsvError, show_project_error, format_hea
 user_actions = []
 
 actions = {
-    "Add Characters to NVDA": {"action": add_characters_to_nvda, "notification": "Added characters to NVDA!"},
-    "create extention for NVDA": {"action": create_nvda_extention, "notification": "Extention created for NVDA !"},
-    "Write Table for Liblouis": {"action": create_braille_table, "notification": "Table written for Liblouis!"},
-    "Write Test for Liblouis": {"action": create_braille_tests, "notification": "Test written for Liblouis!"}
+    "Add Characters to NVDA": {"action": add_characters_to_nvda, "notification": "notify.added_nvda"},
+    "create extention for NVDA": {"action": create_nvda_extention, "notification": "notify.extention_created"},
+    "Write Table for Liblouis": {"action": create_braille_table, "notification": "notify.table_written"},
+    "Write Test for Liblouis": {"action": create_braille_tests, "notification": "notify.test_written"}
 }
 
 actions_name_list = list(actions.keys())
@@ -27,7 +28,7 @@ def perform_user_actions():
     for action in user_actions:
         if action in actions:
             actions[action]["action"]()
-            ui.notify(actions[action]["notification"])
+            ui.notify(t(actions[action]["notification"]))
 
 def update_user_actions(e: events.ValueChangeEventArguments):
     global user_actions
@@ -74,7 +75,7 @@ def _save_project_and_filter(replace_existing=False):
         except Exception as ex:
             print(f"LOG: Could not download CSV report: {ex}")
 
-    ui.notify("Your project is saved successfully.", type="positive")
+    ui.notify(t("notify.project_saved"), type="positive")
     ui.navigate.to("/dashboard")
 
 def save_and_create_csv():

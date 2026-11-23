@@ -1,0 +1,8 @@
+.env
+.git
+actions-runner
+__pycache__
+*.pyc
+.nicegui
+niv_louie_data/
+secrets/

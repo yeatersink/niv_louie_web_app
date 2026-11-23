@@ -1,5 +1,6 @@
 # utils/braille.py
 
+from utils.i18n import t
 import os
 from pathlib import Path
 import warnings
@@ -29,14 +30,14 @@ def create_braille_table(include_metadata=True):
     print("creating table for Liblouis")
 
     if not project.project_name:
-        ui.notify("Please select a project.", type="negative")
+        ui.notify(t("notify.select_project"), type="negative")
         return
 
     projects_dir = get_user_projects_dir()
     filtered_path = projects_dir / f"filtered_{project.project_name}.csv"
 
     if not filtered_path.exists():
-        ui.notify(f"Filtered CSV not found: {filtered_path}", type="negative")
+        ui.notify(t("notify.filtered_csv_missing", path=filtered_path), type="negative")
         return
 
     braille = pd.read_csv(filtered_path)
@@ -123,7 +124,7 @@ def create_braille_table(include_metadata=True):
             for table in project.project_included_braille_tables:
                 braille_table.write(f"include {table}\n")
 
-    ui.notify(f"Braille Table for {project.project_name} has been Generated.")
+    ui.notify(t("notify.table_generated", name=project.project_name))
     print("Braille table created successfully")
     ui.download(output_path, output_filename)
 
@@ -174,7 +175,7 @@ def load_filtered_project_csv(projects_dir, project_name):
     """Load filtered_{name}.csv. Notify and return None if missing."""
     filtered_path = Path(projects_dir) / f"filtered_{project_name}.csv"
     if not filtered_path.exists():
-        ui.notify(f"Filtered CSV not found: {filtered_path}", type="negative")
+        ui.notify(t("notify.filtered_csv_missing", path=filtered_path), type="negative")
         print(f"DEBUG: Missing filtered CSV: {filtered_path}")
         return None
     return pd.read_csv(filtered_path, encoding="utf-8")
@@ -212,7 +213,7 @@ def _included_braille_table_names(included_tables):
 def create_braille_tests(selected_projects=None, include_metadata=True):
     """Create YAML test file for Liblouis"""
     if not selected_projects:
-        ui.notify("No projects selected for test generation", type="negative")
+        ui.notify(t("notify.no_projects_test"), type="negative")
         return
 
     print("Creating braille tests")
@@ -233,7 +234,7 @@ def create_braille_tests(selected_projects=None, include_metadata=True):
     yaml_path = tests_dir / yaml_filename
 
     if not test_csv_path.exists():
-        ui.notify(f"Test CSV not found: {test_csv_path}", type="negative")
+        ui.notify(t("notify.test_csv_missing", path=test_csv_path), type="negative")
         print(f"DEBUG: Missing test CSV: {test_csv_path}")
         return
 
@@ -335,13 +336,13 @@ tests:
 
             test_yaml.write(f'  - ["{row["Text"]}", "{braille_test}"]\n')
 
-    ui.notify(f"Braille Test for {first_project} has been Generated.")
+    ui.notify(t("notify.test_generated", name=first_project))
     print(f"Done creating braille tests for {first_project}")
     ui.download(yaml_path, yaml_filename)
 
     if report["non_braille_characters_in_braille_section"]:
         ui.notify(
-            "Some tests contain characters not in braille_to_numbers.json. See test report.txt.",
+            t("notify.non_braille"),
             type="warning",
         )
 
@@ -370,7 +371,7 @@ def get_braille_from_text_in_source():
     source_path = projects_dir / "source" / f"{project.project_name}.csv"
 
     if not source_path.exists():
-        ui.notify("Source file not found", type="negative")
+        ui.notify(t("notify.source_missing"), type="negative")
         return
 
     language_file = pd.read_csv(source_path)
@@ -381,4 +382,4 @@ def get_braille_from_text_in_source():
 
     language_file.to_csv(source_path, index=False)
     print("done converting text to braille")
-    ui.notify("Text converted to braille in source file.")
+    ui.notify(t("notify.text_converted"))
